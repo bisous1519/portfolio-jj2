@@ -35,6 +35,7 @@ const ProjectModalContainer = styled.section`
       &:nth-of-type(2) {
         margin-top: 9px;
         margin-bottom: 30px;
+        margin-left: 11px;
       }
     }
     p {
@@ -112,29 +113,33 @@ const ProjectModalContainer = styled.section`
       border: none;
     }
     table {
-      color: ${({ theme }) => theme.textColor.initial};
-      & > thead {
-        & > tr {
-          & > th {
-            background: none;
-            & > img {
-              width: 30px;
-              height: 30px;
-              object-fit: cover;
-              border-radius: 10px;
-              margin: 0;
-              box-shadow: ${({ theme }) => theme.shadowColor};
-            }
-          }
-        }
+      th,
+      td {
+        background: none;
+        font-size: ${({ theme }) => theme.fontSize.small};
+        line-height: 1.4;
+        color: ${({ theme }) => theme.textColor.gray};
+        vertical-align: middle;
+        text-align: left;
+        padding: 10px 7px 10px 14px;
       }
-      & > tbody {
-        & > tr {
-          & > td {
-            font-size: ${({ theme }) => theme.fontSize.small};
-            line-height: 1.4;
-            color: ${({ theme }) => theme.textColor.gray};
-          }
+      th {
+        padding-top: 0;
+      }
+      tr:last-of-type > td {
+        padding-bottom: 0;
+      }
+      tr {
+        font-size: ${({ theme }) => theme.fontSize.small};
+        line-height: 1.4;
+        color: ${({ theme }) => theme.textColor.gray};
+        img {
+          width: 30px;
+          height: 30px;
+          object-fit: cover;
+          border-radius: 10px;
+          margin: 0;
+          box-shadow: ${({ theme }) => theme.shadowColor};
         }
       }
     }

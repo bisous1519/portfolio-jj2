@@ -6,7 +6,6 @@ import {
   bear2 as MyProject2,
 } from '../assets/img';
 import Javascript from '../assets/icons/javascript_logo.png';
-import Nextjs from '../assets/icons/nextjs_logo.png';
 import Reactjs from '../assets/icons/react_logo.png';
 import Redux from '../assets/icons/redux_logo.png';
 import Reduxsaga from '../assets/icons/redux-saga_logo.png';

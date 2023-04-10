@@ -1,13 +1,11 @@
 import { MaliconLogo } from '../../assets/icons';
-import gif from '../../assets/img/pro-malicon1.png';
-// import {} from '../../assets/img/';
 
 const text = `
 ![main-img](/static/media/pro-malicon2.55aa0b10a957053e9e31.png)
 
 >기간 : 23.01.02 ~ 23.02.17 (약 7주)
 >인원 : 프론트엔드 2명(본인 포함), 백엔드 4명
->깃허브 : [malicon](https://github.com/bisous1519/malicon)
+>깃허브 : [MALICON](https://github.com/bisous1519/malicon)
 ___
 
 ### " 아바타로 소통하는 아티스트와 나,
@@ -36,16 +34,20 @@ ___
 - 피드를 통해 일상을 나누거나, 오프라인 공연 일시를 홍보할 수 있습니다.
 
 ## 프론트엔드 기술 스택
-| ![react](https://velog.velcdn.com/images/bisous1519/post/a4482b71-face-43af-be19-77cab7d306c4/image.png) | ![typescript](https://velog.velcdn.com/images/bisous1519/post/92a92e82-e837-4778-bf71-9e4bbe05a913/image.png) | ![redux toolkit](https://velog.velcdn.com/images/bisous1519/post/faf213b6-535b-404c-bffc-4b8c33b39693/image.png) | ![emotion](https://velog.velcdn.com/images/bisous1519/post/fa374983-803e-434a-a180-9225c17af7bd/image.png) |
-| :---: | :---: | :---: | :---: |
-| React | TS | Redux<br>Toolkit | emotion |
+
+| ![react](/static/media/react_logo.8c075233df045e93c51a.png) | React |
+| :---: | :---: |
+| ![typescript](/static/media/typescript_logo.29073194eeda5803e7f3.png) | Typescript |
+| ![redux toolkit](/static/media/redux_logo.13709933f3b443c1da91.png) | Redux Toolkit |
+| ![emotion](/static/media/emotion_logo.9b228ebbe47e4d05d3ee.png) | emotion |
+
 
 ## 맡은 역할
 ~~**요약** 애니메이션, 무한스크롤, 실시간 반응, 실시간 채팅~~
 
 ### [ 애니메이션 ]
 ![landing-page](/static/media/malicon_landing.c4843d16932fd3ded4a9.gif)
-- keyframes를 이용한 **애니메이션**으로 역동적인 **랜딩페이지**를 구현하였습니다.
+keyframes를 이용한 **애니메이션**으로 역동적인 **랜딩페이지**를 구현하였습니다.
 
 ![loading-page](/static/media/malicon_loading.9ed35043d1f8feb2e5e2.gif)
 - keyframes을 이용한 **애니메이션**으로 동적인 **로딩페이지**를 구현하여, 실시간 방송 입장 중 이탈률을 낮추었습니다.
@@ -68,7 +70,6 @@ ___
 
 ## 프로젝트 성과
 아이디어의 독창성과 프로젝트 완성도를 인정받아 **삼성 청년 SW 아카데미(SSAFY) 8기 공통프로젝트 우수상**을 수여하였습니다.
-
 `;
 // ## 프로젝트 리뷰
 
