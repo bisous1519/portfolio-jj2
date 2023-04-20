@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import throttle from 'lodash.throttle';
-import TopButton from '../buttons/TopButton';
+import TopButton from '../components/buttons/TopButton';
 import styled from '@emotion/styled';
 
 const NavContainer = styled.div`
@@ -65,3 +65,4 @@ export default function Nav() {
     </NavContainer>
   );
 }
+

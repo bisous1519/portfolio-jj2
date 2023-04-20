@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import React from 'react';
-import EomjiBackground from '../../assets/img/eomji.png';
+import EomjiBackground from '../assets/img/eomji.png';
 import { IoIosArrowDown } from 'react-icons/io';
 import { keyframes } from '@emotion/react';
 

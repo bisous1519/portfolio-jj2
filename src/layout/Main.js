@@ -1,9 +1,9 @@
 import React from 'react';
+import Projects from '../components/main/Projects';
+import Skills from '../components/main/Skills';
 import Footer from './Footer';
-import Introduction from '../main/Introduction';
-import Skills from '../main/Skills';
-import Projects from '../main/Projects';
-import { myProject, teamProject } from '../../mocks/data';
+import Introduction from '../components/main/Introduction';
+import { myProject, teamProject } from '../mocks/data';
 import styled from '@emotion/styled';
 
 const MainContainer = styled.div`
@@ -87,3 +87,4 @@ export default function Main() {
     </MainContainer>
   );
 }
+

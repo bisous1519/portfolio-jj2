@@ -1,10 +1,8 @@
 import styled from '@emotion/styled';
 import React from 'react';
-import Skills from '../main/Skills';
-import Projects from '../main/Projects';
 import Footer from './Footer';
-import { myProject, teamProject } from '../../mocks/data';
-import NewSkills from '../main/NewSkills';
+import { myProject, teamProject } from '../mocks/data';
+import { NewSkills, Projects, Skills } from '../components/main';
 
 const ContentsContainer = styled.div`
   margin-top: 10px;

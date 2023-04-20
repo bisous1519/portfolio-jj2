@@ -4,15 +4,17 @@ import {
   IoHomeOutline,
 } from 'react-icons/io5';
 import { VscGithubAlt } from 'react-icons/vsc';
-import Project1 from '../assets/img/apeach2.jpeg';
-import Project2 from '../assets/img/apeach3.png';
-import Project3 from '../assets/img/ieum_main.png';
-import MyProject1 from '../assets/img/bear.jpg';
-import MyProject2 from '../assets/img/bear2.jpg';
-import { developic } from '../assets/text/developic';
-import { wikea } from '../assets/text/wikea';
-import { starbucks } from '../assets/text/starbucks';
-import { booksy } from '../assets/text/booksy';
+import {
+  Apeach2 as Project1,
+  Apeach3 as Project2,
+  eeumMain as Project3,
+  bear as MyProject1,
+  bear2 as MyProject2,
+} from '../assets/img';
+import { developic } from './text/developic';
+import { wikea } from './text/wikea';
+import { starbucks } from './text/starbucks';
+import { booksy } from './text/booksy';
 import Javascript from '../assets/icons/javascript_logo.png';
 import Nextjs from '../assets/icons/nextjs_logo.png';
 import Reactjs from '../assets/icons/react_logo.png';

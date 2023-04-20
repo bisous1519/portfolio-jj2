@@ -3,10 +3,10 @@ import Header from './Header';
 import Nav from './Nav';
 import Main from './Main';
 import { ThemeProvider } from '@emotion/react';
-import theme from '../../utils/theme';
-import { useThemeState } from '../../hooks/ThemeContext';
-import useModal from '../../hooks/useModal';
-import ContactModal from '../modal/ContactModal';
+import theme from '../utils/theme';
+import { useThemeState } from '../hooks/ThemeContext';
+import useModal from '../hooks/useModal';
+import ContactModal from '../components/modal/ContactModal';
 import styled from '@emotion/styled';
 
 const LayoutContainer = styled.div`

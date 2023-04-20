@@ -1,4 +1,4 @@
-import image from '../img/bear2.jpg';
+import { bear as image } from '../../assets/img';
 
 export const wikea = `
 # Getting Started with Create React App
@@ -74,3 +74,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 `;
+

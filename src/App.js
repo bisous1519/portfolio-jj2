@@ -1,7 +1,6 @@
 import { css, Global } from '@emotion/react';
 import './assets/css/reset.css';
-import Layout from './components/layout/Layout';
-import NewLayout from './components/layout/NewLayout';
+import NewLayout from './layout/NewLayout';
 import ModeProvider from './hooks/ThemeContext';
 import { createContext, useEffect, useState } from 'react';
 

@@ -1,16 +1,12 @@
 import React, { useContext, useEffect, useState } from 'react';
-import Header from './Header';
-import Nav from './Nav';
-import Main from './Main';
 import { ThemeProvider } from '@emotion/react';
-import theme from '../../utils/theme';
-import { useThemeState } from '../../hooks/ThemeContext';
-import useModal from '../../hooks/useModal';
-import ContactModal from '../modal/ContactModal';
 import styled from '@emotion/styled';
-import Contents from './Contents';
-import NewMain from './NewMain';
-import { ScrollContext } from '../../App';
+import theme from '../utils/theme';
+import { useThemeState } from '../hooks/ThemeContext';
+import useModal from '../hooks/useModal';
+import ContactModal from '../components/modal/ContactModal';
+import { ScrollContext } from '../App';
+import { Contents, Header, Nav, NewMain } from './index';
 
 const LayoutContainer = styled.div`
   background-color: ${({ theme }) => theme.background};

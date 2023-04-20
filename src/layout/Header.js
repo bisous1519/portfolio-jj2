@@ -1,6 +1,6 @@
 import React from 'react';
 import { FiExternalLink } from 'react-icons/fi';
-import ToggleButton from '../buttons/ToggleButton';
+import ToggleButton from '../components/buttons/ToggleButton';
 import styled from '@emotion/styled';
 
 const HeaderContainer = styled.div`
