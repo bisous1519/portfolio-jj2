@@ -7,6 +7,7 @@ import useModal from '../hooks/useModal';
 import ContactModal from '../components/modal/ContactModal';
 import { ScrollContext } from '../App';
 import { Contents, Header, Nav, NewMain } from './index';
+import useScroll from '../hooks/useScroll';
 
 const LayoutContainer = styled.div`
   background-color: ${({ theme }) => theme.background};
@@ -39,41 +40,25 @@ const LayoutContainer = styled.div`
   }
 `;
 
-export default function Layout() {
-  const scrollPosition = useContext(ScrollContext);
-  //   const [scrollPosition, setScrollPosition] = useState(0);
-  const [headerVisible, setHeaderVisible] = useState(false);
+export default function NewLayout() {
+  // const scrollPosition = useContext(ScrollContext);
 
-  //   const updateScroll = () => {
-  //     // setScrollPosition(window.scrollY || document.documentElement.scrollTop);
-  //     if (window.scrollY && window.scrollY > window.innerHeight * 0.8) {
-  //       setheaderVisible(true);
-  //       console.log('header true');
-  //     } else {
-  //       setheaderVisible(false);
-  //       console.log('header false');
-  //     }
-  //   };
-
-  useEffect(() => {
-    if (scrollPosition && scrollPosition > window.innerHeight * 0.8) {
-      setHeaderVisible(true);
-    } else {
-      setHeaderVisible(false);
-    }
-  }, [scrollPosition]);
-
-  //   useEffect(() => {
-  //     window.addEventListener('scroll', updateScroll);
-  //     // console.log(scrollPosition);
-  //     console.log('window', window.innerHeight);
-  //   }, []);
   const currentTheme = useThemeState();
   const [openModal, onOpenModal, onCloseModal] = useModal();
+
+  // const [headerVisible, setHeaderVisible] = useState(false);
+  // useEffect(() => {
+  //   if (scrollPosition && scrollPosition > window.innerHeight * 0.8) {
+  //     setHeaderVisible(true);
+  //   } else {
+  //     setHeaderVisible(false);
+  //   }
+  // }, [scrollPosition]);
+
   return (
     <ThemeProvider theme={currentTheme === 'light' ? theme.light : theme.dark}>
       <LayoutContainer>
-        <Header headerVisible={headerVisible} onOpenModal={onOpenModal} />
+        <Header onOpenModal={onOpenModal} />
         <NewMain />
         <div className='contents'>
           <Contents />

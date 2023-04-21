@@ -3,6 +3,7 @@ import './assets/css/reset.css';
 import NewLayout from './layout/NewLayout';
 import ModeProvider from './hooks/ThemeContext';
 import { createContext, useEffect, useState } from 'react';
+import throttle from 'lodash.throttle';
 
 const globalStyle = css`
   * {
@@ -38,21 +39,13 @@ export const ScrollContext = createContext();
 function App() {
   const [scrollPosition, setScrollPosition] = useState(0);
 
-  const updateScroll = () => {
+  const updateScroll = throttle(() => {
     setScrollPosition(window.scrollY || document.documentElement.scrollTop);
-    // if (window.scrollY && window.scrollY > window.innerHeight * 0.8) {
-    //   setheaderVisible(true);
-    //   console.log('header true');
-    // } else {
-    //   setheaderVisible(false);
-    //   console.log('header false');
-    // }
-  };
+    console.log(scrollPosition);
+  }, 300);
 
   useEffect(() => {
     window.addEventListener('scroll', updateScroll);
-    // console.log(scrollPosition);
-    // console.log('window', window.innerHeight);
   }, []);
   return (
     <ModeProvider>

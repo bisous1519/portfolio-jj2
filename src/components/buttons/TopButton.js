@@ -28,7 +28,7 @@ const TopButtonBox = styled.div`
 export default function TopButton() {
   const btnEl = useRef();
   const toTop = () => {
-    // scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
   useEffect(() => {
     window.addEventListener(

@@ -34,7 +34,7 @@ export default function Nav() {
   const [selected, setSelected] = useState(1);
   const onClickNav = (num, top) => {
     setSelected(num);
-    // scrollTo({ top: top, behavior: 'smooth' });
+    window.scrollTo({ top: top, behavior: 'smooth' });
   };
   useEffect(() => {
     window.addEventListener(
