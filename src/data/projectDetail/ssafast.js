@@ -1,7 +1,11 @@
 import { SsafastLogo1 } from '../../assets/icons';
+import { ssafastMain, ssafastConnAPI } from '../../assets/img';
+import skillLogo from '../../data/skillLogo';
+
+const { react, nextjs, ts, redux, reactQuery, tailwind } = skillLogo;
 
 const text = `
-![main-img](/static/media/ssafastMain.dd1a7f204d23fa1a1b70.png)
+<img src=${ssafastMain} alt='main page />
 
 >기간 : 23.04.10 ~ 23.05.19 (약 7주)
 >인원 : 프론트엔드 3명(본인 포함), 백엔드 3명
@@ -39,13 +43,13 @@ Figma, Notion, Postman, Swagger, Locust 등
 
 ## 프론트엔드 기술 스택
 
-| ![react](/static/media/react_logo.8c075233df045e93c51a.png) | React |
+| <img src=${react.src} alt=${react.alt} /> | React |
 | :---: | :---: |
-| ![nextjs](/static/media/nextjs_logo.66aa06e0dc0d62667881.jpeg) | Next.js |
-| ![typescript](/static/media/typescript_logo.29073194eeda5803e7f3.png) | Typescript |
-| ![redux](/static/media/redux_logo.13709933f3b443c1da91.png) | Redux |
-| ![react query](/static/media/reactquery_logo.9901a9d562a5cdf16838.png) | React Query |
-| ![tailwind](/static/media/tailwind_logo.8c7d6a6265d709bdbb34.png) | Tailwind |
+| <img src=${nextjs.src} alt=${nextjs.alt} /> | Next.js |
+| <img src=${ts.src} alt=${ts.alt} /> | Typescript |
+| <img src=${redux.src} alt=${redux.alt} /> | Redux |
+| <img src=${reactQuery.src} alt=${reactQuery.alt} /> | React Query |
+| <img src=${tailwind.src} alt=${tailwind.alt} /> | Tailwind |
 
 ## 맡은 역할
 ~~**요약** 워크스페이스 홈화면 구현, 화면별 API 연결 구현, axios 요청 객체코드 반환 구현, 테스트 자동화 페이지 구현~~

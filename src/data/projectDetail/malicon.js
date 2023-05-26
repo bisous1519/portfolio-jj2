@@ -1,7 +1,19 @@
 import { MaliconLogo } from '../../assets/icons';
+import {
+  maliconLanding,
+  maliconLandingAni,
+  maliconLoadingAni,
+  maliconChattingAni,
+  maliconReactionAni,
+  maliconTutorialAni,
+  maliconMain,
+} from '../../assets/img';
+import skillLogo from '../../data/skillLogo';
+
+const { react, ts, redux, emotion } = skillLogo;
 
 const text = `
-![main-img](/static/media/pro-malicon2.55aa0b10a957053e9e31.png)
+<img src=${maliconLanding} alt='landing page' />
 
 >기간 : 23.01.02 ~ 23.02.17 (약 7주)
 >인원 : 프론트엔드 2명(본인 포함), 백엔드 4명
@@ -35,37 +47,40 @@ ___
 
 ## 프론트엔드 기술 스택
 
-| ![react](/static/media/react_logo.8c075233df045e93c51a.png) | React |
+| <img src=${react.src} alt=${react.alt} /> | React |
 | :---: | :---: |
-| ![typescript](/static/media/typescript_logo.29073194eeda5803e7f3.png) | Typescript |
-| ![redux toolkit](/static/media/redux_logo.13709933f3b443c1da91.png) | Redux Toolkit |
-| ![emotion](/static/media/emotion_logo.9b228ebbe47e4d05d3ee.png) | emotion |
+| <img src=${ts.src} alt=${ts.alt} /> | Typescript |
+| <img src=${redux.src} alt=${redux.alt} /> | Redux Toolkit |
+| <img src=${emotion.src} alt=${emotion.alt} /> | emotion |
 
 
 ## 맡은 역할
 ~~**요약** 애니메이션, 무한스크롤, 실시간 반응, 실시간 채팅~~
 
 ### [ 애니메이션 ]
-![landing-page](/static/media/malicon_landing.c4843d16932fd3ded4a9.gif)
-keyframes를 이용한 **애니메이션**으로 역동적인 **랜딩페이지**를 구현하였습니다.
 
-![loading-page](/static/media/malicon_loading.9ed35043d1f8feb2e5e2.gif)
+<img src=${maliconLandingAni} alt='landing page' />
+- keyframes를 이용한 **애니메이션**으로 역동적인 **랜딩페이지**를 구현하였습니다.
+
+<img src=${maliconLoadingAni} alt='loading page' />
 - keyframes을 이용한 **애니메이션**으로 동적인 **로딩페이지**를 구현하여, 실시간 방송 입장 중 이탈률을 낮추었습니다.
 
 ### [ 무한스크롤 ]
-![main-page](/static/media/pro-malicon1.fab678de2fc823b69ed5.png)
+
+<img src=${maliconMain} alt='main page' />
 - **Intersection Observer API**를 이용하여 **무한 스크롤**을 구현하였습니다.
-방송 리스트 페이지에 적용함으로써 리스트를 탐색하는 사용자의 흐름이 끊기지 않게 하였습니다.
+- 방송 리스트 페이지에 적용함으로써 리스트를 탐색하는 사용자의 흐름이 끊기지 않게 하였습니다.
 
 ### [ Openvidu ]
-![main-img](/static/media/malicon_reaction.241f6d7fde2e1f7006d4.gif)
-- face-api를 활용하여 읽은 표정 정보와 티처블머신을 활용하여 읽은 사용자의 행동 정보를 'happy', 'clab' 등의 단어로 정형화하였습니다. **Openvidu**를 통해, 해당 단어와 사용자 정보를 담은 시그널을 발생시킨 뒤, 해당 사용자의 아바타에 이모지를 띄워 **실시간 반응**을 구현하였습니다.
+<img src=${maliconReactionAni} alt='avatar animation' />
+- face-api를 활용하여 읽은 표정 정보와 티처블머신을 활용하여 읽은 사용자의 행동 정보를 'happy', 'clab' 등의 단어로 정형화하였습니다.
+- **Openvidu**를 통해, 해당 단어와 사용자 정보를 담은 시그널을 발생시킨 뒤, 해당 사용자의 아바타에 이모지를 띄워 **실시간 반응**을 구현하였습니다.
 
-![tutorial-page](/static/media/malicon_tutorial.dc16f2d8aacfadbf3d71.png)
+<img src=${maliconTutorialAni} alt='tutorial page' />
 - 실시간 방송 페이지에서 사용했던 **사용자의 행동정보 인식 컴포넌트를 재사용** 가능하도록 리팩토링하였습니다.
-아바타 활용 메커니즘이 잘 이해되도록 튜토리얼 페이지를 꾸몄으며 각 단계 별로 특정 표정이나 행동이 인식된 경우에만 다음 단계 이동 버튼이 활성화되도록 구현하였습니다.
+- 아바타 활용 메커니즘이 잘 이해되도록 튜토리얼 페이지를 꾸몄으며 각 단계 별로 특정 표정이나 행동이 인식된 경우에만 다음 단계 이동 버튼이 활성화되도록 구현하였습니다.
 
-![chatting](/static/media/malicon_chatting.7873ab1c1e00c93186f8.gif)
+<img src=${maliconChattingAni} alt='landing page' />
 - **Openvidu**를 통해, 사용자의 메세지 내용을 담은 시그널을 발생시켜 **실시간 채팅**을 구현하였습니다.
 
 ## 프로젝트 성과

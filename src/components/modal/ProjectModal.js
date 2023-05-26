@@ -27,7 +27,7 @@ const ProjectModalContainer = styled.section`
       font-size: ${({ theme }) => theme.fontSize.lg};
       font-weight: ${({ theme }) => theme.fontWeight.bold};
       color: ${({ theme }) => theme.textColor.initial};
-      margin-top: 30px;
+      margin-top: 55px;
       &:nth-of-type(1) {
         margin-top: 55px;
         margin-bottom: 2px;
@@ -51,6 +51,69 @@ const ProjectModalContainer = styled.section`
         }
         & > p {
           margin: 10px 0;
+        }
+      }
+    }
+    /* div > div > ul {
+      margin: 12px 0px 14px 0px;
+      padding: 0px 15px;
+      columns: 13rem;
+      & > li {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 20px;
+        &::before {
+          display: none;
+        }
+        & > img {
+          width: 30px;
+          height: 30px;
+          object-fit: cover;
+          border-radius: 10px;
+          margin: 0;
+          box-shadow: ${({ theme }) => theme.shadowColor};
+        }
+        & > span {
+        }
+      }
+    } */
+    table,
+    thead,
+    tr,
+    th,
+    tbody,
+    td {
+      border: none;
+    }
+    table {
+      th,
+      td {
+        background: none;
+        font-size: ${({ theme }) => theme.fontSize.small};
+        line-height: 1.4;
+        color: ${({ theme }) => theme.textColor.gray};
+        vertical-align: middle;
+        text-align: left;
+        padding: 10px 7px 10px 14px;
+      }
+      th {
+        padding-top: 0;
+      }
+      tr:last-of-type > td {
+        padding-bottom: 0;
+      }
+      tr {
+        font-size: ${({ theme }) => theme.fontSize.small};
+        line-height: 1.4;
+        color: ${({ theme }) => theme.textColor.gray};
+        img {
+          width: 30px;
+          height: 30px;
+          object-fit: cover;
+          border-radius: 10px;
+          margin: 0;
+          box-shadow: ${({ theme }) => theme.shadowColor};
         }
       }
     }
@@ -98,50 +161,26 @@ const ProjectModalContainer = styled.section`
       max-height: 200px;
       display: block;
       margin: 0 auto;
+      margin-top: 55px;
       border: 1px solid ${({ theme }) => theme.lineColor};
       border-radius: 10px;
     }
+    div > div > img {
+      max-height: 300px;
+      display: block;
+      margin: 0 auto;
+      margin-top: 55px;
+      border: 1px solid ${({ theme }) => theme.lineColor};
+      border-radius: 10px;
+    }
+    h3 + p,
+    h3 + div > div {
+      & > img {
+        margin-top: 30px;
+      }
+    }
     hr {
       margin: 40px 0;
-    }
-    table,
-    thead,
-    tr,
-    th,
-    tbody,
-    td {
-      border: none;
-    }
-    table {
-      th,
-      td {
-        background: none;
-        font-size: ${({ theme }) => theme.fontSize.small};
-        line-height: 1.4;
-        color: ${({ theme }) => theme.textColor.gray};
-        vertical-align: middle;
-        text-align: left;
-        padding: 10px 7px 10px 14px;
-      }
-      th {
-        padding-top: 0;
-      }
-      tr:last-of-type > td {
-        padding-bottom: 0;
-      }
-      tr {
-        font-size: ${({ theme }) => theme.fontSize.small};
-        line-height: 1.4;
-        color: ${({ theme }) => theme.textColor.gray};
-        img {
-          width: 30px;
-          height: 30px;
-          object-fit: cover;
-          border-radius: 10px;
-          margin: 0;
-          box-shadow: ${({ theme }) => theme.shadowColor};
-        }
-      }
     }
   }
 `;
