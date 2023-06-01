@@ -7,7 +7,7 @@ import useModal from '../hooks/useModal';
 import ContactModal from '../components/modal/ContactModal';
 import { ScrollContext } from '../App';
 import { Contents, Header, Nav, NewMain } from './index';
-import useScroll from '../hooks/useScroll';
+// import useScrollVisible from '../hooks/useScrollVisible';
 
 const LayoutContainer = styled.div`
   background-color: ${({ theme }) => theme.background};

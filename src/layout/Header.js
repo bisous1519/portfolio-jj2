@@ -2,7 +2,7 @@ import React from 'react';
 import { FiExternalLink } from 'react-icons/fi';
 import ToggleButton from '../components/buttons/ToggleButton';
 import styled from '@emotion/styled';
-import useScroll from '../hooks/useScroll';
+import useScrollVisible from '../hooks/useScrollVisible';
 
 const HeaderContainer = styled.div`
   &.invisible {
@@ -61,7 +61,7 @@ const HeaderContainer = styled.div`
 `;
 
 export default function Header({ onOpenModal }) {
-  const headerVisible = useScroll(80);
+  const headerVisible = useScrollVisible(80);
 
   return (
     <HeaderContainer className={headerVisible ? 'visible' : 'invisible'}>

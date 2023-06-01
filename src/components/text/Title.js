@@ -1,13 +1,15 @@
 import styled from '@emotion/styled';
 import React from 'react';
-import useScroll from '../../hooks/useScroll';
+import useScrollVisible from '../../hooks/useScrollVisible';
 
 const TitleContainer = styled.div`
   &.invisible {
     opacity: 0%;
+    transform: translateY(15px);
   }
   opacity: 100%;
-  transition: opacity ease-in-out 0.2s !important;
+  transform: translateY(0px);
+  transition: all ease-in-out 0.2s !important;
   margin-bottom: 50px;
   color: ${({ theme }) => theme.textColor.primary};
   font-size: ${({ theme }) => theme.fontSize.title};
@@ -23,7 +25,7 @@ const TitleContainer = styled.div`
 `;
 
 export default function Title({ name, visiblePoint }) {
-  const visible = useScroll(visiblePoint);
+  const visible = useScrollVisible(visiblePoint);
   return (
     <TitleContainer className={visible ? 'visible' : 'invisible'}>
       {name}

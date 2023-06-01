@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from 'react';
 import { ScrollContext } from '../App';
 
-const useScroll = (percent) => {
+const useScrollVisible = (percent) => {
   const scrollPosition = useContext(ScrollContext);
 
   const [state, setState] = useState(false);
@@ -21,5 +21,5 @@ const useScroll = (percent) => {
   return state;
 };
 
-export default useScroll;
+export default useScrollVisible;
 
