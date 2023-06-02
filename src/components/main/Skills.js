@@ -1,5 +1,5 @@
 import React from 'react';
-import { skills } from '../../mocks/data';
+import { skills } from '../../data/data';
 import styled from '@emotion/styled';
 
 export const SkillsContainer = styled.section`

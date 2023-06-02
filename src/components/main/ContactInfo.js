@@ -1,5 +1,5 @@
 import React from 'react';
-import { contact } from '../../mocks/data';
+import { contact } from '../../data/data';
 import styled from '@emotion/styled';
 
 const ContactInfoBox = styled.ul`

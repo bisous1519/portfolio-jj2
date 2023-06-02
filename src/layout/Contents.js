@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import React from 'react';
 import Footer from './Footer';
-import { myProject, teamProject } from '../mocks/data';
+import { myProject, teamProject } from '../data/data';
 import { NewSkills, Projects, Skills } from '../components/main';
 
 const ContentsContainer = styled.div`

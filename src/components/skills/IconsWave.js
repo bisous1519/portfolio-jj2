@@ -14,6 +14,7 @@ import useScrollVisible from '../../hooks/useScrollVisible';
 import styled from '@emotion/styled';
 
 const IconsWaveContainer = styled.div`
+  margin-bottom: 50px;
   & > ul.iconsWave {
     &.invisible {
       opacity: 0;

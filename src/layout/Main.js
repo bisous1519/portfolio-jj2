@@ -3,7 +3,7 @@ import Projects from '../components/main/Projects';
 import Skills from '../components/main/Skills';
 import Footer from './Footer';
 import Introduction from '../components/main/Introduction';
-import { myProject, teamProject } from '../mocks/data';
+import { myProject, teamProject } from '../data/data';
 import styled from '@emotion/styled';
 
 const MainContainer = styled.div`
