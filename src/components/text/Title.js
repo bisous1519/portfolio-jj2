@@ -1,15 +1,16 @@
 import styled from '@emotion/styled';
 import React from 'react';
 import useScrollVisible from '../../hooks/useScrollVisible';
+import useScrollFadeIn from '../../hooks/useScrollFadeIn';
 
 const TitleContainer = styled.div`
-  &.invisible {
+  /* &.invisible {
     opacity: 0%;
     transform: translateY(15px);
   }
   opacity: 100%;
   transform: translateY(0px);
-  transition: all ease-in-out 0.2s !important;
+  transition: all ease-in-out 0.2s !important; */
   margin-bottom: 50px;
   color: ${({ theme }) => theme.textColor.primary};
   font-size: ${({ theme }) => theme.fontSize.title};
@@ -25,9 +26,13 @@ const TitleContainer = styled.div`
 `;
 
 export default function Title({ name, visiblePoint }) {
+  const fadeInAnimation = useScrollFadeIn();
   const visible = useScrollVisible(visiblePoint);
   return (
-    <TitleContainer className={visible ? 'visible' : 'invisible'}>
+    <TitleContainer
+      className={visible ? 'visible' : 'invisible'}
+      {...fadeInAnimation}
+    >
       {name}
     </TitleContainer>
   );
