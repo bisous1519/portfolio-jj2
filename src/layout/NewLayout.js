@@ -10,6 +10,7 @@ import { Contents, Header, Nav, NewMain } from './index';
 // import useScrollVisible from '../hooks/useScrollVisible';
 
 const LayoutContainer = styled.div`
+  color: ${({ theme }) => theme.textColor.initial};
   background-color: ${({ theme }) => theme.background};
   transition: all 0.3s;
   /* position: relative; */

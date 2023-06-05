@@ -62,26 +62,6 @@ const backendSkills = [
     ],
   },
   {
-    id: 'skills-8',
-    name: 'Github',
-    des: [
-      '깃 컨벤션을 지키려 노력합니다.',
-      'branch 분기를 통해 협업할 수 있습니다.',
-      '코드의 변경사항을 추적하고 관리하는 등 버전 관리를 할 수 있습니다.',
-    ],
-  },
-  {
-    id: 'skills-9',
-    name: 'Jira',
-    des: [
-      '에자일 방법론을 이해하고 에자일하게 개발할 수 있습니다.',
-      '카드를 생성하고 스프린트를 시작하여 일정을 체계적으로 관리할 수 있습니다.',
-      '시각화된 데이터들을 이해하고 진행사항을 파악하여 효율적으로 협업할 수 있습니다.',
-    ],
-  },
-];
-const dbSkills = [
-  {
     id: 'skills-7',
     name: 'MySQL',
     des: [
@@ -91,6 +71,7 @@ const dbSkills = [
     ],
   },
 ];
+
 const toolsSkills = [
   {
     id: 'skills-8',
@@ -115,7 +96,6 @@ const toolsSkills = [
 const skillData = {
   frontendSkills,
   backendSkills,
-  dbSkills,
   toolsSkills,
 };
 

@@ -12,9 +12,9 @@ const TitleContainer = styled.div`
   transform: translateY(0px);
   transition: all ease-in-out 0.2s !important; */
   margin-bottom: 50px;
-  color: ${({ theme }) => theme.textColor.primary};
+  /* color: ${({ theme }) => theme.textColor.primary}; */
   font-size: ${({ theme }) => theme.fontSize.title};
-  font-weight: ${({ theme }) => theme.fontWeight.bold};
+  /* font-weight: ${({ theme }) => theme.fontWeight.bold}; */
   /* &::after {
     content: '';
     display: block;
@@ -25,16 +25,8 @@ const TitleContainer = styled.div`
   } */
 `;
 
-export default function Title({ name, visiblePoint }) {
+export default function Title({ name }) {
   const fadeInAnimation = useScrollFadeIn();
-  const visible = useScrollVisible(visiblePoint);
-  return (
-    <TitleContainer
-      className={visible ? 'visible' : 'invisible'}
-      {...fadeInAnimation}
-    >
-      {name}
-    </TitleContainer>
-  );
+  return <TitleContainer {...fadeInAnimation}>{name}</TitleContainer>;
 }
 

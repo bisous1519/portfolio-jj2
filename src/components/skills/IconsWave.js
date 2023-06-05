@@ -44,7 +44,9 @@ const IconsWaveContainer = styled.div`
   }
 `;
 
-function WaveBox({ logoArr, sPoint, ePoint, halfInnerW }) {
+function WaveBox({ logoArr, sPoint, ePoint }) {
+  const halfInnerW = useRef(Math.floor(window.innerWidth / 2));
+
   const iconsWaveVisible = useScrollVisible(sPoint);
 
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -97,7 +99,7 @@ function WaveBox({ logoArr, sPoint, ePoint, halfInnerW }) {
   );
 }
 
-export default function IconsWave({ halfInnerW }) {
+export default function IconsWave() {
   const logoArr1 = [
     { src: JSlogo, alt: 'javascript logo', des: 'Javascript' },
     { src: TSlogo, alt: 'TS logo', des: 'Typescript' },
@@ -118,18 +120,8 @@ export default function IconsWave({ halfInnerW }) {
 
   return (
     <IconsWaveContainer>
-      <WaveBox
-        logoArr={logoArr1}
-        sPoint={35}
-        ePoint={70}
-        halfInnerW={halfInnerW}
-      />
-      <WaveBox
-        logoArr={logoArr2}
-        sPoint={40}
-        ePoint={73}
-        halfInnerW={halfInnerW}
-      />
+      <WaveBox logoArr={logoArr1} sPoint={35} ePoint={70} />
+      <WaveBox logoArr={logoArr2} sPoint={40} ePoint={73} />
     </IconsWaveContainer>
   );
 }

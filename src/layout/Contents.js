@@ -3,6 +3,7 @@ import React from 'react';
 import Footer from './Footer';
 import { myProject, teamProject } from '../data/data';
 import { NewSkills, Projects, Skills } from '../components/main';
+import NewProjects from '../components/main/NewProjects';
 
 const ContentsContainer = styled.div`
   margin-top: 50px;
@@ -67,6 +68,7 @@ export default function Contents() {
   return (
     <ContentsContainer>
       <NewSkills />
+      <NewProjects />
       {/* <Skills />
       <Projects data={teamProject}>
         <div>

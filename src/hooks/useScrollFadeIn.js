@@ -30,12 +30,13 @@ const useScrollFadeIn = (direction = 'up', duration = 1, delay = 0) => {
         current.style.transitionDelay = `${delay}s`;
         current.style.opacity = 1;
         current.style.transform = 'translate3d(0, 0, 0)';
-      } else {
-        current.style.transitionProperty = 'opacity transform';
-        // current.style.transitionTimingFunction = 'cubic-bezier(0, 0, 0.2, 1)';
-        current.style.opacity = 0;
-        current.style.transform = handleDirection(direction);
       }
+      //   else {
+      //     current.style.transitionProperty = 'opacity transform';
+      //     // current.style.transitionTimingFunction = 'cubic-bezier(0, 0, 0.2, 1)';
+      //     current.style.opacity = 0;
+      //     current.style.transform = handleDirection(direction);
+      //   }
     },
     [direction, delay, duration]
   );
@@ -46,8 +47,8 @@ const useScrollFadeIn = (direction = 'up', duration = 1, delay = 0) => {
     let observer;
     if (current) {
       observer = new IntersectionObserver(handleScroll, {
-        threshold: 0.7,
-        rootMargin: '-70px',
+        threshold: 0.3,
+        rootMargin: '-50px',
       });
       observer.observe(current);
 
