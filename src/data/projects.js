@@ -4,24 +4,31 @@ import {
   maliconLoading,
   eeumMain,
 } from '../assets/img';
-import {
-  JSlogo,
-  Nextjslogo,
-  Reactlogo,
-  ReduxSagalogo,
-  Reduxlogo,
-  Sasslogo,
-  StyledComponentslogo,
-  TSlogo,
-  Vuejslogo,
-} from '../assets/icons';
+import skillLogo from './skillLogo';
+
+const {
+  js,
+  nextjs,
+  react,
+  redux,
+  reduxSaga,
+  sass,
+  styledComponent,
+  ts,
+  vue,
+  reactNative,
+  recoil,
+  emotion,
+  tailwind,
+  reactQuery,
+} = skillLogo;
 
 export const projectData = [
   {
     id: 'teampjt-1',
     title: 'MALICON',
     subTitle: '아바타로 소통하는 실시간 방송 플랫폼',
-    date: '23.02 - 23.04',
+    date: '23.02 - 23.03',
     des: [
       '공통 컴포넌트 제작',
       '랜딩 페이지 구현',
@@ -34,8 +41,38 @@ export const projectData = [
     src2: maliconMain,
     alt1: 'malicon landing page',
     alt2: 'malicon main page',
-    skills: [TSlogo, Reactlogo, Reduxlogo, StyledComponentslogo],
+    skills: [react, ts, redux, emotion],
   },
+  {
+    id: 'teampjt-2',
+    title: '이음',
+    subTitle: '자립준비청년의 자립을 돕는 파트너',
+    date: '23.03 - 23.04',
+    des: ['공통 컴포넌트 제작', '다이어리 페이지 구현', '관리자 페이지 구현'],
+    src1: maliconLanding,
+    src2: maliconMain,
+    alt1: 'malicon landing page',
+    alt2: 'malicon main page',
+    skills: [reactNative, ts, recoil, styledComponent],
+  },
+  {
+    id: 'teampjt-3',
+    title: 'SSAFAST',
+    subTitle: '불편함을 해소하여 개발자 경험을 높이다',
+    date: '23.04 - 23.05',
+    des: [
+      '공통 컴포넌트 제작',
+      '워크스페이스 홈화면 구현',
+      '화면별 API 연결 구현',
+      'axios 요청 객체코드 반환 구현',
+      '테스트 자동화 페이지 구현',
+    ],
+    src1: maliconLanding,
+    src2: maliconMain,
+    alt1: 'malicon landing page',
+    alt2: 'malicon main page',
+    skills: [react, nextjs, ts, redux, reactQuery, tailwind],
+  }, // reduxToolkit, reactquery,
   //   {
   //     id: 1,
   //     title: 'MALICON (My Little Concert, 마리콘)',

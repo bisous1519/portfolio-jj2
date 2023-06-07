@@ -8,6 +8,11 @@ import {
   StyledComponentslogo,
   TSlogo,
   Vuejslogo,
+  ReactNative,
+  Recoil,
+  Emotion,
+  Tailwind,
+  ReactQuery,
 } from '../assets/icons';
 
 const js = { src: JSlogo, alt: 'javascript logo', des: 'Javascript' };
@@ -21,23 +26,41 @@ const reduxSaga = {
   alt: 'ReduxSaga logo',
   des: 'Redux saga',
 };
-const sass = { src: Sasslogo, alt: 'Sass logo', des: 'sass' };
+const reactQuery = {
+  src: ReactQuery,
+  alt: 'ReactQuery logo',
+  des: 'ReactQuery',
+};
+const sass = { src: Sasslogo, alt: 'Sass logo', des: 'Sass' };
 const styledComponent = {
   src: StyledComponentslogo,
   alt: 'StyledComponents logo',
   des: 'styled-components',
 };
+const reactNative = {
+  src: ReactNative,
+  alt: 'ReactNative logo',
+  des: 'React Native',
+};
+const recoil = { src: Recoil, alt: 'Recoil logo', des: 'Recoil' };
+const emotion = { src: Emotion, alt: 'Emotion logo', des: 'emotion' };
+const tailwind = { src: Tailwind, alt: 'Tailwind logo', des: 'Tailwind' };
 
 const skillLogo = {
   js,
   ts,
   react,
+  reactNative,
   vue,
   nextjs,
   redux,
   reduxSaga,
+  reactQuery,
+  recoil,
   sass,
   styledComponent,
+  emotion,
+  tailwind,
 };
 export default skillLogo;
 

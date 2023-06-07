@@ -7,5 +7,11 @@ export { default as Sasslogo } from './sass_logo.png';
 export { default as StyledComponentslogo } from './styled-components_logo.png';
 export { default as TSlogo } from './typescript_logo.png';
 export { default as Vuejslogo } from './vuejs_logo.png';
+export { default as ReactNative } from './reactnative_logo.png';
+export { default as Recoil } from './recoil_logo.png';
+export { default as Emotion } from './emotion_logo.png';
+export { default as Tailwind } from './tailwind_logo.png';
+export { default as ReactQuery } from './reactquery_logo.png';
+
 //Mui
 

@@ -1,57 +1,76 @@
 import styled from '@emotion/styled';
 import React from 'react';
+import SkillIcons from '../skills/SkillIcons';
+import { VscCircle } from 'react-icons/vsc';
+import { PiCircleLight } from 'react-icons/pi';
+import { BsCircle } from 'react-icons/bs';
 
 const ProjectItemWrapper = styled.div`
-  border: 1px solid red;
+  /* border: 1px solid red; */
   height: 100vh;
   padding: 60px 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 25px;
   & > div.imgWrapper {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    flex: 1;
+    flex: 0.55;
     & > div {
       flex: 1;
       width: 100%;
       border-radius: 15px;
       overflow: hidden;
+      border: 0.7px solid #d9d9d9;
+      /* box-shadow: ${({ theme }) => theme.shadowColor}; */
       & > img {
         width: 100%;
       }
     }
   }
   & > div.desWrapper {
-    flex: 1;
+    flex: 0.45;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    gap: 15px;
-    & > h3 {
-    }
-    & > span {
-    }
-    & > ul.des {
-      & > li {
+    gap: 25px;
+    & > div {
+      & > h1 {
+        color: ${({ theme }) => theme.textColor.primary};
+        font-weight: ${({ theme }) => theme.fontWeight.bold};
+        font-size: ${({ theme }) => theme.fontSize.subTitle};
+        margin-bottom: 15px;
       }
-    }
-    & > p {
-    }
-    & > ul.skills {
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      height: 30px;
-      & > li {
-        width: 30px;
-        height: 100%;
-        & > img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
+      & > h3 {
+        color: ${({ theme }) => theme.textColor.initial};
+        font-weight: ${({ theme }) => theme.fontWeight.bold};
+        font-size: ${({ theme }) => theme.fontSize.xl};
+        margin-bottom: 15px;
+      }
+      & > span {
+        color: ${({ theme }) => theme.textColor.gray};
+        font-size: ${({ theme }) => theme.fontSize.base};
+      }
+      & > p {
+        color: ${({ theme }) => theme.textColor.initial};
+        font-weight: ${({ theme }) => theme.fontWeight.bold};
+        font-size: ${({ theme }) => theme.fontSize.lg};
+        margin-bottom: 15px;
+      }
+      & > ul.des {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 15px;
+        & > li {
+          & > i {
+            font-size: 12px;
+            margin-right: 10px;
+          }
         }
       }
     }
@@ -70,21 +89,28 @@ export default function NewProjectItem({ data }) {
         </div>
       </div>
       <div className='desWrapper'>
-        <h3>{data.subTitle}</h3>
-        <span>{data.date}</span>
-        <ul className='des'>
-          {data.des.map((el, idx) => (
-            <li key={`${data.id}-des-${idx}`}>{el}</li>
-          ))}
-        </ul>
-        <p>Frontend</p>
-        <ul className='skills'>
-          {data.skills.map((el, idx) => (
-            <li key={`${data.id}-skills-${idx}`}>
-              <img src={el} alt='logo' />
-            </li>
-          ))}
-        </ul>
+        <div>
+          <h1>{data.title}</h1>
+          <h3>{data.subTitle}</h3>
+          <span>( {data.date} )</span>
+        </div>
+        <div>
+          <p>맡은 역할</p>
+          <ul className='des'>
+            {data.des.map((el, idx) => (
+              <li key={`${data.id}-des-${idx}`}>
+                <i>
+                  <VscCircle />
+                </i>
+                {el}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <p>Frontend</p>
+          <SkillIcons datas={data.skills} />
+        </div>
       </div>
     </ProjectItemWrapper>
   );
