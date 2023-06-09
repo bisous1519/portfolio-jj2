@@ -3,6 +3,9 @@ import {
   maliconMain,
   maliconLoading,
   eeumMain,
+  eeumDiary,
+  ssafastMain,
+  ssafastConnAPI,
 } from '../assets/img';
 import skillLogo from './skillLogo';
 
@@ -49,8 +52,9 @@ export const projectData = [
     subTitle: '자립준비청년의 자립을 돕는 파트너',
     date: '23.03 - 23.04',
     des: ['공통 컴포넌트 제작', '다이어리 페이지 구현', '관리자 페이지 구현'],
-    src1: maliconLanding,
-    src2: maliconMain,
+    app: true,
+    src1: eeumMain,
+    src2: eeumDiary,
     alt1: 'malicon landing page',
     alt2: 'malicon main page',
     skills: [reactNative, ts, recoil, styledComponent],
@@ -67,8 +71,8 @@ export const projectData = [
       'axios 요청 객체코드 반환 구현',
       '테스트 자동화 페이지 구현',
     ],
-    src1: maliconLanding,
-    src2: maliconMain,
+    src1: ssafastMain,
+    src2: ssafastConnAPI,
     alt1: 'malicon landing page',
     alt2: 'malicon main page',
     skills: [react, nextjs, ts, redux, reactQuery, tailwind],

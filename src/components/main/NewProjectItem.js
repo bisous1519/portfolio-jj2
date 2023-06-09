@@ -1,23 +1,28 @@
 import styled from '@emotion/styled';
 import React from 'react';
 import SkillIcons from '../skills/SkillIcons';
-import { VscCircle } from 'react-icons/vsc';
-import { PiCircleLight } from 'react-icons/pi';
-import { BsCircle } from 'react-icons/bs';
+import { VscCircle, VscGithub } from 'react-icons/vsc';
+import { HiOutlineMagnifyingGlassPlus } from 'react-icons/hi2';
+import { IoLogoGithub, IoIosArrowForward } from 'react-icons/io';
+import { BiSearch } from 'react-icons/bi';
+import MoveToButton from '../buttons/MoveToButton';
 
 const ProjectItemWrapper = styled.div`
   /* border: 1px solid red; */
   height: 100vh;
   padding: 60px 0;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 25px;
+  gap: 70px;
   & > div.imgWrapper {
+    &.app {
+      flex-direction: row;
+    }
     display: flex;
     flex-direction: column;
     gap: 15px;
-    flex: 0.55;
+    flex: 3.5;
     & > div {
       flex: 1;
       width: 100%;
@@ -31,45 +36,56 @@ const ProjectItemWrapper = styled.div`
     }
   }
   & > div.desWrapper {
-    flex: 0.45;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 25px;
+    flex: 2;
+    min-width: 300px;
+    & > ul.moveToWrapper {
+      display: flex;
+      justify-content: flex-end;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
     & > div {
-      & > h1 {
-        color: ${({ theme }) => theme.textColor.primary};
-        font-weight: ${({ theme }) => theme.fontWeight.bold};
-        font-size: ${({ theme }) => theme.fontSize.subTitle};
-        margin-bottom: 15px;
-      }
-      & > h3 {
-        color: ${({ theme }) => theme.textColor.initial};
-        font-weight: ${({ theme }) => theme.fontWeight.bold};
-        font-size: ${({ theme }) => theme.fontSize.xl};
-        margin-bottom: 15px;
-      }
-      & > span {
-        color: ${({ theme }) => theme.textColor.gray};
-        font-size: ${({ theme }) => theme.fontSize.base};
-      }
-      & > p {
-        color: ${({ theme }) => theme.textColor.initial};
-        font-weight: ${({ theme }) => theme.fontWeight.bold};
-        font-size: ${({ theme }) => theme.fontSize.lg};
-        margin-bottom: 15px;
-      }
-      & > ul.des {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        gap: 15px;
-        & > li {
-          & > i {
-            font-size: 12px;
-            margin-right: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 35px;
+      & > div {
+        & > h1 {
+          color: ${({ theme }) => theme.textColor.primary};
+          font-weight: ${({ theme }) => theme.fontWeight.bold};
+          font-size: ${({ theme }) => theme.fontSize.subTitle};
+          margin-bottom: 15px;
+        }
+        & > h3 {
+          color: ${({ theme }) => theme.textColor.initial};
+          font-weight: ${({ theme }) => theme.fontWeight.bold};
+          font-size: ${({ theme }) => theme.fontSize.xl};
+          margin-bottom: 15px;
+        }
+        & > span {
+          display: block;
+          color: ${({ theme }) => theme.textColor.gray};
+          font-size: ${({ theme }) => theme.fontSize.base};
+          margin-bottom: 20px;
+        }
+        & > p {
+          color: ${({ theme }) => theme.textColor.initial};
+          font-weight: ${({ theme }) => theme.fontWeight.bold};
+          font-size: ${({ theme }) => theme.fontSize.lg};
+          margin-bottom: 15px;
+        }
+        & > ul.des {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+          gap: 15px;
+          & > li {
+            & > i {
+              font-size: 12px;
+              margin-right: 10px;
+            }
           }
         }
       }
@@ -80,7 +96,7 @@ const ProjectItemWrapper = styled.div`
 export default function NewProjectItem({ data }) {
   return (
     <ProjectItemWrapper>
-      <div className='imgWrapper'>
+      <div className={`imgWrapper${data.app ? ' app' : ''}`}>
         <div>
           <img src={data.src1} alt={data.alt1} />
         </div>
@@ -89,27 +105,37 @@ export default function NewProjectItem({ data }) {
         </div>
       </div>
       <div className='desWrapper'>
+        <ul className='moveToWrapper'>
+          <li>
+            <MoveToButton github={true} link={data.gitLink} />
+          </li>
+          <li>
+            <MoveToButton detail={true} />
+          </li>
+        </ul>
         <div>
-          <h1>{data.title}</h1>
-          <h3>{data.subTitle}</h3>
-          <span>( {data.date} )</span>
-        </div>
-        <div>
-          <p>맡은 역할</p>
-          <ul className='des'>
-            {data.des.map((el, idx) => (
-              <li key={`${data.id}-des-${idx}`}>
-                <i>
-                  <VscCircle />
-                </i>
-                {el}
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div>
-          <p>Frontend</p>
-          <SkillIcons datas={data.skills} />
+          <div>
+            <h1>{data.title}</h1>
+            <h3>{data.subTitle}</h3>
+            <span>( {data.date} )</span>
+          </div>
+          <div>
+            <p>맡은 역할</p>
+            <ul className='des'>
+              {data.des.map((el, idx) => (
+                <li key={`${data.id}-des-${idx}`}>
+                  <i>
+                    <VscCircle />
+                  </i>
+                  {el}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <p>Frontend</p>
+            <SkillIcons datas={data.skills} />
+          </div>
         </div>
       </div>
     </ProjectItemWrapper>
