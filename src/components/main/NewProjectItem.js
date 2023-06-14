@@ -23,15 +23,18 @@ const ProjectItemWrapper = styled.div`
     flex-direction: column;
     gap: 15px;
     flex: 3.5;
+    /* max-height: 80vh; */
     & > div {
       flex: 1;
       width: 100%;
+      /* height: 100%; */
       border-radius: 15px;
       overflow: hidden;
       border: 0.7px solid #d9d9d9;
       /* box-shadow: ${({ theme }) => theme.shadowColor}; */
       & > img {
         width: 100%;
+        /* height: 100%; */
       }
     }
   }
@@ -110,7 +113,7 @@ export default function NewProjectItem({ data }) {
             <MoveToButton github={true} link={data.gitLink} />
           </li>
           <li>
-            <MoveToButton detail={true} />
+            <MoveToButton detail={true} data={data.detail} />
           </li>
         </ul>
         <div>
@@ -118,6 +121,10 @@ export default function NewProjectItem({ data }) {
             <h1>{data.title}</h1>
             <h3>{data.subTitle}</h3>
             <span>( {data.date} )</span>
+            {/* <div style={{ display: 'flex', gap: '15px' }}>
+              <MoveToButton github={true} link={data.gitLink} />
+              <MoveToButton detail={true} />
+            </div> */}
           </div>
           <div>
             <p>맡은 역할</p>

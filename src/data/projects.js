@@ -32,6 +32,8 @@ export const projectData = [
     title: 'MALICON',
     subTitle: '아바타로 소통하는 실시간 방송 플랫폼',
     date: '23.02 - 23.03',
+    gitLink: 'https://github.com/bisous1519/malicon',
+    detail: '',
     des: [
       '공통 컴포넌트 제작',
       '랜딩 페이지 구현',
@@ -51,6 +53,8 @@ export const projectData = [
     title: '이음',
     subTitle: '자립준비청년의 자립을 돕는 파트너',
     date: '23.03 - 23.04',
+    gitLink: 'https://github.com/bisous1519/E-Eum',
+    detail: '',
     des: ['공통 컴포넌트 제작', '다이어리 페이지 구현', '관리자 페이지 구현'],
     app: true,
     src1: eeumMain,
@@ -64,6 +68,8 @@ export const projectData = [
     title: 'SSAFAST',
     subTitle: '불편함을 해소하여 개발자 경험을 높이다',
     date: '23.04 - 23.05',
+    gitLink: 'https://github.com/bisous1519/ssafast',
+    detail: '',
     des: [
       '공통 컴포넌트 제작',
       '워크스페이스 홈화면 구현',
