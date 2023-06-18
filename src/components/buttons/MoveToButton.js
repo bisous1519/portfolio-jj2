@@ -25,12 +25,16 @@ const MoveToButtonBox = styled.div`
   }
 `;
 
-export default function MoveToButton({ github, detail, link }) {
+export default function MoveToButton({ github, link, detail, onOpenModal }) {
   const onClickLink = () => {
     window.open(link);
   };
+  const onClickButton = () => {
+    if (github) onClickLink();
+    else onOpenModal();
+  };
   return (
-    <MoveToButtonBox onClick={onClickLink}>
+    <MoveToButtonBox onClick={onClickButton}>
       {github ? (
         <>
           <i style={{ fontSize: '18px' }}>

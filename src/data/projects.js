@@ -7,6 +7,7 @@ import {
   ssafastMain,
   ssafastConnAPI,
 } from '../assets/img';
+import { maliconDetail } from '../data/projectDetail';
 import skillLogo from './skillLogo';
 
 const {
@@ -33,7 +34,7 @@ export const projectData = [
     subTitle: '아바타로 소통하는 실시간 방송 플랫폼',
     date: '23.02 - 23.03',
     gitLink: 'https://github.com/bisous1519/malicon',
-    detail: '',
+    detail: maliconDetail,
     des: [
       '공통 컴포넌트 제작',
       '랜딩 페이지 구현',

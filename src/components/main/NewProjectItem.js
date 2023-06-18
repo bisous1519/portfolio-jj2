@@ -6,6 +6,8 @@ import { HiOutlineMagnifyingGlassPlus } from 'react-icons/hi2';
 import { IoLogoGithub, IoIosArrowForward } from 'react-icons/io';
 import { BiSearch } from 'react-icons/bi';
 import MoveToButton from '../buttons/MoveToButton';
+import useModal from '../../hooks/useModal';
+import ProjectModal from '../modal/ProjectModal';
 
 const ProjectItemWrapper = styled.div`
   /* border: 1px solid red; */
@@ -97,6 +99,8 @@ const ProjectItemWrapper = styled.div`
 `;
 
 export default function NewProjectItem({ data }) {
+  const [openModal, onOpenModal, onCloseModal] = useModal();
+
   return (
     <ProjectItemWrapper>
       <div className={`imgWrapper${data.app ? ' app' : ''}`}>
@@ -113,7 +117,7 @@ export default function NewProjectItem({ data }) {
             <MoveToButton github={true} link={data.gitLink} />
           </li>
           <li>
-            <MoveToButton detail={true} data={data.detail} />
+            <MoveToButton detail={true} onOpenModal={onOpenModal} />
           </li>
         </ul>
         <div>
@@ -145,6 +149,9 @@ export default function NewProjectItem({ data }) {
           </div>
         </div>
       </div>
+      {openModal && (
+        <ProjectModal data={data.detail} onCloseModal={onCloseModal} />
+      )}
     </ProjectItemWrapper>
   );
 }

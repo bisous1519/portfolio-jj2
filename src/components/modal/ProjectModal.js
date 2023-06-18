@@ -27,7 +27,7 @@ export default function ProjectModal({ data, onCloseModal }) {
   return (
     <ModalLayout onCloseModal={onCloseModal}>
       <ProjectModalContainer>
-        <Viewer initialValue={data.detail} />
+        <Viewer initialValue={data} />
       </ProjectModalContainer>
     </ModalLayout>
   );
