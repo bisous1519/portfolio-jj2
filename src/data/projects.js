@@ -7,7 +7,11 @@ import {
   ssafastMain,
   ssafastConnAPI,
 } from '../assets/img';
-import { maliconDetail } from '../data/projectDetail';
+import {
+  maliconDetail,
+  eeumDetail,
+  ssafastDetail,
+} from '../data/projectDetail';
 import skillLogo from './skillLogo';
 
 const {
@@ -55,7 +59,7 @@ export const projectData = [
     subTitle: '자립준비청년의 자립을 돕는 파트너',
     date: '23.03 - 23.04',
     gitLink: 'https://github.com/bisous1519/E-Eum',
-    detail: '',
+    detail: eeumDetail,
     des: ['공통 컴포넌트 제작', '다이어리 페이지 구현', '관리자 페이지 구현'],
     app: true,
     src1: eeumMain,
@@ -70,7 +74,7 @@ export const projectData = [
     subTitle: '불편함을 해소하여 개발자 경험을 높이다',
     date: '23.04 - 23.05',
     gitLink: 'https://github.com/bisous1519/ssafast',
-    detail: '',
+    detail: ssafastDetail,
     des: [
       '공통 컴포넌트 제작',
       '워크스페이스 홈화면 구현',

@@ -13,5 +13,5 @@ export { default as Emotion } from './emotion_logo.png';
 export { default as Tailwind } from './tailwind_logo.png';
 export { default as ReactQuery } from './reactquery_logo.png';
 
-//Mui
+// github, gitlab, jira, notion
 
