@@ -1,10 +1,4 @@
 import {
-  IoMailOutline,
-  IoPhonePortraitOutline,
-  IoHomeOutline,
-} from 'react-icons/io5';
-import { VscGithubAlt } from 'react-icons/vsc';
-import {
   Apeach2 as Project1,
   Apeach3 as Project2,
   eeumMain as Project3,
@@ -24,41 +18,6 @@ import Sass from '../assets/icons/sass_logo.png';
 import Styledcomponents from '../assets/icons/styled-components_logo.png';
 import Typescript from '../assets/icons/typescript_logo.png';
 import Vuejs from '../assets/icons/vuejs_logo.png';
-
-export const contact = [
-  {
-    id: 1,
-    href: 'mailto:bisous1519@gmail.com',
-    target: '',
-    rel: '',
-    icon: <IoMailOutline />,
-    contact: 'bisous1519@gmail.com',
-  },
-  {
-    id: 2,
-    href: 'tel:010-3566-0340',
-    target: '',
-    rel: '',
-    icon: <IoPhonePortraitOutline />,
-    contact: '010.3566.0340',
-  },
-  {
-    id: 3,
-    href: 'https://velog.io/@bisous1519',
-    target: '_blank',
-    rel: 'noreferrer',
-    icon: <IoHomeOutline />,
-    contact: 'velog.io/@bisous1519',
-  },
-  {
-    id: 4,
-    href: 'https://github.com/bisous1519',
-    target: '_blank',
-    rel: 'noreferrer',
-    icon: <VscGithubAlt />,
-    contact: 'github.com/bisous1519',
-  },
-];
 
 export const skills = [
   {

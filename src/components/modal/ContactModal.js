@@ -35,7 +35,7 @@ export default function ContactModal({ onCloseModal }) {
       <ContactModalContainer>
         <ContactInfo />
         <p>
-          어쩌고 저쩌고 감사합니다 <FaRegSmile />
+          감사합니다 <FaRegSmile />
         </p>
       </ContactModalContainer>
     </ModalLayout>

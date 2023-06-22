@@ -1,6 +1,8 @@
 import React from 'react';
-import { contact } from '../../data/data';
+import contact from '../../data/contact';
 import styled from '@emotion/styled';
+import { HiOutlineArrowRightCircle } from 'react-icons/hi2';
+import { RxCopy } from 'react-icons/rx';
 
 const ContactInfoBox = styled.ul`
   display: flex;
@@ -37,6 +39,14 @@ export default function ContactInfo() {
             <li>
               <i>{v.icon}</i>
               {v.contact}
+              {v.moveIcon && (
+                <i>
+                  <HiOutlineArrowRightCircle />
+                </i>
+              )}
+              <i>
+                <RxCopy />
+              </i>
             </li>
           </a>
         ))}

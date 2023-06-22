@@ -67,9 +67,9 @@ export default function Header({ onOpenModal }) {
     <HeaderContainer className={headerVisible ? 'visible' : 'invisible'}>
       <div className='inner'>
         <ul>
-          <li>
+          {/* <li>
             <a href='javascript:void(0)'>이력서</a>
-          </li>
+          </li> */}
           <li>
             <a
               href='https://github.com/bisous1519'
@@ -83,12 +83,8 @@ export default function Header({ onOpenModal }) {
             </a>
           </li>
           <li>
-            <a
-              href='https://velog.io/@bisous1519'
-              target='_blank'
-              rel='noreferrer'
-            >
-              블로그
+            <a href='https://bit.ly/eomjii' target='_blank' rel='noreferrer'>
+              노션
               <i>
                 <FiExternalLink />
               </i>
