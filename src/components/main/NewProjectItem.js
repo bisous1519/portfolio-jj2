@@ -25,18 +25,19 @@ const ProjectItemWrapper = styled.div`
     flex-direction: column;
     gap: 15px;
     flex: 3.5;
-    /* max-height: 80vh; */
+    height: 90%;
     & > div {
       flex: 1;
       width: 100%;
-      /* height: 100%; */
+      height: 100%;
       border-radius: 15px;
       overflow: hidden;
       border: 0.7px solid #d9d9d9;
       /* box-shadow: ${({ theme }) => theme.shadowColor}; */
       & > img {
         width: 100%;
-        /* height: 100%; */
+        height: 100%;
+        object-fit: contain;
       }
     }
   }
