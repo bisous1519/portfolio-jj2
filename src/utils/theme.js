@@ -29,7 +29,8 @@ const theme = {
       xl: calcRem(18),
       subTitle: calcRem(23),
       title: calcRem(30),
-      xxl: calcRem(55),
+      xxl: calcRem(45),
+      xxxl: calcRem(60),
     },
     fontWeight: {
       base: 400,

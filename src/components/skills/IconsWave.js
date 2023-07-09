@@ -17,7 +17,7 @@ import IconItem from './SkillIcons';
 import SkillIcons from './SkillIcons';
 
 const IconsWaveContainer = styled.div`
-  margin-bottom: 50px;
+  margin-bottom: 60px;
   /* & > ul { */
   & > p {
     font-size: ${({ theme }) => theme.fontSize.base};

@@ -5,6 +5,7 @@ import IconsWave from '../skills/IconsWave';
 import useScrollFadeIn from '../../hooks/useScrollFadeIn';
 import SkillCard from '../skills/SkillCard';
 import skillData from '../../data/skills';
+import NewSkillCard from '../skills/NewSkillCard';
 
 const SkillsInnerlContainer = styled.div`
   & > div {
@@ -45,7 +46,9 @@ function SkillsInner() {
             <p className='subTitle'>{name}</p>
             <div className='cardsOuter'>
               {data &&
-                data.map((skill) => <SkillCard key={skill.id} data={skill} />)}
+                data.map((skill) => (
+                  <NewSkillCard key={skill.id} data={skill} />
+                ))}
             </div>
           </div>
         ))}

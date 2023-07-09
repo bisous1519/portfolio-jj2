@@ -1,16 +1,24 @@
 import styled from '@emotion/styled';
 import React from 'react';
-import EomjiBackground from '../assets/img/eomji.png';
 import { IoIosArrowDown } from 'react-icons/io';
 import { keyframes } from '@emotion/react';
+import {
+  eomji,
+  eomji1,
+  eomji2,
+  eomji3,
+  eomji4,
+  eomji5,
+  eomji6,
+} from '../assets/img';
 
 const oneKeyFrames = keyframes`
     0% {
-        transform: translateY(10px) scale(1.5);
+        transform: translateX(-30px);
         opacity: 0%;
     }
     100% {
-        transform: translateY(0px) scale(1);
+        transform: translateX(0px);
         opacity: 100%;
     }
 `;
@@ -25,64 +33,47 @@ const arrowKeyFrames = keyframes`
 `;
 
 const MainContainer = styled.div`
+  position: relative;
   width: 100%;
   height: 100vh;
-  /* border-radius: 0% 0% 7% 7%; */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: ${({ theme }) => theme.background}
-  /* background: linear-gradient(to bottom, #121212 90%, white); */
-  opacity: 90%;
-  box-shadow: ${({ theme }) => theme.shadowColor};
+  background-color: #e4fffd;
+  /* background-color: ${({ theme }) => theme.background} */
   & > .img-wrapper {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(30%, -45%);
+    width: 80%;
+    height: 80%;
     & > img {
-      /* position: fixed; */
-      width: 80%;
-      height: 80%;
+      width: 100%;
+      height: 100%;
       object-fit: contain;
-      filter: drop-shadow(2px 4px 6px black);
+      filter: drop-shadow(2px 4px 10px #555);
     }
   }
-  & > .introduction {
-    color: white;
-    width: 100%;
-    height: 100%;
+  & > ul.introduction {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translateY(50%);
     display: flex;
-    justify-content: center;
-    align-items: center;
-    & > ul {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 30px;
-      color: ${({ theme }) => theme.textColor.initial};
-      & > li {
-        .one,
-        .two {
-          transform: translateY(10px) scale(1.5);
-          opacity: 0%;
-          animation: ${oneKeyFrames} 1s ease-in forwards;
-        }
-        .two {
-          animation-delay: 0.6s;
-        }
+    flex-direction: column;
+    gap: 30px;
+    color: ${({ theme }) => theme.textColor.gray};
+    & > li {
+      font-size: ${({ theme }) => theme.fontSize.xxl};
+      transform: translateX(-30px);
+      opacity: 0%;
+      animation: ${oneKeyFrames} 0.6s ease-in forwards;
+      font-weight: ${({ theme }) => theme.fontWeight.bold};
+      &.two {
+        font-size: ${({ theme }) => theme.fontSize.title};
+        animation-delay: 0.3s;
       }
-      & b {
-        color: ${({ theme }) => theme.textColor.primary};
-        font-size: ${({ theme }) => theme.fontSize.xxl};
-        font-weight: ${({ theme }) => theme.fontWeight.bold};
-      }
-      & i {
-        color: ${({ theme }) => theme.textColor.lightPrimary};
-        font-size: ${({ theme }) => theme.fontSize.xl};
-        font-weight: ${({ theme }) => theme.fontWeight.bold};
+      &.three {
+        font-size: ${({ theme }) => theme.fontSize.xxxl};
+        animation-delay: 0.6s;
       }
     }
   }
@@ -97,7 +88,7 @@ const MainContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    color: ${({ theme }) => theme.textColor.gray};
+    color: ${({ theme }) => theme.textColor.lightGray};
     font-size: ${({ theme }) => theme.fontSize.xxl};
     animation: ${arrowKeyFrames} 0.8s ease-out alternate infinite;
   }
@@ -107,26 +98,17 @@ export default function NewMain() {
   return (
     <MainContainer>
       <div className='img-wrapper'>
-        <img src={EomjiBackground} alt='eomjiBackground' />
+        <img src={eomji6} alt='eomji' />
       </div>
-      <div className='introduction'>
-        <ul>
-          <li>
-            <div className='one'>
-              <b>1px의 가치를 아는</b> 프론트엔드 개발자,
-            </div>
-          </li>
-          <li>
-            <div className='two'>
-              <b>장엄지 입니다.</b>
-            </div>
-          </li>
-          <li className='three'>사용자 친화적인 UI/UX를 구현하기위해</li>
+      <ul className='introduction'>
+        <li className='one'>사용자 관점에서 생각하는</li>
+        <li className='two'>프론트엔드 개발자,</li>
+        <li className='three'>장엄지 입니다.</li>
+        {/* <li className='three'>사용자 친화적인 UI/UX를 구현하기위해</li>
           <li className='four'>
             <i>끊임없이 고민</i> 합니다.
-          </li>
-        </ul>
-      </div>
+          </li> */}
+      </ul>
       <div className='arrow'>
         <IoIosArrowDown />
       </div>

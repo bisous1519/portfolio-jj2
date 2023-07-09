@@ -1,7 +1,7 @@
 import React from 'react';
-import ProfileImg from '../../assets/img/eomji.png';
 import ContactInfo from './ContactInfo';
 import styled from '@emotion/styled';
+import { eomji1 } from '../../assets/img';
 
 const IntroductionContainer = styled.article`
   width: 100%;
@@ -65,7 +65,7 @@ export default function Introduction() {
   return (
     <IntroductionContainer>
       <div className='imgWrapper'>
-        <img src={ProfileImg} alt='profileImage' />
+        <img src={eomji1} alt='profileImage' />
       </div>
       <div className='introduction'>
         <p>
