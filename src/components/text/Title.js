@@ -15,6 +15,7 @@ const TitleContainer = styled.div`
   margin-bottom: 50px;
   /* color: ${({ theme }) => theme.textColor.primary}; */
   font-size: ${({ theme }) => theme.fontSize.title};
+  display: inline-block;
   /* font-weight: ${({ theme }) => theme.fontWeight.bold}; */
   /* &::after {
     content: '';
