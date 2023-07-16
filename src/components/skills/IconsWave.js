@@ -19,31 +19,25 @@ import SkillIcons from './SkillIcons';
 const IconsWaveContainer = styled.div`
   margin-bottom: 50px;
   /* & > ul { */
-  & > div {
+  & > p {
+    font-size: ${({ theme }) => theme.fontSize.base};
+    color: ${({ theme }) => theme.textColor.lightGray};
+    margin-bottom: 15px;
+  }
+  & > div.iconsWave {
     &.invisible {
       opacity: 0;
     }
     opacity: 1;
     transform: ${(props) => `translateX(${props.halfInnerW + 15}px)`};
     transition: opacity 0.3s;
-    margin-bottom: 20px;
-  }
-  /* & > li {
-      width: 30px;
-      height: 30px;
-      border-radius: 10px;
-      overflow: hidden;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      box-shadow: ${({ theme }) => theme.shadowColor};
-      & > img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+    margin-bottom: 30px;
+    & > ul.skillIcons {
+      gap: 20px !important;
+      & > li {
       }
-    } */
-  /* } */
+    }
+  }
 `;
 
 function WaveBox({ logoArr, sPoint, ePoint }) {
@@ -55,9 +49,6 @@ function WaveBox({ logoArr, sPoint, ePoint }) {
   const [scrollPercent, setScrollPercent] = useState(0);
 
   const iconsWaveEl = useRef();
-
-  //   const sPoint = 45; // scrollPercent가 45% 부터
-  //   const ePoint = 80; // scrollPercent가 85% 일 때 까지
 
   useEffect(() => {
     if (halfInnerW.current && iconsWaveEl.current && iconsWaveVisible) {
@@ -99,22 +90,48 @@ function WaveBox({ logoArr, sPoint, ePoint }) {
 export default function IconsWave() {
   const {
     js,
-    nextjs,
+    ts,
     react,
+    vue,
+    nextjs,
+    reactNative,
+
     redux,
     reduxSaga,
+    recoil,
+    reactQuery,
     sass,
     styledComponent,
-    ts,
-    vue,
+    emotion,
+    tailwind,
+
+    java,
+    springBoot,
+    mySQL,
+    git,
+    jira,
   } = skillLogo;
-  const logoArr1 = [js, ts, react, vue, nextjs];
-  const logoArr2 = [redux, reduxSaga, sass, styledComponent];
+  const logoArr1 = [js, ts, react, vue, nextjs, reactNative];
+  const logoArr2 = [
+    redux,
+    reduxSaga,
+    recoil,
+    reactQuery,
+    sass,
+    styledComponent,
+    emotion,
+    tailwind,
+  ];
+  const logoArr3 = [java, springBoot, mySQL, git, jira];
 
   return (
     <IconsWaveContainer>
+      <p>프론트엔드</p>
       <WaveBox logoArr={logoArr1} sPoint={35} ePoint={70} />
+      <p>상태관리 라이브러리, CSS</p>
       <WaveBox logoArr={logoArr2} sPoint={40} ePoint={73} />
+      <p>백엔드, 협업 툴</p>
+      <WaveBox logoArr={logoArr3} sPoint={55} ePoint={76} />
     </IconsWaveContainer>
   );
 }

@@ -12,6 +12,11 @@ export { default as Recoil } from './recoil_logo.png';
 export { default as Emotion } from './emotion_logo.png';
 export { default as Tailwind } from './tailwind_logo.png';
 export { default as ReactQuery } from './reactquery_logo.png';
+export { default as JavaLogo } from './java_logo.png';
+export { default as SpringBoot } from './springBoot_logo.png';
+export { default as MySQL } from './mysql_logo.png';
+export { default as Git } from './git_logo.png';
+export { default as Jira } from './jira_logo.jpeg';
 
 // github, gitlab, jira, notion
 

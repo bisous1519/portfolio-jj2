@@ -29,6 +29,7 @@ const {
   emotion,
   tailwind,
   reactQuery,
+  java,
 } = skillLogo;
 
 export const projectData = [

@@ -13,6 +13,11 @@ import {
   Emotion,
   Tailwind,
   ReactQuery,
+  JavaLogo,
+  SpringBoot,
+  MySQL,
+  Git,
+  Jira,
 } from '../assets/icons';
 
 const js = { src: JSlogo, alt: 'javascript logo', des: 'Javascript' };
@@ -45,6 +50,15 @@ const reactNative = {
 const recoil = { src: Recoil, alt: 'Recoil logo', des: 'Recoil' };
 const emotion = { src: Emotion, alt: 'Emotion logo', des: 'emotion' };
 const tailwind = { src: Tailwind, alt: 'Tailwind logo', des: 'Tailwind' };
+const java = { src: JavaLogo, alt: 'Java logo', des: 'Java' };
+const springBoot = {
+  src: SpringBoot,
+  alt: 'SpringBoot logo',
+  des: 'Spring Boot',
+};
+const mySQL = { src: MySQL, alt: 'MySQL logo', des: 'mySQL' };
+const git = { src: Git, alt: 'Git logo', des: 'git' };
+const jira = { src: Jira, alt: 'Jira logo', des: 'Jira' };
 
 const skillLogo = {
   js,
@@ -61,6 +75,11 @@ const skillLogo = {
   styledComponent,
   emotion,
   tailwind,
+  java,
+  springBoot,
+  mySQL,
+  git,
+  jira,
 };
 export default skillLogo;
 

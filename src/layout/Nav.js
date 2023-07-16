@@ -12,14 +12,18 @@ const NavContainer = styled.div`
     left: 0;
     margin: 0 auto;
     width: 100px;
+    display: flex;
+    flex-direction: column;
+    /* gap: 3px; */
     li {
+      /* border: 1px solid red; */
       font-size: ${({ theme }) => theme.fontSize.base};
-      margin: 10px 0;
       padding: 10px 5px;
-      color: ${({ theme }) => theme.textColor.initial};
+      color: ${({ theme }) => theme.textColor.lightGray};
       cursor: pointer;
       &:nth-child(${({ selected }) => selected}) {
         color: ${({ theme }) => theme.textColor.primary};
+        font-weight: ${({ theme }) => theme.fontWeight.bold};
       }
     }
   }
@@ -56,10 +60,11 @@ export default function Nav() {
   return (
     <NavContainer selected={selected}>
       <ul>
-        <li onClick={() => onClickNav(1, topArr[1])}>프로필</li>
+        <li onClick={() => onClickNav(1, topArr[1])}>소개</li>
         <li onClick={() => onClickNav(2, topArr[2])}>기술스택</li>
-        <li onClick={() => onClickNav(3, topArr[3])}>팀프로젝트</li>
-        <li onClick={() => onClickNav(4, topArr[4])}>개인프로젝트</li>
+        <li onClick={() => onClickNav(3, topArr[3])}>프로젝트</li>
+        <li onClick={() => onClickNav(4, topArr[4])}>수상경력</li>
+        <li onClick={() => onClickNav(5, topArr[5])}>경험</li>
       </ul>
       <TopButton />
     </NavContainer>

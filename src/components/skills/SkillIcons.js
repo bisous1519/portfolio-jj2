@@ -50,7 +50,7 @@ const SkillIconsBox = styled.ul`
 
 export default function SkillIcons({ datas }) {
   return (
-    <SkillIconsBox>
+    <SkillIconsBox className='skillIcons'>
       {datas.length > 0 &&
         datas.map((data, idx) => (
           <li key={`iconitem-${idx}`}>

@@ -1,7 +1,6 @@
 import styled from '@emotion/styled';
 import React, { useRef } from 'react';
 import Title from '../text/Title';
-import { JSlogo, Nextjslogo, Reactlogo, Reduxlogo } from '../../assets/icons';
 import IconsWave from '../skills/IconsWave';
 import useScrollFadeIn from '../../hooks/useScrollFadeIn';
 import SkillCard from '../skills/SkillCard';

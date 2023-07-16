@@ -1,6 +1,31 @@
+import skillLogo from '../data/skillLogo';
+
+const {
+  js,
+  ts,
+  react,
+  reactNative,
+  vue,
+  nextjs,
+  redux,
+  reduxSaga,
+  reactQuery,
+  recoil,
+  sass,
+  styledComponent,
+  emotion,
+  tailwind,
+  java,
+  springBoot,
+  mySQL,
+  git,
+  jira,
+} = skillLogo;
+
 const frontendSkills = [
   {
     id: 'skills-1',
+    icon: js,
     name: 'Javascript',
     des: [
       'ES6를 이해하고 있습니다.',
@@ -10,6 +35,7 @@ const frontendSkills = [
   },
   {
     id: 'skills-3',
+    icon: ts,
     name: 'Typescript',
     des: [
       'Type-safe한 코드를 코드를 작성할 수 있습니다.',
@@ -20,6 +46,7 @@ const frontendSkills = [
   },
   {
     id: 'skills-2',
+    icon: react,
     name: 'React',
     des: [
       '라이프 사이클을 이해하고 있습니다.',
@@ -28,7 +55,14 @@ const frontendSkills = [
     ],
   },
   {
+    id: 'skills-10',
+    icon: reactNative,
+    name: 'React Native',
+    des: ['', '', ''],
+  },
+  {
     id: 'skills-4',
+    icon: redux,
     name: 'Redux',
     des: [
       '클라이언트 단에서 발생한 데이터나, 서버에서 가져온 데이터를 전역적이고 체계적으로 관리할 수 있습니다.',
@@ -45,6 +79,7 @@ const frontendSkills = [
 const backendSkills = [
   {
     id: 'skills-5',
+    icon: java,
     name: 'Java',
     des: [
       '기능별로 분류하여 API를 작성하여 클라이언트로부터 온 요청을 처리할 수 있습니다.',
@@ -54,6 +89,7 @@ const backendSkills = [
   },
   {
     id: 'skills-6',
+    icon: springBoot,
     name: 'Spring Boot',
     des: [
       'Spring Boot의 장점을 이해하고 활용할 수 있습니다.',
@@ -63,6 +99,7 @@ const backendSkills = [
   },
   {
     id: 'skills-7',
+    icon: mySQL,
     name: 'MySQL',
     des: [
       'SQL문을 통해 테이블을 조회하고 데이터를 변경할 수 있습니다.',
@@ -75,7 +112,8 @@ const backendSkills = [
 const toolsSkills = [
   {
     id: 'skills-8',
-    name: 'Github',
+    icon: git,
+    name: 'Git',
     des: [
       '깃 컨벤션을 지키려 노력합니다.',
       'branch 분기를 통해 협업할 수 있습니다.',
@@ -84,6 +122,7 @@ const toolsSkills = [
   },
   {
     id: 'skills-9',
+    icon: jira,
     name: 'Jira',
     des: [
       '에자일 방법론을 이해하고 에자일하게 개발할 수 있습니다.',
