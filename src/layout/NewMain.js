@@ -62,6 +62,7 @@ const MainContainer = styled.div`
     gap: 30px;
     color: ${({ theme }) => theme.textColor.gray};
     & > li {
+      font-family: '양진체', 'Yeongdeok', 'Yeongdo' !important;
       font-size: ${({ theme }) => theme.fontSize.xxl};
       transform: translateX(-30px);
       opacity: 0%;

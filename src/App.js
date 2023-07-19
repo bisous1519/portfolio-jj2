@@ -4,16 +4,22 @@ import NewLayout from './layout/NewLayout';
 import ModeProvider from './hooks/ThemeContext';
 import { createContext, useEffect, useState } from 'react';
 import throttle from 'lodash.throttle';
+// import Yeongdo from './assets/fonts/YeongdoOTF.otf';
+// import './index.css';
 
 const globalStyle = css`
   * {
     box-sizing: border-box;
+    font-family: 'Pretendard', 'Noto Sans KR', 'sans-serif' !important;
   }
   html {
     /* scroll-behavior: smooth; */
   }
   body {
     overflow: overlay;
+    overflow-x: hidden !important;
+    /* font-family: 'Yeongdo'; */
+    /* font-family: 'Pretendard'; */
   }
   body::-webkit-scrollbar {
     width: 6px;
