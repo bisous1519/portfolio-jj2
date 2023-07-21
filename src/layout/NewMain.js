@@ -40,31 +40,31 @@ const MainContainer = styled.div`
   /* background-color: ${({ theme }) => theme.background} */
   & > .img-wrapper {
     position: absolute;
-    top: 50%;
-    right: 50%;
-    transform: translate(30%, -45%);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-30%);
     width: 80%;
-    height: 80%;
+    height: 93%;
     & > img {
       width: 100%;
       height: 100%;
       object-fit: contain;
-      filter: drop-shadow(2px 4px 10px #555);
+      /* filter: drop-shadow(2px 4px 10px #555); */
     }
   }
   & > ul.introduction {
     position: absolute;
     bottom: 50%;
-    left: 50%;
+    right: 52%;
     transform: translateY(50%);
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 70px;
     color: ${({ theme }) => theme.textColor.gray};
     & > li {
       font-family: '양진체', 'Yeongdeok', 'Yeongdo' !important;
       font-size: ${({ theme }) => theme.fontSize.xxl};
-      transform: translateX(-30px);
+      /* transform: translateX(30px); */
       opacity: 0%;
       animation: ${oneKeyFrames} 0.6s ease-in forwards;
       font-weight: ${({ theme }) => theme.fontWeight.bold};
@@ -89,7 +89,9 @@ const MainContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    color: ${({ theme }) => theme.textColor.lightGray};
+    color: ${({ theme }) => theme.textColor.reverse};
+    /* filter: drop-shadow(2px 4px 10px #555); */
+    /* box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); */
     font-size: ${({ theme }) => theme.fontSize.xxl};
     animation: ${arrowKeyFrames} 0.8s ease-out alternate infinite;
   }
@@ -99,7 +101,7 @@ export default function NewMain() {
   return (
     <MainContainer>
       <div className='img-wrapper'>
-        <img src={eomji6} alt='eomji' />
+        <img src={eomji1} alt='eomji' />
       </div>
       <ul className='introduction'>
         <li className='one'>사용자 관점에서 생각하는</li>
