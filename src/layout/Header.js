@@ -4,7 +4,7 @@ import ToggleButton from '../components/buttons/ToggleButton';
 import styled from '@emotion/styled';
 import useScrollVisible from '../hooks/useScrollVisible';
 
-const HeaderContainer = styled.div`
+const HeaderContainer = styled.header`
   &.invisible {
     opacity: 0%;
   }
@@ -12,7 +12,7 @@ const HeaderContainer = styled.div`
   top: 0;
   width: 100vw;
   height: 60px;
-  background-color: ${({ theme }) => theme.background};
+  backdrop-filter: blur(6px);
   opacity: 100%;
   transition: background-color 0.3s, opacity 0.3s;
   z-index: 9999;
