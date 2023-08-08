@@ -17,6 +17,7 @@ export { default as SpringBoot } from './springBoot_logo.png';
 export { default as MySQL } from './mysql_logo.png';
 export { default as Git } from './git_logo.png';
 export { default as Jira } from './jira_logo.jpeg';
+export { default as CSSlogo } from './css_logo.png';
 
 // github, gitlab, jira, notion
 

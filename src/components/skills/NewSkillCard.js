@@ -43,7 +43,11 @@ const SkillCardsBox = styled.article`
         & > li {
           width: 25px;
           height: 6px;
-          background-color: ${({ theme }) => theme.textColor.lightPrimary};
+          border-radius: 3px;
+          background-color: ${({ theme }) => theme.textColor.lightGray};
+          &.fill {
+            background-color: ${({ theme }) => theme.textColor.lightPrimary};
+          }
         }
       }
     }
@@ -87,11 +91,12 @@ export default function NewSkillCard({ data }) {
         <div className='title'>
           <p>{data.name}</p>
           <ul className='bar'>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            {new Array(data.lv).fill(null).map(() => (
+              <li className='fill'></li>
+            ))}
+            {new Array(5 - data.lv).fill(null).map(() => (
+              <li></li>
+            ))}
           </ul>
         </div>
         <ul className='des'>

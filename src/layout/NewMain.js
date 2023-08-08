@@ -36,7 +36,8 @@ const MainContainer = styled.div`
   position: relative;
   width: 100%;
   height: 100vh;
-  background-color: #e4fffd;
+  background-color: #e4f2f2;
+  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.15);
   /* background-color: ${({ theme }) => theme.background} */
   & > .img-wrapper {
     position: absolute;

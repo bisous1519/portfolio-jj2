@@ -10,7 +10,6 @@ import throttle from 'lodash.throttle';
 const globalStyle = css`
   * {
     box-sizing: border-box;
-    font-family: 'Pretendard', 'Noto Sans KR', 'sans-serif' !important;
   }
   html {
     /* scroll-behavior: smooth; */
@@ -18,8 +17,6 @@ const globalStyle = css`
   body {
     overflow: overlay;
     overflow-x: hidden !important;
-    /* font-family: 'Yeongdo'; */
-    /* font-family: 'Pretendard'; */
   }
   body::-webkit-scrollbar {
     width: 6px;

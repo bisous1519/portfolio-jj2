@@ -18,6 +18,7 @@ import {
   MySQL,
   Git,
   Jira,
+  CSSlogo,
 } from '../assets/icons';
 
 const js = { src: JSlogo, alt: 'javascript logo', des: 'Javascript' };
@@ -42,6 +43,7 @@ const styledComponent = {
   alt: 'StyledComponents logo',
   des: 'styled-components',
 };
+const css = { src: CSSlogo, alt: 'CSS logo', des: 'CSS' };
 const reactNative = {
   src: ReactNative,
   alt: 'ReactNative logo',
@@ -80,6 +82,7 @@ const skillLogo = {
   mySQL,
   git,
   jira,
+  css,
 };
 export default skillLogo;
 

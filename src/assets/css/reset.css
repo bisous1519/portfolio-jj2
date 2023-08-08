@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url('//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css');
 
 html,
 body,
@@ -87,7 +88,9 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
-  font-family: "Noto Sans KR", sans-serif;
+  /* font-family: "Noto Sans KR", sans-serif; */
+  font-family: 'Pretendard', 'Spoqa Han Sans', 'Spoqa Han Sans JP',
+    'Noto Sans KR', 'sans-serif';
 }
 * {
   box-sizing: border-box;
@@ -95,7 +98,7 @@ video {
 a {
   color: #000;
 }
-body{
+body {
   overflow-x: hidden;
 }
 /* HTML5 display-role reset for older browsers */
@@ -127,10 +130,11 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: "";
+  content: '';
   content: none;
 }
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+

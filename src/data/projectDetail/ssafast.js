@@ -27,28 +27,29 @@ Figma, Notion, Postman, Swagger, Locust 등
 - 전문가 자격을 지닌 사용자와 연결하여 상담을 지원합니다.
 
 ## 프론트엔드 기술 스택
-img img img img img
-~~사용..이유?~~
+**React, Next.js, Typescript, Redux, React Query, Tailwind**
+
 
 ## 맡은 역할
 **요약** : 네비게이션과 스택 세팅, 공통 컴포넌트 제작, theme.js
 
 **세부내용**
 
-img
+### 1.
 **Natigation과 Stack**을 쌓아 효율적인 페이지 이동의 구성을 만들었습니다.
 스택 헤더를 숨기고 왼쪽 하단에 페이지 이동 버튼을 구현하여 사용자에게 보다 깔끔한 UI를 제공하였습니다.
 
-img
+### 2.
 **공통 컴포넌트 제작**으로 일관된 UI를 제공하여 사용자 경험을 높였습니다.
 
-img
+### 3.
 폰트 사이즈나 자주 쓰이는 색상등을 객체화하여 **theme.js**파일로 작성했습니다. styled-component에서 제공하는 ThemeProvider 컴포넌트를 통해 모든 컴포넌트에서 편하게 사용할 수 있도록 하여 개발 속도를 향상시켰습니다.
 
 ## 프로젝트 성과
+서비스의 실용성을 인정받아 **'삼성 청년 SW 아카데미(SSAFY) 자율프로젝트 우수상'**을 수여하였습니다.
+`;
 
-
-## 프로젝트 리뷰`;
+// ## 프로젝트 리뷰
 
 export default data;
 

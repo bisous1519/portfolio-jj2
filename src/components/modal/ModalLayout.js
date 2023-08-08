@@ -6,7 +6,7 @@ const ModalLayoutContainer = styled.div`
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 10000;
+  z-index: 999999;
   width: 100vw;
   height: 100vh;
   background-color: ${({ theme }) => theme.layerColor};

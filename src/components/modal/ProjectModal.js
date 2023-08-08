@@ -20,6 +20,10 @@ const ProjectModalContainer = styled.section`
         color: ${({ theme }) => theme.textColor.lightGray};
       }
     }
+    strong {
+      color: ${({ theme }) => theme.textColor.primary};
+      font-weight: ${({ theme }) => theme.fontWeight.bolder};
+    }
   }
 `;
 
