@@ -3,4 +3,4 @@ export { default as Introduction } from './Introduction';
 export { default as NewSkills } from './NewSkills';
 export { default as ProjectItem } from './ProjectItem';
 export { default as Projects } from './Projects';
-export { default as Skills } from './Skills';
+

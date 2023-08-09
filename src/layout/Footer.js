@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { AiOutlineCopyrightCircle } from 'react-icons/ai';
 import styled from '@emotion/styled';
 
-export const FooterContainer = styled.div`
+const FooterContainer = styled.div`
   width: 100%;
   height: 30px;
   margin-bottom: 15px;

@@ -3,7 +3,7 @@ import throttle from 'lodash.throttle';
 import TopButton from '../components/buttons/TopButton';
 import styled from '@emotion/styled';
 
-const NavContainer = styled.div`
+const NavContainer = styled.nav`
   width: 155px;
   & > ul {
     position: sticky;
@@ -62,9 +62,15 @@ export default function Nav() {
       <ul>
         <li onClick={() => onClickNav(1, topArr[1])}>소개</li>
         <li onClick={() => onClickNav(2, topArr[2])}>기술스택</li>
-        <li onClick={() => onClickNav(3, topArr[3])}>프로젝트</li>
-        <li onClick={() => onClickNav(4, topArr[4])}>수상경력</li>
-        <li onClick={() => onClickNav(5, topArr[5])}>경험</li>
+        <li onClick={() => onClickNav(3, topArr[3])}>
+          <p>프로젝트</p>
+          <ul>
+            <li>마리콘</li>
+            <li>이음</li>
+            <li>싸패스트</li>
+          </ul>
+        </li>
+        <li onClick={() => onClickNav(4, topArr[4])}>수상 및 교육</li>
       </ul>
       <TopButton />
     </NavContainer>
