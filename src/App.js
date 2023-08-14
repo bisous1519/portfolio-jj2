@@ -17,6 +17,7 @@ const globalStyle = css`
   body {
     overflow: overlay;
     overflow-x: hidden !important;
+    transition: all 0.3s;
   }
   body::-webkit-scrollbar {
     width: 6px;

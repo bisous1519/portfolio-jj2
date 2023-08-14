@@ -14,10 +14,11 @@ export default function useModal() {
   };
   useEffect(() => {
     if (openModal) {
-      document.body.style.overflow = 'hidden';
+      // document.body.style.overflow = 'hidden';
     } else {
-      document.body.style.overflow = 'overlay';
+      // document.body.style.overflow = 'overlay';
     }
   }, [openModal]);
   return [openModal, onOpenModal, onCloseModal];
 }
+

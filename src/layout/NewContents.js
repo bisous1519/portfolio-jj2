@@ -4,7 +4,9 @@ import Nav from './Nav';
 import { NewSkills } from '../components/main';
 import NewProjects from '../components/main/NewProjects';
 
-const NewContentsContainer = styled.div``;
+const NewContentsContainer = styled.div`
+  width: 100%;
+`;
 
 export default function NewContents() {
   return (
