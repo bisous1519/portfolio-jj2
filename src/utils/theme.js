@@ -20,6 +20,8 @@ const theme = {
       light: '#FCFCFC',
       dark: '#2B2B2B',
     },
+    // lineColor: '#e2e2e2',
+    lineColor: '#d9d9d9',
     shadowColor: '1px 1px 3px rgba(0, 0, 0, 0.2)',
     layerColor: 'rgba(115, 115, 115, 0.4)',
     fontSize: {

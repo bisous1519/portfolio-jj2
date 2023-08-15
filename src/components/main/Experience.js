@@ -11,21 +11,18 @@ const ExperienceContainer = styled.section`
   & > div {
     flex: 1;
     &.awards {
+      padding-right: 30px;
+      border-right: 0.7px solid ${({ theme }) => theme.lineColor};
       & > div {
         & > ul {
-          margin-top: 50px;
-          display: flex;
-          flex-direction: column;
-          gap: 30px;
           & > li {
-            display: flex;
-            gap: 10px;
             & > i {
+              color: #ffb800;
             }
             & > span {
+              font-weight: ${({ theme }) => theme.fontWeight.bold};
             }
             & > ul {
-              /* flex: 1; */
               display: flex;
               flex-direction: column;
               gap: 10px;
@@ -37,29 +34,43 @@ const ExperienceContainer = styled.section`
       }
     }
     &.experience {
-      & > ul {
-        & > li {
-          & > i {
-          }
-          & > ul {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            & > li {
+      padding-left: 30px;
+      & > div {
+        & > ul {
+          & > li {
+            & > i {
+              color: #009dcf;
+            }
+            & > ul {
+              display: flex;
+              flex-direction: column;
+              gap: 10px;
+              & > li:first-child {
+                font-weight: ${({ theme }) => theme.fontWeight.bold};
+              }
             }
           }
         }
       }
     }
-    & > ul {
-      margin-top: 50px;
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-      & > li {
+    & > div {
+      max-width: 400px;
+      margin: 0 auto;
+      & > ul {
+        margin-top: 50px;
         display: flex;
-        gap: 10px;
+        flex-direction: column;
+        gap: 30px;
+        & > li {
+          display: flex;
+          gap: 20px;
+          & > ul {
+            & > li.gray {
+              color: ${({ theme }) => theme.textColor.lightGray};
+              font-size: ${({ theme }) => theme.fontSize.small};
+            }
+          }
+        }
       }
     }
   }
@@ -69,8 +80,8 @@ export default function Experience() {
   return (
     <ExperienceContainer>
       <div className='awards'>
-        <Title name='수상' />
         <div>
+          <Title name='수상' />
           <ul>
             {awards &&
               awards.map((data) => (
@@ -81,8 +92,8 @@ export default function Experience() {
                   <span>{data.name}</span>
                   <ul>
                     <li>{data.host}</li>
-                    <li>{data.desc}</li>
-                    <li>{data.date}</li>
+                    <li className='gray'>{data.desc}</li>
+                    <li className='gray'>{data.date}</li>
                   </ul>
                 </li>
               ))}
@@ -90,22 +101,24 @@ export default function Experience() {
         </div>
       </div>
       <div className='experience'>
-        <Title name='교육' />
-        <ul>
-          {experience &&
-            experience.map((data) => (
-              <li key={`experience-${data.id}`}>
-                <i>
-                  <LuGraduationCap />
-                </i>
-                <ul>
-                  <li>{data.name}</li>
-                  <li>{data.date}</li>
-                  <li>{data.desc}</li>
-                </ul>
-              </li>
-            ))}
-        </ul>
+        <div>
+          <Title name='교육' />
+          <ul>
+            {experience &&
+              experience.map((data) => (
+                <li key={`experience-${data.id}`}>
+                  <i>
+                    <LuGraduationCap />
+                  </i>
+                  <ul>
+                    <li>{data.name}</li>
+                    <li>{data.date}</li>
+                    <li className='gray'>{data.desc}</li>
+                  </ul>
+                </li>
+              ))}
+          </ul>
+        </div>
       </div>
     </ExperienceContainer>
   );

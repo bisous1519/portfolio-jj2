@@ -32,7 +32,7 @@ const ProjectItemWrapper = styled.li`
       height: 100%;
       border-radius: 15px;
       overflow: hidden;
-      border: 0.7px solid #d9d9d9;
+      border: ${({ theme }) => `0.7px solid ${theme.lineColor}`};
       /* box-shadow: ${({ theme }) => theme.shadowColor}; */
       & > img {
         width: 100%;
