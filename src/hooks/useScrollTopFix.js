@@ -3,21 +3,6 @@ import { useCallback, useEffect, useRef } from 'react';
 const useScrollTopFix = (direction = 'up', duration = 1, delay = 0) => {
   const dom = useRef();
 
-  const handleDirection = (dir) => {
-    switch (dir) {
-      case 'up':
-        return 'translate3d(0, 50%, 0)';
-      case 'down':
-        return 'translate3d(0, -50%, 0)';
-      case 'left':
-        return 'translate3d(50%, 0, 0)';
-      case 'right':
-        return 'translate3d(-50%, 0, 0)';
-      default:
-        return;
-    }
-  };
-
   const handleScroll = useCallback(
     ([entry]) => {
       const { current } = dom;

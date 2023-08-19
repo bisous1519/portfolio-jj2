@@ -3,6 +3,7 @@ import React from 'react';
 import Title from '../text/Title';
 import { PiCircleBold } from 'react-icons/pi';
 import intro from '../../data/intro';
+import useScrollFadeIn from '../../hooks/useScrollFadeIn';
 
 const NewIntroContainer = styled.section`
   & > ul {
@@ -13,6 +14,7 @@ const NewIntroContainer = styled.section`
     gap: 80px;
     & > li {
       max-width: 250px;
+      /* animation-delay: 2s; */
       & > p {
         margin-bottom: 30px;
         font-size: ${({ theme }) => theme.fontSize.lg};
@@ -53,6 +55,27 @@ const NewIntroContainer = styled.section`
   }
 `;
 
+function IntroItem({ data, dataIdx }) {
+  const fadeInAnimation = useScrollFadeIn({ delay: dataIdx * 0.3 });
+  return (
+    <li key={`intro-${dataIdx}`} {...fadeInAnimation}>
+      <p>
+        <strong>{data.who}</strong>를 생각합니다.
+      </p>
+      <ul>
+        {data.line.map((line, lineIdx) => (
+          <li key={`intro-${dataIdx}-${lineIdx}`}>
+            <i>
+              <PiCircleBold />
+            </i>
+            <p dangerouslySetInnerHTML={{ __html: line }} />
+          </li>
+        ))}
+      </ul>
+    </li>
+  );
+}
+
 export default function NewIntro() {
   return (
     <NewIntroContainer>
@@ -60,21 +83,7 @@ export default function NewIntro() {
       <ul>
         {intro &&
           intro.map((data, dataIdx) => (
-            <li key={`intro-${dataIdx}`}>
-              <p>
-                <strong>{data.who}</strong>를 생각합니다.
-              </p>
-              <ul>
-                {data.line.map((line, lineIdx) => (
-                  <li key={`intro-${dataIdx}-${lineIdx}`}>
-                    <i>
-                      <PiCircleBold />
-                    </i>
-                    <p dangerouslySetInnerHTML={{ __html: line }} />
-                  </li>
-                ))}
-              </ul>
-            </li>
+            <IntroItem data={data} dataIdx={dataIdx} />
           ))}
       </ul>
     </NewIntroContainer>

@@ -10,12 +10,11 @@ const TitleContainer = styled.div`
 `;
 
 export default function Title({ name }) {
-  const fadeInAnimation = useScrollFadeIn();
+  // const fadeInAnimation = useScrollFadeIn();
   const topFix = useScrollTopFix();
   return (
-    <TitleContainer {...fadeInAnimation} {...topFix}>
-      {name}
-    </TitleContainer>
+    // <TitleContainer {...fadeInAnimation} {...topFix}>
+    <TitleContainer {...topFix}>{name}</TitleContainer>
   );
 }
 

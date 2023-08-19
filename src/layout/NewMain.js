@@ -4,9 +4,9 @@ import { IoIosArrowDown } from 'react-icons/io';
 import { keyframes } from '@emotion/react';
 import { eomji1 } from '../assets/img';
 
-const oneKeyFrames = keyframes`
+const titleKeyFrames = keyframes`
     0% {
-        transform: translateX(-30px);
+        transform: translateX(30px);
         opacity: 0%;
     }
     100% {
@@ -59,7 +59,7 @@ const MainContainer = styled.div`
       font-size: ${({ theme }) => theme.fontSize.xxl};
       /* transform: translateX(30px); */
       opacity: 0%;
-      animation: ${oneKeyFrames} 0.6s ease-in forwards;
+      animation: ${titleKeyFrames} 0.6s ease-in forwards;
       font-weight: ${({ theme }) => theme.fontWeight.bold};
       &.two {
         font-size: ${({ theme }) => theme.fontSize.title};

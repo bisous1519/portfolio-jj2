@@ -39,6 +39,7 @@ const globalStyle = css`
 `;
 
 export const ScrollContext = createContext();
+// export const 
 
 function App() {
   const [scrollPosition, setScrollPosition] = useState(0);
