@@ -20,7 +20,7 @@ const IconsWaveContainer = styled.div`
   margin-bottom: 60px;
   /* & > ul { */
   & > p {
-    font-size: ${({ theme }) => theme.fontSize.base};
+    font-size: ${({ theme }) => theme.fontSize.small};
     color: ${({ theme }) => theme.textColor.lightGray};
     margin-bottom: 15px;
   }

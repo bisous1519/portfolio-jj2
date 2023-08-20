@@ -12,7 +12,7 @@ const TitleContainer = styled.div`
   opacity: 100%;
   transform: translateY(0px);
   transition: all ease-in-out 0.2s !important; */
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
   /* color: ${({ theme }) => theme.textColor.primary}; */
   font-size: ${({ theme }) => theme.fontSize.title};
   display: inline-block;

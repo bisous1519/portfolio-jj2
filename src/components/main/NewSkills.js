@@ -59,7 +59,7 @@ function SkillsInner() {
 export default function NewSkills() {
   return (
     <SkillsContainer>
-      <Title name='기술스택' />
+      <Title name='사용할 수 있는 기술스택 입니다' />
       <div className='inner'>
         <IconsWave />
         <SkillsInner />

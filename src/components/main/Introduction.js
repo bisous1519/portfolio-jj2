@@ -27,17 +27,17 @@ const IntroductionContainer = styled.article`
     /* border: 1px solid red; */
     margin-left: 70px;
     & > p {
-      font-size: ${({ theme }) => theme.fontSize.base};
+      font-size: ${({ theme }) => theme.fontSize.small};
       color: ${({ theme }) => theme.textColor.initial};
       line-height: 20px;
       h2 {
         display: inline-block;
         color: ${({ theme }) => theme.textColor.primary};
-        font-size: ${({ theme }) => theme.fontSize.xl};
+        font-size: ${({ theme }) => theme.fontSize.lg};
       }
       b {
         color: ${({ theme }) => theme.textColor.primary};
-        font-size: ${({ theme }) => theme.fontSize.lg};
+        font-size: ${({ theme }) => theme.fontSize.base};
       }
     }
     & > ul {

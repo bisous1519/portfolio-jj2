@@ -12,7 +12,7 @@ const HeaderContainer = styled.header`
   top: 0;
   width: 100%;
   height: 60px;
-  padding: 0 30px;
+  padding: ${({ theme }) => `0px ${theme.layoutPadding.desktop}`};
   backdrop-filter: blur(6px);
   opacity: 100%;
   z-index: 9999;
@@ -29,12 +29,12 @@ const HeaderContainer = styled.header`
       display: flex;
       align-items: center;
       & > span {
-        font-size: ${({ theme }) => theme.fontSize.base};
+        font-size: ${({ theme }) => theme.fontSize.small};
       }
       & > i {
         margin-left: 5px;
         color: ${({ theme }) => theme.textColor.lightGray};
-        font-size: ${({ theme }) => theme.fontSize.small};
+        font-size: ${({ theme }) => theme.fontSize.smaller};
       }
     }
   }

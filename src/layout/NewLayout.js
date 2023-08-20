@@ -11,6 +11,7 @@ import NewContents from './NewContents';
 const LayoutContainer = styled.div`
   color: ${({ theme }) => theme.textColor.initial};
   background-color: ${({ theme }) => theme.background};
+  font-size: ${({ theme }) => theme.fontSize.base};
   transition: all 0.3s;
   width: 100vw;
   /* overflow-x: hidden; */

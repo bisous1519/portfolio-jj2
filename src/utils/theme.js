@@ -23,19 +23,20 @@ const theme = {
     shadowColor: '1px 1px 3px rgba(0, 0, 0, 0.2)',
     layerColor: 'rgba(115, 115, 115, 0.4)',
     fontSize: {
-      small: calcRem(12),
-      base: calcRem(14),
-      lg: calcRem(16),
-      xl: calcRem(18),
+      smaller: calcRem(12),
+      small: calcRem(14),
+      base: calcRem(16),
+      lg: calcRem(18),
+      xl: calcRem(20),
       subTitle: calcRem(23),
       title: calcRem(30),
       xxl: calcRem(45),
       xxxl: calcRem(60),
     },
     fontWeight: {
-      base: 400,
-      bold: 500,
-      bolder: 600,
+      base: 500,
+      bold: 600,
+      bolder: 700,
     },
     viewPortSize: {
       mobile: `(max-width: ${size.mobile})`,
@@ -46,6 +47,9 @@ const theme = {
       mobile: `${size.mobile}`,
       tablet: `${size.tablet}`,
       desktop: `${size.desktop}`,
+    },
+    layoutPadding: {
+      desktop: '30px',
     },
   },
   dark: {
@@ -71,9 +75,9 @@ const theme = {
       title: calcRem(38),
     },
     fontWeight: {
-      base: 400,
-      bold: 500,
-      bolder: 600,
+      base: 500,
+      bold: 600,
+      bolder: 700,
     },
     viewPortSize: {
       mobile: `(max-width: ${size.mobile})`,
@@ -84,6 +88,9 @@ const theme = {
       mobile: `${size.mobile}`,
       tablet: `${size.tablet}`,
       desktop: `${size.desktop}`,
+    },
+    layoutPadding: {
+      desktop: '30px',
     },
   },
 };

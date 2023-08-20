@@ -2,15 +2,7 @@ import styled from '@emotion/styled';
 import React from 'react';
 import { IoIosArrowDown } from 'react-icons/io';
 import { keyframes } from '@emotion/react';
-import {
-  eomji,
-  eomji1,
-  eomji2,
-  eomji3,
-  eomji4,
-  eomji5,
-  eomji6,
-} from '../assets/img';
+import { eomji1 } from '../assets/img';
 
 const oneKeyFrames = keyframes`
     0% {

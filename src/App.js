@@ -10,6 +10,7 @@ import throttle from 'lodash.throttle';
 const globalStyle = css`
   * {
     box-sizing: border-box;
+    transition: all 0.3s;
   }
   html {
     /* scroll-behavior: smooth; */
@@ -17,7 +18,6 @@ const globalStyle = css`
   body {
     overflow: overlay;
     overflow-x: hidden !important;
-    transition: all 0.3s;
   }
   body::-webkit-scrollbar {
     width: 6px;

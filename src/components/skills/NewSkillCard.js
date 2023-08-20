@@ -57,12 +57,12 @@ const SkillCardsBox = styled.article`
       align-items: flex-start;
       gap: 10px;
       & > li {
-        line-height: 25px;
+        line-height: 28px;
         color: ${({ theme }) => theme.textColor.gray};
         /* font-size: ${({ theme }) => theme.fontSize.base}; */
         display: flex;
         & > i {
-          font-size: 10px;
+          font-size: 7px;
           margin-right: 7px;
           width: 10px;
           height: 25px;
