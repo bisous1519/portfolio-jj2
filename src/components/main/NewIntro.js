@@ -30,7 +30,7 @@ const NewIntroContainer = styled.section`
         justify-content: flex-start;
         gap: 15px;
         & > li {
-          line-height: 28px;
+          line-height: 25px;
           display: flex;
           & > i {
             font-size: 7px;

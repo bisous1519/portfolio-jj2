@@ -1,0 +1,143 @@
+import styled from '@emotion/styled';
+import React from 'react';
+import { PiCircleBold } from 'react-icons/pi';
+
+const SkillsContentsContainer = styled.article`
+  margin-top: 120px;
+  & > p {
+    font-size: ${({ theme }) => theme.fontSize.xl};
+    font-weight: ${({ theme }) => theme.fontWeight.bold};
+  }
+  & > ul.contents {
+    padding: 0px 50px;
+    margin: 0 auto;
+    margin-top: 50px;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    & > li {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 50px;
+      /* &:not(:first-child) {
+        &::before {
+          content: '';
+          display: block;
+          width: 100%;
+          border: 1px solid red;
+        }
+      } */
+      & > div.summ {
+        height: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        & > div.img {
+          height: 100%;
+          border-radius: 10px;
+          overflow: hidden;
+          & > img {
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        & > div.name {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+          gap: 15px;
+          & > p {
+            font-size: ${({ theme }) => theme.fontSize.lg};
+          }
+          & > ul.bar {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 4px;
+            & > li {
+              width: 17px;
+              height: 4px;
+              border-radius: 3px;
+              background-color: ${({ theme }) => theme.textColor.lightGray};
+              &.fill {
+                background-color: ${({ theme }) =>
+                  theme.textColor.lightPrimary};
+              }
+            }
+          }
+        }
+      }
+      & > ul.desc {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        flex: 1;
+        & > li {
+          line-height: 25px;
+          color: ${({ theme }) => theme.textColor.gray};
+          /* font-size: ${({ theme }) => theme.fontSize.base}; */
+          display: flex;
+          & > i {
+            font-size: 7px;
+            margin-right: 7px;
+            width: 10px;
+            height: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          & > p {
+            flex: 1;
+          }
+        }
+      }
+    }
+  }
+`;
+
+export default function SkillsContents({ name, data }) {
+  return (
+    <SkillsContentsContainer>
+      <p>{name}</p>
+      <ul className='contents'>
+        {data &&
+          data.map((skill, skillIdx) => (
+            <li key={`skill-${name}-${skillIdx}`}>
+              <div className='summ'>
+                <div className='img'>
+                  <img src={skill.icon.src} alt={skill.icon.alt} />
+                </div>
+                <div className='name'>
+                  <p>{skill.name}</p>
+                  <ul className='bar'>
+                    {new Array(skill.lv).fill(null).map(() => (
+                      <li className='fill'></li>
+                    ))}
+                    {new Array(5 - skill.lv).fill(null).map(() => (
+                      <li></li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+              <ul className='desc'>
+                {skill.des.map((line, lineIdx) => (
+                  <li key={`skill-${name}-${skillIdx}-${lineIdx}`}>
+                    <i>
+                      <PiCircleBold />
+                    </i>
+                    <p>{line}</p>
+                  </li>
+                ))}
+              </ul>
+            </li>
+          ))}
+      </ul>
+    </SkillsContentsContainer>
+  );
+}

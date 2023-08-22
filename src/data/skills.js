@@ -25,17 +25,6 @@ const {
 
 const frontendSkills = [
   {
-    id: 'skills-1',
-    icon: js,
-    name: 'Javascript',
-    lv: 4,
-    des: [
-      'ES6를 이해하고 있습니다.',
-      'JS 기반의 라이브러리와 프레임워크를 사용할 수 있습니다.',
-      '다양한 자료구조를 직접 구현하여 알고리즘 문제를 풀이할 수 있습니다.',
-    ],
-  },
-  {
     id: 'skills-2',
     icon: react,
     name: 'React',
@@ -44,16 +33,6 @@ const frontendSkills = [
       '라이프 사이클을 이해하고 있습니다.',
       '작은 프로젝트의 프론트엔드를혼자 맡아 진행할 수 있습니다.',
       '컴포넌트의 개념을 이해하고 재사용성이 좋은 컴포넌트를 작성할 수 있습니다.',
-    ],
-  },
-  {
-    id: 'skills-11',
-    icon: css,
-    name: 'CSS',
-    lv: 4,
-    des: [
-      'css-in-js를 작성할 수 있습니다.',
-      '다양한 스타일 라이브러리를 사용하여 CSS를 작성할 수 있습니다.',
     ],
   },
   {
@@ -69,12 +48,6 @@ const frontendSkills = [
       '자동완성을 통해 더 빠른 개발이 가능합니다.',
     ],
   },
-  // {
-  //   id: 'skills-10',
-  //   icon: reactNative,
-  //   name: 'React Native',
-  //   des: ['', '', ''],
-  // },
   {
     id: 'skills-4',
     icon: redux,
@@ -85,6 +58,22 @@ const frontendSkills = [
       '다양한 상태관리 라이브러리들의 장단점을 이해하고 프로젝트의 상황에 맞게 적용할 수 있습니다.',
     ],
   },
+  {
+    id: 'skills-11',
+    icon: css,
+    name: 'CSS',
+    lv: 4,
+    des: [
+      'css-in-js를 작성할 수 있습니다.',
+      '다양한 스타일 라이브러리를 사용하여 CSS를 작성할 수 있습니다.',
+    ],
+  },
+  // {
+  //   id: 'skills-10',
+  //   icon: reactNative,
+  //   name: 'React Native',
+  //   des: ['', '', ''],
+  // },
 
   //   {
   //     id: 'skills-',
@@ -93,7 +82,7 @@ const frontendSkills = [
   //   },
 ];
 
-const backendSkills = [
+const etcSkills = [
   {
     id: 'skills-5',
     icon: java,
@@ -125,9 +114,6 @@ const backendSkills = [
       'JOIN을 통해 원하는 데이터를 얻을 수 있습니다.',
     ],
   },
-];
-
-const toolsSkills = [
   {
     id: 'skills-8',
     icon: git,
@@ -137,6 +123,20 @@ const toolsSkills = [
       '깃 컨벤션을 지키려 노력합니다.',
       'branch 분기를 통해 협업할 수 있습니다.',
       '코드의 변경사항을 추적하고 관리하는 등 버전 관리를 할 수 있습니다.',
+    ],
+  },
+];
+
+const data = [
+  {
+    id: 'skills-1',
+    icon: js,
+    name: 'Javascript',
+    lv: 4,
+    des: [
+      'ES6를 이해하고 있습니다.',
+      'JS 기반의 라이브러리와 프레임워크를 사용할 수 있습니다.',
+      '다양한 자료구조를 직접 구현하여 알고리즘 문제를 풀이할 수 있습니다.',
     ],
   },
   {
@@ -154,8 +154,7 @@ const toolsSkills = [
 
 const skillData = {
   frontendSkills,
-  backendSkills,
-  toolsSkills,
+  etcSkills,
 };
 
 export default skillData;

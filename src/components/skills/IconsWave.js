@@ -16,25 +16,29 @@ import styled from '@emotion/styled';
 import IconItem from './SkillIcons';
 import SkillIcons from './SkillIcons';
 
-const IconsWaveContainer = styled.div`
-  margin-bottom: 60px;
-  /* & > ul { */
-  & > p {
-    font-size: ${({ theme }) => theme.fontSize.small};
-    color: ${({ theme }) => theme.textColor.lightGray};
-    margin-bottom: 15px;
-  }
-  & > div.iconsWave {
-    &.invisible {
-      opacity: 0;
+const IconsWaveContainer = styled.ul`
+  margin-top: 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  & > li {
+    & > p {
+      font-size: ${({ theme }) => theme.fontSize.small};
+      color: ${({ theme }) => theme.textColor.lightGray};
+      margin-bottom: 15px;
     }
-    opacity: 1;
-    transform: ${(props) => `translateX(${props.halfInnerW + 15}px)`};
-    transition: opacity 0.3s;
-    margin-bottom: 30px;
-    & > ul.skillIcons {
-      gap: 20px !important;
-      & > li {
+    & > div.iconsWave {
+      &.invisible {
+        opacity: 0;
+      }
+      opacity: 1;
+      transform: ${(props) => `translateX(${props.halfInnerW + 15}px)`};
+      transition: opacity 0.3s;
+      margin-bottom: 30px;
+      & > ul.skillIcons {
+        gap: 20px !important;
+        & > li {
+        }
       }
     }
   }
@@ -128,12 +132,18 @@ export default function IconsWave() {
 
   return (
     <IconsWaveContainer>
-      <p>프론트엔드</p>
-      <WaveBox logoArr={logoArr1} sPoint={35} ePoint={70} />
-      <p>상태관리 라이브러리, CSS</p>
-      <WaveBox logoArr={logoArr2} sPoint={40} ePoint={73} />
-      <p>백엔드, 협업 툴</p>
-      <WaveBox logoArr={logoArr3} sPoint={55} ePoint={76} />
+      <li>
+        <p>프론트엔드</p>
+        <WaveBox logoArr={logoArr1} sPoint={35} ePoint={70} />
+      </li>
+      <li>
+        <p>상태관리 라이브러리, CSS</p>
+        <WaveBox logoArr={logoArr2} sPoint={40} ePoint={73} />
+      </li>
+      <li>
+        <p>백엔드, 협업 툴</p>
+        <WaveBox logoArr={logoArr3} sPoint={55} ePoint={76} />
+      </li>
     </IconsWaveContainer>
   );
 }

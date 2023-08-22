@@ -31,7 +31,7 @@ const SkillIconsBox = styled.ul`
       left: 50%;
       bottom: -24px;
       transform: translateX(-50%);
-      font-size: ${({ theme }) => theme.fontSize.small};
+      font-size: ${({ theme }) => theme.fontSize.smaller};
       background-color: ${({ theme }) => theme.textColor.gray};
       color: ${({ theme }) => theme.textColor.reverse};
       padding: 3px 5px 4px 5px;

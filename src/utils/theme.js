@@ -49,7 +49,7 @@ const theme = {
       desktop: `${size.desktop}`,
     },
     layoutPadding: {
-      desktop: '30px',
+      desktop: '50px',
     },
   },
   dark: {

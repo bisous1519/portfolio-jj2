@@ -3,9 +3,9 @@ import React, { useRef } from 'react';
 import Title from '../text/Title';
 import IconsWave from '../skills/IconsWave';
 import useScrollFadeIn from '../../hooks/useScrollFadeIn';
-import SkillCard from '../skills/SkillCard';
 import skillData from '../../data/skills';
 import NewSkillCard from '../skills/NewSkillCard';
+import SkillsContents from '../skills/SkillsContents';
 
 const SkillsInnerlContainer = styled.div`
   & > div {
@@ -22,10 +22,7 @@ const SkillsInnerlContainer = styled.div`
   }
 `;
 
-const SkillsContainer = styled.section`
-  & > div.inner {
-  }
-`;
+const SkillsContainer = styled.section``;
 
 function SkillsInner() {
   const fadeinAnimation = useScrollFadeIn();
@@ -57,13 +54,15 @@ function SkillsInner() {
 }
 
 export default function NewSkills() {
+  const { frontendSkills, etcSkills } = skillData;
+
   return (
     <SkillsContainer>
       <Title name='사용할 수 있는 기술스택 입니다' />
-      <div className='inner'>
-        <IconsWave />
-        <SkillsInner />
-      </div>
+      <IconsWave />
+      <SkillsContents name='프론트엔드' data={frontendSkills} />
+      <SkillsContents name='그 외' data={etcSkills} />
+      {/* <SkillsInner /> */}
     </SkillsContainer>
   );
 }
