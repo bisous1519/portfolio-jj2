@@ -3,12 +3,10 @@ import { IoIosArrowUp } from 'react-icons/io';
 import throttle from 'lodash.throttle';
 import styled from '@emotion/styled';
 
-const TopButtonBox = styled.div`
-  position: sticky;
-  top: 85vh;
-  right: 0;
-  left: 0;
-  margin: 0 auto;
+const TopButtonBox = styled.button`
+  position: fixed;
+  bottom: 30px;
+  right: ${({ theme }) => theme.layoutPadding.desktop};
   width: 30px;
   height: 30px;
   border: 1px solid ${({ theme }) => theme.textColor.lightGray};
@@ -17,11 +15,14 @@ const TopButtonBox = styled.div`
   justify-content: center;
   align-items: center;
   box-shadow: ${({ theme }) => theme.shadowColor};
-  cursor: pointer;
   opacity: 0;
   transition: opacity 0.2s;
+  cursor: pointer;
   i {
     color: ${({ theme }) => theme.textColor.primary};
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 `;
 
@@ -50,7 +51,7 @@ export default function TopButton() {
     );
   }, []);
   return (
-    <TopButtonBox ref={btnEl} onClick={toTop}>
+    <TopButtonBox className='topButton' ref={btnEl} onClick={toTop}>
       <i>
         <IoIosArrowUp />
       </i>

@@ -7,8 +7,10 @@ import useModal from '../hooks/useModal';
 import ContactModal from '../components/modal/ContactModal';
 import { Footer, Header, NewMain } from './index';
 import NewContents from './NewContents';
+import TopButton from '../components/buttons/TopButton';
 
 const LayoutContainer = styled.div`
+  position: relative;
   color: ${({ theme }) => theme.textColor.initial};
   background-color: ${({ theme }) => theme.background};
   font-size: ${({ theme }) => theme.fontSize.base};
@@ -41,6 +43,7 @@ export default function NewLayout() {
         <NewMain />
         <NewContents />
         <Footer />
+        <TopButton />
         {openModal && <ContactModal onCloseModal={onCloseModal} />}
       </LayoutContainer>
     </ThemeProvider>

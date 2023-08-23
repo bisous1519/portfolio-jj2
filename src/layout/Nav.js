@@ -4,7 +4,8 @@ import TopButton from '../components/buttons/TopButton';
 import styled from '@emotion/styled';
 
 const NavContainer = styled.nav`
-  width: 155px;
+  border: 1px solid red;
+  /* width: 155px; */
   & > ul {
     position: sticky;
     top: 170px;
@@ -72,7 +73,6 @@ export default function Nav() {
         </li>
         <li onClick={() => onClickNav(4, topArr[4])}>수상 및 교육</li>
       </ul>
-      <TopButton />
     </NavContainer>
   );
 }
