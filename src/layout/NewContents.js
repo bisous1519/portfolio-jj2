@@ -4,6 +4,7 @@ import Nav from './Nav';
 import { NewSkills } from '../components/main';
 import NewProjects from '../components/main/NewProjects';
 import NewIntro from '../components/main/NewIntro';
+import Experience from '../components/main/Experience';
 
 const NewContentsContainer = styled.div`
   width: 100%;
@@ -26,6 +27,7 @@ export default function NewContents() {
         <NewIntro />
         <NewSkills />
         <NewProjects />
+        <Experience />
       </div>
       <Nav />
     </NewContentsContainer>

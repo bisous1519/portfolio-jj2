@@ -16,7 +16,7 @@ const NavContainer = styled.nav`
     & li:not(.project) {
       color: ${({ theme }) => theme.textColor.lightGray};
       font-size: ${({ theme }) => theme.fontSize.small};
-      line-height: 25px;
+      line-height: 30px;
       padding-left: 3px;
       cursor: pointer;
       &:hover {

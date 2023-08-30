@@ -9,7 +9,7 @@ import MoveToButton from '../buttons/MoveToButton';
 import useModal from '../../hooks/useModal';
 import ProjectModal from '../modal/ProjectModal';
 
-const ProjectItemWrapper = styled.div`
+const ProjectItemWrapper = styled.li`
   /* border: 1px solid red; */
   height: 100vh;
   padding: 60px 0;

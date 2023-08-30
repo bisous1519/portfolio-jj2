@@ -5,7 +5,7 @@ import styled from '@emotion/styled';
 const FooterContainer = styled.div`
   width: 100%;
   height: 30px;
-  margin-bottom: 15px;
+  margin: 150px 0px 15px 0px;
   display: flex;
   justify-content: center;
   align-items: center;

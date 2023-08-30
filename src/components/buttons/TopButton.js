@@ -5,12 +5,13 @@ import styled from '@emotion/styled';
 
 const TopButtonBox = styled.button`
   position: fixed;
-  bottom: 30px;
+  bottom: 50px;
   right: ${({ theme }) => theme.layoutPadding.desktop};
   width: 30px;
   height: 30px;
   border: 1px solid ${({ theme }) => theme.textColor.lightGray};
   border-radius: 50%;
+  background-color: ${({ theme }) => theme.background};
   display: flex;
   justify-content: center;
   align-items: center;

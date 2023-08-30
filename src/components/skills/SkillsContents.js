@@ -6,7 +6,7 @@ const SkillsContentsContainer = styled.article`
   margin-top: 120px;
   & > p {
     font-size: ${({ theme }) => theme.fontSize.xl};
-    font-weight: ${({ theme }) => theme.fontWeight.bold};
+    font-weight: ${({ theme }) => theme.fontWeight.bolder};
   }
   & > ul.contents {
     padding: 0px 50px;

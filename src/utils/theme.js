@@ -29,6 +29,7 @@ const theme = {
       lg: calcRem(18),
       xl: calcRem(20),
       subTitle: calcRem(23),
+      tititle: calcRem(25),
       title: calcRem(30),
       xxl: calcRem(45),
       xxxl: calcRem(60),
