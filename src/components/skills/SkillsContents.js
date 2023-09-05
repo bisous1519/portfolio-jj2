@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { PiCircleBold } from 'react-icons/pi';
 
 const SkillsContentsContainer = styled.article`
@@ -12,10 +12,10 @@ const SkillsContentsContainer = styled.article`
     padding: 0px 50px;
     margin: 0 auto;
     margin-top: 50px;
-    max-width: 1000px;
+    max-width: ${({ isFrontend }) => (isFrontend ? '1000px' : '840px')};
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 80px;
     & > li {
       display: flex;
       justify-content: flex-start;
@@ -101,9 +101,15 @@ const SkillsContentsContainer = styled.article`
   }
 `;
 
-export default function SkillsContents({ name, data }) {
+export default function SkillsContents({ isFrontend, data }) {
+  const [name, setName] = useState('프론트엔드');
+  useEffect(() => {
+    if (isFrontend) setName('프론트엔드');
+    else setName('그 외');
+  }, [isFrontend]);
+
   return (
-    <SkillsContentsContainer>
+    <SkillsContentsContainer isFrontend={isFrontend}>
       <p>{name}</p>
       <ul className='contents'>
         {data &&
@@ -141,3 +147,4 @@ export default function SkillsContents({ name, data }) {
     </SkillsContentsContainer>
   );
 }
+
