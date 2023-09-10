@@ -17,9 +17,6 @@ const NewContentsContainer = styled.div`
       width: 100%;
     }
   }
-  & > div.nav {
-    padding-right: ${({ theme }) => theme.layoutPadding.desktop};
-  }
 `;
 
 export default function NewContents() {
@@ -30,9 +27,7 @@ export default function NewContents() {
         <NewSkills />
         <NewProjects />
       </div>
-      <div className='nav'>
-        <Nav />
-      </div>
+      <Nav />
     </NewContentsContainer>
   );
 }

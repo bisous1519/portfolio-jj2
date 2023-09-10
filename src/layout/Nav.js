@@ -4,30 +4,46 @@ import TopButton from '../components/buttons/TopButton';
 import styled from '@emotion/styled';
 
 const NavContainer = styled.nav`
-  border: 1px solid red;
-  /* width: 155px; */
+  position: sticky;
+  top: 170px;
+  right: 0;
+  padding-right: ${({ theme }) => theme.layoutPadding.desktop};
   & > ul {
-    position: sticky;
-    top: 170px;
-    right: 0;
-    left: 0;
-    margin: 0 auto;
-    width: 100px;
     display: flex;
     flex-direction: column;
-    /* gap: 3px; */
-    li {
-      /* border: 1px solid red; */
-      font-size: ${({ theme }) => theme.fontSize.base};
-      padding: 10px 5px;
+    align-items: flex-start;
+    gap: 2px;
+    & li:not(.project) {
       color: ${({ theme }) => theme.textColor.lightGray};
+      font-size: ${({ theme }) => theme.fontSize.small};
+      line-height: 25px;
+      padding-left: 3px;
       cursor: pointer;
-      &:nth-child(${({ selected }) => selected}) {
-        color: ${({ theme }) => theme.textColor.primary};
-        font-weight: ${({ theme }) => theme.fontWeight.bold};
+      &:hover {
+        color: ${({ theme }) => theme.textColor.lightPrimary};
+      }
+    }
+    & > li:nth-child(${({ selected }) => selected}) {
+      color: ${({ theme }) => theme.textColor.primary};
+      font-weight: ${({ theme }) => theme.fontWeight.bold};
+    }
+    & > li.project {
+      & > ul {
+        margin-left: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
       }
     }
   }
+  /* & > ul {
+    border: 1px solid blue;
+    display: flex;
+    flex-direction: column;
+    & > li {
+      padding: 10px 5px;
+    }
+  } */
   @media ${({ theme }) => theme.viewPortSize.mobile} {
     display: none;
   }
@@ -63,8 +79,8 @@ export default function Nav() {
       <ul>
         <li onClick={() => onClickNav(1, topArr[1])}>소개</li>
         <li onClick={() => onClickNav(2, topArr[2])}>기술스택</li>
-        <li onClick={() => onClickNav(3, topArr[3])}>
-          <p>프로젝트</p>
+        <li onClick={() => onClickNav(3, topArr[3])}>프로젝트</li>
+        <li className='project'>
           <ul>
             <li>마리콘</li>
             <li>이음</li>
