@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import React, { useEffect, useState } from 'react';
 import { PiCircleBold } from 'react-icons/pi';
+import useScrollFadeIn from '../../hooks/useScrollFadeIn';
 
 const SkillsContentsContainer = styled.article`
   margin-top: 120px;
@@ -101,6 +102,40 @@ const SkillsContentsContainer = styled.article`
   }
 `;
 
+function SkillsItem({ name, skill, skillIdx }) {
+  const fadeInAnimation = useScrollFadeIn();
+  return (
+    <li {...fadeInAnimation}>
+      <div className='summ'>
+        <div className='img'>
+          <img src={skill.icon.src} alt={skill.icon.alt} />
+        </div>
+        <div className='name'>
+          <p>{skill.name}</p>
+          <ul className='bar'>
+            {new Array(skill.lv).fill(null).map(() => (
+              <li className='fill'></li>
+            ))}
+            {new Array(5 - skill.lv).fill(null).map(() => (
+              <li></li>
+            ))}
+          </ul>
+        </div>
+      </div>
+      <ul className='desc'>
+        {skill.des.map((line, lineIdx) => (
+          <li key={`skill-${name}-${skillIdx}-${lineIdx}`}>
+            <i>
+              <PiCircleBold />
+            </i>
+            <p>{line}</p>
+          </li>
+        ))}
+      </ul>
+    </li>
+  );
+}
+
 export default function SkillsContents({ isFrontend, data }) {
   const [name, setName] = useState('프론트엔드');
   useEffect(() => {
@@ -114,34 +149,12 @@ export default function SkillsContents({ isFrontend, data }) {
       <ul className='contents'>
         {data &&
           data.map((skill, skillIdx) => (
-            <li key={`skill-${name}-${skillIdx}`}>
-              <div className='summ'>
-                <div className='img'>
-                  <img src={skill.icon.src} alt={skill.icon.alt} />
-                </div>
-                <div className='name'>
-                  <p>{skill.name}</p>
-                  <ul className='bar'>
-                    {new Array(skill.lv).fill(null).map(() => (
-                      <li className='fill'></li>
-                    ))}
-                    {new Array(5 - skill.lv).fill(null).map(() => (
-                      <li></li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-              <ul className='desc'>
-                {skill.des.map((line, lineIdx) => (
-                  <li key={`skill-${name}-${skillIdx}-${lineIdx}`}>
-                    <i>
-                      <PiCircleBold />
-                    </i>
-                    <p>{line}</p>
-                  </li>
-                ))}
-              </ul>
-            </li>
+            <SkillsItem
+              key={`skill-${name}-${skillIdx}`}
+              name={name}
+              skill={skill}
+              skillIdx={skillIdx}
+            />
           ))}
       </ul>
     </SkillsContentsContainer>

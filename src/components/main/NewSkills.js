@@ -1,10 +1,8 @@
 import styled from '@emotion/styled';
-import React, { useRef } from 'react';
+import React from 'react';
 import Title from '../text/Title';
 import IconsWave from '../skills/IconsWave';
-import useScrollFadeIn from '../../hooks/useScrollFadeIn';
 import skillData from '../../data/skills';
-import NewSkillCard from '../skills/NewSkillCard';
 import SkillsContents from '../skills/SkillsContents';
 
 const SkillsContainer = styled.section``;

@@ -56,9 +56,9 @@ const NewIntroContainer = styled.section`
 `;
 
 function IntroItem({ data, dataIdx }) {
-  const fadeInAnimation = useScrollFadeIn({ delay: dataIdx * 0.3 });
+  const fadeInAnimation = useScrollFadeIn(dataIdx * 0.3);
   return (
-    <li key={`intro-${dataIdx}`} {...fadeInAnimation}>
+    <li {...fadeInAnimation}>
       <p>
         <strong>{data.who}</strong>를 생각합니다.
       </p>
@@ -83,7 +83,7 @@ export default function NewIntro() {
       <ul>
         {intro &&
           intro.map((data, dataIdx) => (
-            <IntroItem data={data} dataIdx={dataIdx} />
+            <IntroItem key={`intro-${dataIdx}`} data={data} dataIdx={dataIdx} />
           ))}
       </ul>
     </NewIntroContainer>
