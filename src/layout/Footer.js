@@ -16,11 +16,11 @@ const FooterContainer = styled.div`
     & + span {
       border-left: 1px solid ${({ theme }) => theme.textColor.lightGray};
     }
-    &:first-child {
+    &:first-of-type {
       word-spacing: 3px;
     }
   }
-  & > span:first-child {
+  & > span:first-of-type {
     display: flex;
     align-items: center;
     gap: 5px;

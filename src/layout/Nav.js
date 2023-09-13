@@ -23,7 +23,7 @@ const NavContainer = styled.nav`
         color: ${({ theme }) => theme.textColor.lightPrimary};
       }
     }
-    & > li:nth-child(${({ selected }) => selected}) {
+    & > li:nth-of-type(${({ selected }) => selected}) {
       color: ${({ theme }) => theme.textColor.primary};
       font-weight: ${({ theme }) => theme.fontWeight.bold};
     }

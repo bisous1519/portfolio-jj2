@@ -22,18 +22,18 @@ const ToggleButtonBox = styled.div`
       ${({ currentTheme, theme }) =>
         currentTheme === 'light'
           ? css`
-              &:first-child {
+              &:first-of-type {
                 color: ${theme.textColor.primary};
               }
-              &:last-child {
+              &:last-of-type {
                 color: ${theme.textColor.lightGray};
               }
             `
           : css`
-              &:first-child {
+              &:first-of-type {
                 color: ${theme.textColor.lightGray};
               }
-              &:last-child {
+              &:last-of-type {
                 color: ${theme.textColor.primary};
               }
             `}

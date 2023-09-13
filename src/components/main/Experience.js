@@ -45,7 +45,7 @@ const ExperienceContainer = styled.section`
               display: flex;
               flex-direction: column;
               gap: 10px;
-              & > li:first-child {
+              & > li:first-of-type {
                 font-weight: ${({ theme }) => theme.fontWeight.bold};
               }
             }

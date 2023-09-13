@@ -22,7 +22,7 @@ const SkillsContentsContainer = styled.article`
       justify-content: flex-start;
       align-items: flex-start;
       gap: 50px;
-      /* &:not(:first-child) {
+      /* &:not(:first-of-type) {
         &::before {
           content: '';
           display: block;

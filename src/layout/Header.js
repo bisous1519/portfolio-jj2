@@ -48,7 +48,7 @@ const HeaderContainer = styled.header`
       justify-content: space-between;
       align-items: center;
       & > li {
-        &:first-child {
+        &:first-of-type {
           margin-left: 5px;
         }
         & + li {
