@@ -5,7 +5,7 @@ import {
   eeumMain,
   eeumDiary,
   ssafastMain,
-  ssafastConnAPI,
+  ssafastPJMain,
 } from '../assets/img';
 import {
   maliconDetail,
@@ -84,7 +84,7 @@ export const projectData = [
       '테스트 자동화 페이지 구현',
     ],
     src1: ssafastMain,
-    src2: ssafastConnAPI,
+    src2: ssafastPJMain,
     alt1: 'malicon landing page',
     alt2: 'malicon main page',
     skills: [react, nextjs, ts, redux, reactQuery, tailwind],

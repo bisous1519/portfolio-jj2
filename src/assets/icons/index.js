@@ -1,3 +1,4 @@
+// skills
 export { default as JSlogo } from './javascript_logo.png';
 export { default as Nextjslogo } from './nextjs_logo.jpeg';
 export { default as Reactlogo } from './react_logo.png';
@@ -18,11 +19,13 @@ export { default as MySQL } from './mysql_logo.png';
 export { default as Git } from './git_logo.png';
 export { default as Jira } from './jira_logo.jpeg';
 export { default as CSSlogo } from './css_logo.png';
+
+// project
 export { default as MaliconLogo } from './malicon_logo.png';
 export { default as EeumLogo } from './eeum_logo.png';
 export { default as EeumLogo2 } from './eeum_logo2.png';
-export { default as SsafastLogo1 } from './ssafast_logo1.png';
-export { default as SsafastLogo2 } from './ssafast_logo2.png';
+export { default as SsafastLogoBlack } from './ssafast_logo_black.png';
+export { default as SsafastLogoWhite } from './ssafast_logo_white.png';
 
-// github, gitlab, jira, notion
+// github, gitlab, notion
 

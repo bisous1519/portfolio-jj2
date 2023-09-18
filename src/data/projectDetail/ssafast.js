@@ -1,11 +1,11 @@
-import { SsafastLogo1 } from '../../assets/icons';
-import { ssafastMain, ssafastConnAPIAni } from '../../assets/img';
+import { SsafastLogoBlack } from '../../assets/icons';
+import { ssafastPJMain, ssafastApiMappingAni } from '../../assets/img';
 import skillLogo from '../../data/skillLogo';
 
 const { react, nextjs, ts, redux, reactQuery, tailwind } = skillLogo;
 
 const text = `
-<img src=${ssafastMain} alt='main page' />
+<img src=${ssafastPJMain} alt='main page' />
 
 >기간 : 23.04.10 ~ 23.05.19 (약 7주)
 >인원 : 프론트엔드 3명(본인 포함), 백엔드 3명
@@ -58,7 +58,7 @@ Figma, Notion, Postman, Swagger, Locust 등
 ### [ 화면벌 API 구현 ]
 
 ### [ API 명세 및 화면 별 API 연결]
-<img src=${ssafastConnAPIAni} alt='connect api' />
+<img src=${ssafastApiMappingAni} alt='connect api' />
 - 
 
 ## 프로젝트 성과
@@ -67,7 +67,7 @@ Figma, Notion, Postman, Swagger, Locust 등
 
 // ## 프로젝트 리뷰
 
-const icon = { src: SsafastLogo1, alt: 'ssafast logo' };
+const icon = { src: SsafastLogoBlack, alt: 'ssafast logo' };
 
 const data = {
   name: 'SSAFAST',
