@@ -36,5 +36,5 @@ export { default as ssafastUsecaseList } from './ssafast_usecaseList.png';
 export { default as ssafastUsecaseSelectApi } from './ssafast_usecaseSelectApi.png';
 export { default as ssafastApiMappingAni } from './ssafast_apiMappingAni.gif';
 export { default as ssafastApiReqAni } from './ssafast_apiReqAni.gif';
+export { default as ssafastApiReqAxios } from './ssafast_apiReqAxios.png';
 export { default as ssafastUsecaseAni } from './ssafast_usecaseAni.gif';
-

@@ -1,11 +1,23 @@
 import { SsafastLogoBlack } from '../../assets/icons';
-import { ssafastPJMain, ssafastApiMappingAni } from '../../assets/img';
+import {
+  ssafastMain,
+  ssafastPJMain,
+  ssafastModeDark,
+  ssafastkModeWhite,
+  ssafastApiMappingAni,
+  ssafastApiReqAni,
+  ssafastApiReqAxios,
+  ssafastUsecaseAni,
+  ssafastCreateUsecase,
+  ssafastUsecaseList,
+  ssafastUsecaseSelectApi,
+} from '../../assets/img';
 import skillLogo from '../../data/skillLogo';
 
 const { react, nextjs, ts, redux, reactQuery, tailwind } = skillLogo;
 
 const text = `
-<img src=${ssafastPJMain} alt='main page' />
+<img src=${ssafastMain} alt='main page' />
 
 >기간 : 23.04.10 ~ 23.05.19 (약 7주)
 >인원 : 프론트엔드 3명(본인 포함), 백엔드 3명
@@ -35,12 +47,15 @@ Figma, Notion, Postman, Swagger, Locust 등
 한 층 높은 개발자 경험을 제공합니다.
 
 ## 핵심 기능
-- 팀원들을 초대하여 공동 작업이 가능합니다.
-- DTO를 작성할 수 있습니다.
-- 작성된 DTO를 기반으로 API를 작성할 수 있습니다.
-- Figma API를 통해 Figma에 디자인된 화면을 프레임 단위로 가져올 수 있습니다.
-- 각 Figma 화면마다 원하는 API들을 매칭하여 화면별 필요한 API를 가시화하였습니다.
-- 개발된 API를 테스트하고 프론트에서 서버에 요청하는 axios 객체를 생성할 수 있습니다.
+- **DTO 및 API 명세**
+DTO를 작성하고, 작성된 DTO를 기반으로 API를 설계할 수 있습니다.
+Figma에 디자인된 화면을 프레임 단위로 가져오고 각 프레임 별 필요한 API를 매핑할 수 있습니다.
+- **API 요청**
+작성된 API들에 대한 요청 테스트를 진행하고 프론트에서 서버에 요청하는 axios 객체 코드를 생성할 수 있습니다.
+- **API 유스케이스 테스트**
+하나의 시나리오를 위해 실행되어야하는 API들의 데이터를 유기적으로 요청하여, 해당 기능이 성공적으로 구현되었는지 쉽게 확인할 수 있습니다.
+- **API 성능 테스트**
+테스트 서버를 동적으로 생성하여, API의 성능테스트를 할 수 있습니다.
 
 ## 프론트엔드 기술 스택
 
@@ -53,13 +68,23 @@ Figma, Notion, Postman, Swagger, Locust 등
 | <img src=${tailwind.src} alt=${tailwind.alt} /> | Tailwind |
 
 ## 맡은 역할
-~~**요약** 워크스페이스 홈화면, 화면별 API 연결 구현, axios 요청 객체코드 반환 구현, 테스트 자동화 페이지 구현~~
+~~**요약** 화면별 API 매칭 / API 요청 및 axios 객체코드 반환 / API 유스케이스 테스트 구현~~
 
-### [ 화면벌 API 구현 ]
+### [ 화면별 API 매핑 ]
+<img src=${ssafastApiMappingAni} alt='mapping api' />
+- 작성된 API들을 원하는 Figma 화면에 매핑할 수 있도록 하여, 화면별 필요한 API를 가시화하였습니다.
+- 사용자가 체크박스의 체크/해제를 왼쪽 컨테이너에서 바로 확인할 수 있도록, **useState**를 통해 각 API의 선택 여부를 저장하는 방식으로 구현하였습니다.
 
-### [ API 명세 및 화면 별 API 연결]
-<img src=${ssafastApiMappingAni} alt='connect api' />
-- 
+### [ API 요청 ]
+<img src=${ssafastApiReqAni} alt='api request' />
+- 사용자가 입력한 요청 정보를 토대로 하여 API를 요청할 수 있습니다.
+
+<img src=${ssafastApiReqAxios} alt='axios code' />
+- 테스트가 성공일 경우, 우측 상단 '받기'버튼을 통해 axios 객체 코드를 반환합니다.
+
+### [ API 유스케이스 테스트 ]
+<img src=${ssafastUsecaseAni} alt='usecase test' />
+- 하나의 시나리오를 위해 실행되어야하는 API들의 데이터를 유기적으로 요청하여, 해당 기능이 성공적으로 구현되었는지 쉽게 확인할 수 있도록 구현하였습니다.
 
 ## 프로젝트 성과
 서비스의 실용성을 인정받아 **삼성 청년 SW 아카데미(SSAFY) 8기 자율프로젝트 우수상**을 수여하였습니다.
