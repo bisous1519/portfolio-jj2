@@ -9,6 +9,7 @@ const WaveBoxContainer = styled.div`
   transform: translateX(500px);
   transition: transform 0s;
   & > ul {
+    gap: 17px;
   }
 `;
 
@@ -19,7 +20,7 @@ const IconsWaveContainer = styled.ul`
   gap: 20px;
   & > li {
     position: relative;
-    margin-bottom: 32px;
+    margin-bottom: 40px;
     & > p {
       font-size: ${({ theme }) => theme.fontSize.small};
       color: ${({ theme }) => theme.textColor.lightGray};
@@ -97,7 +98,7 @@ export default function IconsWave() {
     reactNative,
 
     redux,
-    reduxSaga,
+    reduxToolkit,
     recoil,
     reactQuery,
     css,
@@ -110,12 +111,17 @@ export default function IconsWave() {
     springBoot,
     mySQL,
     git,
+    github,
+    gitlab,
+    notion,
+    figma,
+    trello,
     jira,
   } = skillLogo;
   const logoArr1 = [js, ts, react, vue, nextjs, reactNative];
   const logoArr2 = [
     redux,
-    reduxSaga,
+    reduxToolkit,
     recoil,
     reactQuery,
     css,
@@ -124,7 +130,7 @@ export default function IconsWave() {
     emotion,
     tailwind,
   ];
-  const logoArr3 = [java, springBoot, mySQL, git, jira];
+  const logoArr3 = [java, springBoot, mySQL, git, jira, notion, figma];
 
   const FEtitleEl = useRef();
   const [scrollActive, setScrollActive] = useState(false);
@@ -180,7 +186,7 @@ export default function IconsWave() {
         />
       </li>
       <li>
-        <p>백엔드, 협업 툴</p>
+        <p>백엔드, 툴</p>
         <WaveBox
           scrollActive={scrollActive}
           activeScrollY={activeScrollY}

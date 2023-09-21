@@ -2,7 +2,12 @@ import {
   JSlogo,
   Nextjslogo,
   Reactlogo,
-  ReduxSagalogo,
+  Figmalogo,
+  Githublogo,
+  Gitlablogo,
+  Notionlogo,
+  ReduxToolkitlogo,
+  Trellologo,
   Reduxlogo,
   Sasslogo,
   StyledComponentslogo,
@@ -27,15 +32,40 @@ const react = { src: Reactlogo, alt: 'React logo', des: 'React' };
 const vue = { src: Vuejslogo, alt: 'Vuejs logo', des: 'Vue.js' };
 const nextjs = { src: Nextjslogo, alt: 'Nextjs logo', des: 'Next.js' };
 const redux = { src: Reduxlogo, alt: 'Redux logo', des: 'Redux' };
-const reduxSaga = {
-  src: ReduxSagalogo,
-  alt: 'ReduxSaga logo',
-  des: 'Redux saga',
+const reduxToolkit = {
+  src: ReduxToolkitlogo,
+  alt: 'ReduxToolkit logo',
+  des: 'Redux Toolkit',
+};
+const figma = {
+  src: Figmalogo,
+  alt: 'Figma logo',
+  des: 'Figma',
+};
+const github = {
+  src: Githublogo,
+  alt: 'Github logo',
+  des: 'Github',
+};
+const gitlab = {
+  src: Gitlablogo,
+  alt: 'Gitlab logo',
+  des: 'Gitlab',
+};
+const notion = {
+  src: Notionlogo,
+  alt: 'Notion logo',
+  des: 'Notion',
+};
+const trello = {
+  src: Trellologo,
+  alt: 'Trello logo',
+  des: 'Trello',
 };
 const reactQuery = {
   src: ReactQuery,
   alt: 'ReactQuery logo',
-  des: 'ReactQuery',
+  des: 'React Query',
 };
 const sass = { src: Sasslogo, alt: 'Sass logo', des: 'Sass' };
 const styledComponent = {
@@ -58,7 +88,7 @@ const springBoot = {
   alt: 'SpringBoot logo',
   des: 'Spring Boot',
 };
-const mySQL = { src: MySQL, alt: 'MySQL logo', des: 'mySQL' };
+const mySQL = { src: MySQL, alt: 'MySQL logo', des: 'MySQL' };
 const git = { src: Git, alt: 'Git logo', des: 'git' };
 const jira = { src: Jira, alt: 'Jira logo', des: 'Jira' };
 
@@ -70,7 +100,12 @@ const skillLogo = {
   vue,
   nextjs,
   redux,
-  reduxSaga,
+  reduxToolkit,
+  figma,
+  trello,
+  notion,
+  github,
+  gitlab,
   reactQuery,
   recoil,
   sass,
