@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import React from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import Title from '../text/Title';
 import IconsWave from '../skills/IconsWave';
 import skillData from '../../data/skills';

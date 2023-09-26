@@ -1,20 +1,16 @@
-import { useEffect, useRef, useState } from 'react';
-import {
-  JSlogo,
-  Nextjslogo,
-  Reactlogo,
-  Reduxlogo,
-  ReduxSagalogo,
-  Sasslogo,
-  StyledComponentslogo,
-  TSlogo,
-  Vuejslogo,
-} from '../../assets/icons';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import skillLogo from '../../data/skillLogo';
-import useScrollVisible from '../../hooks/useScrollVisible';
 import styled from '@emotion/styled';
-import IconItem from './SkillIcons';
 import SkillIcons from './SkillIcons';
+
+const WaveBoxContainer = styled.div`
+  position: absolute;
+  left: 0px;
+  transform: translateX(500px);
+  transition: transform 0s;
+  & > ul {
+  }
+`;
 
 const IconsWaveContainer = styled.ul`
   margin-top: 120px;
@@ -22,72 +18,72 @@ const IconsWaveContainer = styled.ul`
   flex-direction: column;
   gap: 20px;
   & > li {
+    position: relative;
+    margin-bottom: 32px;
     & > p {
       font-size: ${({ theme }) => theme.fontSize.small};
       color: ${({ theme }) => theme.textColor.lightGray};
       margin-bottom: 15px;
     }
-    & > div.iconsWave {
-      &.invisible {
-        opacity: 0;
-      }
-      opacity: 1;
-      transform: ${(props) => `translateX(${props.halfInnerW + 15}px)`};
-      transition: opacity 0.3s;
-      margin-bottom: 30px;
-      & > ul.skillIcons {
-        gap: 20px !important;
-        & > li {
-        }
-      }
-    }
   }
 `;
 
-function WaveBox({ logoArr, sPoint, ePoint }) {
-  const halfInnerW = useRef(Math.floor(window.innerWidth / 2));
+function WaveBox({ scrollActive, activeScrollY, isAppearFromBottom, logoArr }) {
+  const [translateX, setTranslateX] = useState(0);
+  const [startMoveTo, setStartMoveTo] = useState(window.innerHeight * 0.2);
 
-  const iconsWaveVisible = useScrollVisible(sPoint);
+  const baseWidth = window.innerWidth * 0.5;
+  const opacityFrom = 0.3;
+  const opacityTo = 1;
 
-  const [scrollPosition, setScrollPosition] = useState(0);
-  const [scrollPercent, setScrollPercent] = useState(0);
-
-  const iconsWaveEl = useRef();
-
-  useEffect(() => {
-    if (halfInnerW.current && iconsWaveEl.current && iconsWaveVisible) {
-      if (scrollPercent <= ePoint) {
-        const w = halfInnerW.current;
-        const x = w - w * ((scrollPercent - sPoint) / (ePoint - sPoint));
-        iconsWaveEl.current.style.setProperty('transition', 'transform 0.1s');
-        iconsWaveEl.current.style.setProperty(
-          'transform',
-          `translateX(${x}px)`
-        );
-      } else {
-        iconsWaveEl.current.style.setProperty('transform', `translateX(0px)`);
-      }
+  const handleScroll = useCallback(() => {
+    const curScrollY = window.scrollY;
+    const scrollFraction =
+      (curScrollY - activeScrollY) / (window.innerHeight * 0.7);
+    const moveTo = isAppearFromBottom
+      ? baseWidth - baseWidth * scrollFraction
+      : startMoveTo - baseWidth * scrollFraction;
+    if (moveTo > baseWidth) {
+      setTranslateX(baseWidth);
+    } else if (moveTo < 0) {
+      setTranslateX(0);
+    } else {
+      setTranslateX(moveTo);
     }
-  }, [scrollPercent]);
+  }, [activeScrollY, isAppearFromBottom, baseWidth, startMoveTo]);
+
+  // useEffect(() => {
+  //   console.log(`translateX(${translateX}px`);
+  // }, [translateX]);
 
   useEffect(() => {
-    setScrollPercent(Math.floor((scrollPosition / window.innerHeight) * 100));
-  }, [scrollPosition]);
+    if (scrollActive) {
+      window.addEventListener('scroll', handleScroll);
+    } else {
+      if (isAppearFromBottom) {
+        setStartMoveTo(
+          baseWidth -
+            baseWidth *
+              ((window.scrollY - activeScrollY) / (window.innerHeight * 0.7))
+        );
+      }
+      setTimeout(
+        () => window.removeEventListener('scroll', handleScroll),
+        1000
+      );
+    }
+  }, [
+    activeScrollY,
+    baseWidth,
+    handleScroll,
+    isAppearFromBottom,
+    scrollActive,
+  ]);
 
-  useEffect(() => {
-    window.addEventListener('scroll', () => {
-      setScrollPosition(window.scrollY || document.documentElement.scrollTop);
-    });
-  }, []);
   return (
-    <div
-      className={`iconsWave iconsWave2 ${
-        iconsWaveVisible ? 'visible' : 'invisible'
-      }`}
-      ref={iconsWaveEl}
-    >
+    <WaveBoxContainer style={{ transform: `translateX(${translateX}px)` }}>
       <SkillIcons datas={logoArr} />
-    </div>
+    </WaveBoxContainer>
   );
 }
 
@@ -130,19 +126,67 @@ export default function IconsWave() {
   ];
   const logoArr3 = [java, springBoot, mySQL, git, jira];
 
+  const FEtitleEl = useRef();
+  const [scrollActive, setScrollActive] = useState(false);
+  const [activeScrollY, setActiveScrollY] = useState();
+  const [isAppearFromBottom, setIsAppearFromBottom] = useState(true);
+
+  const handleScroll = useCallback(([entry]) => {
+    if (entry.isIntersecting) {
+      setScrollActive(true);
+      setActiveScrollY(window.scrollY);
+      if (entry.intersectionRect.top >= window.innerHeight * 0.5) {
+        setIsAppearFromBottom(true);
+      } else {
+        setIsAppearFromBottom(false);
+      }
+    } else {
+      setScrollActive(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    const { current } = FEtitleEl;
+
+    let observer;
+    if (current) {
+      observer = new IntersectionObserver(handleScroll, {
+        threshold: 0,
+      });
+      observer.observe(current);
+
+      return () => observer && observer.disconnect();
+    }
+  }, [handleScroll]);
+
   return (
     <IconsWaveContainer>
-      <li>
+      <li ref={FEtitleEl}>
         <p>프론트엔드</p>
-        <WaveBox logoArr={logoArr1} sPoint={35} ePoint={70} />
+        <WaveBox
+          scrollActive={scrollActive}
+          activeScrollY={activeScrollY}
+          isAppearFromBottom={isAppearFromBottom}
+          logoArr={logoArr1}
+        />
       </li>
       <li>
         <p>상태관리 라이브러리, CSS</p>
-        <WaveBox logoArr={logoArr2} sPoint={40} ePoint={73} />
+        <WaveBox
+          scrollActive={scrollActive}
+          activeScrollY={activeScrollY}
+          isAppearFromBottom={isAppearFromBottom}
+          logoArr={logoArr2}
+        />
       </li>
       <li>
         <p>백엔드, 협업 툴</p>
-        <WaveBox logoArr={logoArr3} sPoint={55} ePoint={76} />
+        <WaveBox
+          scrollActive={scrollActive}
+          activeScrollY={activeScrollY}
+          isAppearFromBottom={isAppearFromBottom}
+          logoArr={logoArr3}
+        />
       </li>
     </IconsWaveContainer>
   );

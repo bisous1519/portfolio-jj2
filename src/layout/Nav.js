@@ -61,7 +61,7 @@ export default function Nav() {
     window.addEventListener(
       'scroll',
       throttle(() => {
-        console.log(window.scrollY);
+        // console.log(window.scrollY);
         if (window.scrollY < topArr[2]) {
           setSelected(1);
         } else if (window.scrollY < topArr[3]) {
