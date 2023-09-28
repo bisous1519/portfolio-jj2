@@ -1,10 +1,7 @@
 import styled from '@emotion/styled';
-import React from 'react';
+import React, { useCallback, useEffect, useRef } from 'react';
 import SkillIcons from '../skills/SkillIcons';
-import { VscCircle, VscGithub } from 'react-icons/vsc';
-import { HiOutlineMagnifyingGlassPlus } from 'react-icons/hi2';
-import { IoLogoGithub, IoIosArrowForward } from 'react-icons/io';
-import { BiSearch } from 'react-icons/bi';
+import { VscCircle } from 'react-icons/vsc';
 import MoveToButton from '../buttons/MoveToButton';
 import useModal from '../../hooks/useModal';
 import ProjectModal from '../modal/ProjectModal';
@@ -147,9 +144,36 @@ const ProjectItemWrapper = styled.li`
 
 export default function NewProjectItem({ data }) {
   const [openModal, onOpenModal, onCloseModal] = useModal();
+  const projectOuterRef = useRef();
 
+  const scrollHandler = useCallback(([entry]) => {
+    const { current: outerRef } = projectOuterRef;
+    if (entry.isIntersecting) {
+      window.scrollTo({ top: outerRef.offsetTop, behavior: 'smooth' });
+      setTimeout(() => {
+        // 스크롤이 딱 안맞는 경우가 있어서 맞춰주기
+        if (window.scrollY !== outerRef.offsetTop) {
+          window.scrollTo({ top: outerRef.offsetTop, behavior: 'smooth' });
+        }
+      }, 700);
+    }
+  }, []);
+
+  useEffect(() => {
+    const { current } = projectOuterRef;
+
+    let observer;
+    if (current) {
+      observer = new IntersectionObserver(scrollHandler, {
+        threshold: 0.3,
+      });
+      observer.observe(current);
+
+      return () => observer && observer.disconnect();
+    }
+  }, [scrollHandler]);
   return (
-    <ProjectItemWrapper>
+    <ProjectItemWrapper ref={projectOuterRef}>
       <div className={`imgWrapper${data.app ? ' app' : ''}`}>
         <div className='firstImg'>
           <div>
