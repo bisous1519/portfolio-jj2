@@ -1,4 +1,4 @@
-import { MaliconLogo } from '../../assets/icons';
+import { Emotion, MaliconLogo } from '../../assets/icons';
 import {
   maliconLanding,
   maliconLandingAni,
@@ -10,7 +10,7 @@ import {
 } from '../../assets/img';
 import skillLogo from '../../data/skillLogo';
 
-const { react, ts, redux, emotion } = skillLogo;
+const { react, ts, reduxToolkit, emotion } = skillLogo;
 
 const text = `
 <img src=${maliconLanding} alt='landing page' />
@@ -50,7 +50,7 @@ ___
 | <img src=${react.src} alt=${react.alt} /> | React |
 | :---: | :---: |
 | <img src=${ts.src} alt=${ts.alt} /> | Typescript |
-| <img src=${redux.src} alt=${redux.alt} /> | Redux Toolkit |
+| <img src=${reduxToolkit.src} alt=${reduxToolkit.alt} /> | Redux Toolkit |
 | <img src=${emotion.src} alt=${emotion.alt} /> | emotion |
 
 

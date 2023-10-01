@@ -19,7 +19,7 @@ const {
   nextjs,
   react,
   redux,
-  reduxSaga,
+  reduxToolkit,
   sass,
   styledComponent,
   ts,
@@ -52,7 +52,7 @@ export const projectData = [
     src2: maliconMain,
     alt1: 'malicon landing page',
     alt2: 'malicon main page',
-    skills: [react, ts, redux, emotion],
+    skills: [react, ts, reduxToolkit, emotion],
   },
   {
     id: 'teampjt-2',

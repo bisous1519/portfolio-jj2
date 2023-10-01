@@ -100,10 +100,6 @@ export default function NewMain() {
         <li className='one'>사용자 관점에서 생각하는</li>
         <li className='two'>프론트엔드 개발자,</li>
         <li className='three'>장엄지 입니다.</li>
-        {/* <li className='three'>사용자 친화적인 UI/UX를 구현하기위해</li>
-          <li className='four'>
-            <i>끊임없이 고민</i> 합니다.
-          </li> */}
       </ul>
       <div className='arrow'>
         <IoIosArrowDown />

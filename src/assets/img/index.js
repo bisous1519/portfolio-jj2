@@ -1,11 +1,6 @@
 // eomji
 export { default as eomji } from './eomji.png';
 export { default as eomji1 } from './eomji1.png';
-export { default as eomji2 } from './eomji2.png';
-export { default as eomji3 } from './eomji3.png';
-export { default as eomji4 } from './eomji4.png';
-export { default as eomji5 } from './eomji5.png';
-export { default as eomji6 } from './eomji6.png';
 export { default as eomji7 } from './eomji7.jpg';
 
 // malicon
