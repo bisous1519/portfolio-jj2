@@ -4,6 +4,17 @@ import { IoIosArrowDown } from 'react-icons/io';
 import { keyframes } from '@emotion/react';
 import { eomji1 } from '../assets/img';
 
+const eomjiKeyFrames = keyframes`
+  0% {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+`;
+
 const titleKeyFrames = keyframes`
     0% {
         transform: translateX(30px);
@@ -42,6 +53,9 @@ const MainContainer = styled.div`
       width: 100%;
       height: 100%;
       object-fit: contain;
+      animation: ${eomjiKeyFrames} 0.6s ease-in forwards;
+      animation-delay: 1.2s;
+      opacity: 0;
       /* filter: drop-shadow(2px 4px 10px #555); */
     }
   }

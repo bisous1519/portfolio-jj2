@@ -2,6 +2,7 @@
 export { default as eomji } from './eomji.png';
 export { default as eomji1 } from './eomji1.png';
 export { default as eomji7 } from './eomji7.jpg';
+export { default as eomji8 } from './eomji8.jpg';
 
 // malicon
 export { default as maliconMain } from './malicon_main.png';

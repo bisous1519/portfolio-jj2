@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import ModalLayout from './ModalLayout';
 import styled from '@emotion/styled';
-import { eomji7 } from '../../assets/img';
+import { eomji7, eomji8 } from '../../assets/img';
 import { IoCopyOutline } from 'react-icons/io5';
 import { svgEmail, svgGithub, svgNotion, svgPhone } from '../../assets/icons';
 
@@ -116,7 +116,7 @@ export default function ContactModal({ onCloseModal }) {
     <ModalLayout onCloseModal={onCloseModal}>
       <ContactModalContainer>
         <div>
-          <img src={eomji7} alt='profile img' />
+          <img src={eomji8} alt='profile img' />
         </div>
         <p>장엄지</p>
         <ul>

@@ -8,9 +8,24 @@ import { BiSearch } from 'react-icons/bi';
 import MoveToButton from '../buttons/MoveToButton';
 import useModal from '../../hooks/useModal';
 import ProjectModal from '../modal/ProjectModal';
+import { keyframes } from '@emotion/react';
+
+const upDownKeyFrames = keyframes`
+  0% {
+    /* transform: scale(1.02); */
+     transform:translateY(-7px);
+     /* box-shadow: 1px 1px 15px rgba(193, 193, 193, 0.498); */
+    }
+    100% {
+      /* transform: scale(1); */
+      /* box-shadow: 1px 1px 5px rgba(127, 127, 127, 0.5); */
+     transform:translateY(0px);
+  }
+`;
 
 const ProjectItemWrapper = styled.li`
   /* border: 1px solid red; */
+  width: 100%;
   height: 100vh;
   padding: 60px 0;
   display: flex;
@@ -18,26 +33,46 @@ const ProjectItemWrapper = styled.li`
   align-items: center;
   gap: 70px;
   & > div.imgWrapper {
-    &.app {
-      flex-direction: row;
-    }
+    flex: 3.5;
     display: flex;
     flex-direction: column;
     gap: 15px;
-    flex: 3.5;
     height: 90%;
+    &.app {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+    }
     & > div {
       flex: 1;
       width: 100%;
-      height: 100%;
-      border-radius: 15px;
+      /* height: 100%; */
       overflow: hidden;
-      border: ${({ theme }) => `0.7px solid ${theme.lineColor}`};
       /* box-shadow: ${({ theme }) => theme.shadowColor}; */
-      & > img {
-        width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      & > div {
         height: 100%;
-        object-fit: contain;
+        & > img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          border: ${({ theme }) => `0.7px solid ${theme.lineColor}`};
+          border-radius: 15px;
+        }
+      }
+    }
+    &.app > div {
+      flex: 1;
+      height: 100%;
+      display: flex;
+      &.firstImg {
+        justify-content: flex-end;
+      }
+      &.secondImg {
+        justify-content: flex-start;
       }
     }
   }
@@ -49,6 +84,17 @@ const ProjectItemWrapper = styled.li`
       justify-content: flex-end;
       gap: 20px;
       margin-bottom: 20px;
+      & > li.detailBtnWrapper {
+        position: relative;
+        & > div {
+          width: 50px;
+          height: 40px;
+          & > div {
+            position: absolute;
+            animation: ${upDownKeyFrames} 0.5s ease-in alternate infinite;
+          }
+        }
+      }
     }
     & > div {
       display: flex;
@@ -105,20 +151,26 @@ export default function NewProjectItem({ data }) {
   return (
     <ProjectItemWrapper>
       <div className={`imgWrapper${data.app ? ' app' : ''}`}>
-        <div>
-          <img src={data.src1} alt={data.alt1} />
+        <div className='firstImg'>
+          <div>
+            <img src={data.src1} alt={data.alt1} />
+          </div>
         </div>
-        <div>
-          <img src={data.src2} alt={data.alt2} />
+        <div className='secondImg'>
+          <div>
+            <img src={data.src2} alt={data.alt2} />
+          </div>
         </div>
       </div>
       <div className='desWrapper'>
         <ul className='moveToWrapper'>
-          <li>
-            <MoveToButton github={true} link={data.gitLink} />
+          <li className='detailBtnWrapper'>
+            <div>
+              <MoveToButton detail={true} onOpenModal={onOpenModal} />
+            </div>
           </li>
           <li>
-            <MoveToButton detail={true} onOpenModal={onOpenModal} />
+            <MoveToButton github={true} link={data.gitLink} />
           </li>
         </ul>
         <div>
