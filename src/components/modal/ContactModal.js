@@ -4,6 +4,26 @@ import styled from '@emotion/styled';
 import { eomji7, eomji8 } from '../../assets/img';
 import { IoCopyOutline } from 'react-icons/io5';
 import { svgEmail, svgGithub, svgNotion, svgPhone } from '../../assets/icons';
+import { keyframes } from '@emotion/react';
+
+const imgFadeinKeyFrame = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
+const nameFadeinKeyFrame = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+`;
 
 const ContactModalContainer = styled.section`
   width: 500px;
@@ -19,6 +39,9 @@ const ContactModalContainer = styled.section`
       width: 100%;
       height: 100%;
       object-fit: cover;
+      opacity: 0;
+      animation: ${imgFadeinKeyFrame} 0.3s ease-in forwards;
+      animation-delay: 0.5s;
     }
   }
   & > p {
@@ -26,6 +49,9 @@ const ContactModalContainer = styled.section`
     text-align: center;
     font-size: ${({ theme }) => theme.fontSize.lg};
     font-weight: ${({ theme }) => theme.fontWeight.bold};
+    opacity: 0;
+    animation: ${nameFadeinKeyFrame} 0.3s ease-in forwards;
+    animation-delay: 0.5s;
   }
   & > ul {
     margin: 20px auto 5px auto;

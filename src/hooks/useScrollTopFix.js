@@ -1,7 +1,8 @@
-import { useCallback, useEffect, useRef } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 
 const useScrollTopFix = (direction = 'up', duration = 1, delay = 0) => {
   const dom = useRef();
+  const [isSticky, setIsSticky] = useState(false);
 
   const handleScroll = useCallback(
     ([entry]) => {
@@ -14,10 +15,12 @@ const useScrollTopFix = (direction = 'up', duration = 1, delay = 0) => {
         current.style.position = 'sticky';
         current.style.top = '10px';
         current.style.zIndex = '99999';
+        setIsSticky(true);
       } else {
         current.style.position = 'static';
         current.style.top = '0';
         current.style.zIndex = '0';
+        setIsSticky(false);
       }
     },
     [direction, delay, duration]
@@ -42,6 +45,7 @@ const useScrollTopFix = (direction = 'up', duration = 1, delay = 0) => {
       //   opacity: 0,
       //   transform: handleDirection(direction),
     },
+    className: isSticky ? 'sticky' : 'static',
   };
 };
 
