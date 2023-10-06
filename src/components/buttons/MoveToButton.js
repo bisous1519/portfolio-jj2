@@ -14,7 +14,7 @@ const MoveToButtonBox = styled.div`
   justify-content: center;
   align-items: center;
   box-shadow: ${({ theme }) => theme.shadowColor};
-  over-flow: hidden;
+  overflow: hidden;
   cursor: pointer;
   & > i {
     color: ${({ theme }) => theme.textColor.lightPrimary};

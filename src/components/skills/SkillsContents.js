@@ -23,14 +23,6 @@ const SkillsContentsContainer = styled.article`
       justify-content: flex-start;
       align-items: flex-start;
       gap: 50px;
-      /* &:not(:first-of-type) {
-        &::before {
-          content: '';
-          display: block;
-          width: 100%;
-          border: 1px solid red;
-        }
-      } */
       & > div.summ {
         height: 45px;
         display: flex;

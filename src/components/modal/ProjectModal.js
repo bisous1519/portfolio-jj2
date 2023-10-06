@@ -19,6 +19,7 @@ const ProjectModalContainer = styled.section`
       font-size: ${({ theme }) => theme.fontSize.subTitle};
       font-weight: ${({ theme }) => theme.fontWeight.bolder};
       color: ${({ theme }) => theme.textColor.initial};
+      border-bottom: 1px solid ${({ theme }) => theme.projectModal.etcLine};
       margin-top: 55px;
       margin-bottom: 25px;
       padding-bottom: 14px;
@@ -54,30 +55,6 @@ const ProjectModalContainer = styled.section`
         }
       }
     }
-    /* div > div > ul {
-      margin: 12px 0px 14px 0px;
-      padding: 0px 15px;
-      columns: 13rem;
-      & > li {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 20px;
-        &::before {
-          display: none;
-        }
-        & > img {
-          width: 30px;
-          height: 30px;
-          object-fit: cover;
-          border-radius: 10px;
-          margin: 0;
-          box-shadow: ${({ theme }) => theme.shadowColor};
-        }
-        & > span {
-        }
-      }
-    } */
     table,
     thead,
     tr,
@@ -119,6 +96,7 @@ const ProjectModalContainer = styled.section`
     }
     blockquote {
       margin: 40px 0;
+      border-left: 4px solid ${({ theme }) => theme.projectModal.quoteLine};
       & > p {
         color: ${({ theme }) => theme.textColor.gray};
         line-height: 1.8;
@@ -136,7 +114,7 @@ const ProjectModalContainer = styled.section`
     }
     del {
       text-decoration: none;
-      background: #e9e9e9;
+      background: ${({ theme }) => theme.projectModal.summaryBackground};
       padding: 15px;
       border-radius: 10px;
       color: ${({ theme }) => theme.textColor.initial};
@@ -145,7 +123,7 @@ const ProjectModalContainer = styled.section`
       & > strong {
         &::after {
           content: '';
-          border: 1px solid #0000001f;
+          border: 1px solid ${({ theme }) => theme.projectModal.summaryAfter};
           margin: 0px 13px;
         }
       }
@@ -181,6 +159,7 @@ const ProjectModalContainer = styled.section`
     }
     hr {
       margin: 40px 0;
+      border: 1px solid ${({ theme }) => theme.projectModal.topLine};
     }
   }
 `;

@@ -8,6 +8,7 @@ const calcRem = (size) => `${size / 16}rem`;
 
 const theme = {
   light: {
+    mainBackground: '#e4f2f2',
     background: '#FCFCFC',
     textColor: {
       lightPrimary: '#5dd5cd',
@@ -22,6 +23,13 @@ const theme = {
     },
     // lineColor: '#e2e2e2',
     lineColor: '#d9d9d9',
+    projectModal: {
+      quoteLine: '#e5e5e5',
+      topLine: '#ebebeb',
+      etcLine: '#dbdbdb',
+      summaryBackground: '#e9e9e9',
+      summaryAfter: '#0000001f',
+    },
     shadowColor: '1px 1px 3px rgba(0, 0, 0, 0.2)',
     layerColor: 'rgba(115, 115, 115, 0.4)',
     fontSize: {
@@ -57,6 +65,7 @@ const theme = {
     },
   },
   dark: {
+    mainBackground: '#393939',
     background: '#2B2B2B', // '#121212',
     textColor: {
       lightPrimary: '#5dd5cd',
@@ -64,13 +73,21 @@ const theme = {
       initial: '#FCFCFC',
       reverse: '#2B2B2B',
       lightGray: '#9C9C9C',
-      gray: '#424242',
+      // gray: '#424242',
+      gray: '#cccccc',
       darkGray: '#333333',
       light: '#FCFCFC',
       dark: '#2B2B2B',
     },
-    lineColor: '#d9d9d9',
-    shadowColor: '1px 1px 3px rgba(200, 200, 200, 0.5)',
+    lineColor: '#424242',
+    projectModal: {
+      quoteLine: '#7b7b7b',
+      topLine: '#5b5b5b',
+      etcLine: '#575757',
+      summaryBackground: '#474747',
+      summaryAfter: '#ffffff3d',
+    },
+    shadowColor: '1px 1px 3px rgba(128, 128, 128, 0.5)',
     layerColor: 'rgba(115,115,115,0.4)',
     fontSize: {
       smaller: calcRem(12),

@@ -78,6 +78,7 @@ const ContactModalContainer = styled.section`
       }
       & > a {
         padding: 3px 0px;
+        color: ${({ theme }) => theme.textColor.initial};
         cursor: pointer;
         &:hover {
           color: ${({ theme }) => theme.textColor.primary};

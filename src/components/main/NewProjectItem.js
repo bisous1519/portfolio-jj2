@@ -59,7 +59,7 @@ const ProjectItemWrapper = styled.li`
           & > img {
             width: 100%;
             height: 100%;
-            object-fit: contain;
+            object-fit: cover;
             border: ${({ theme }) => `0.7px solid ${theme.lineColor}`};
             border-radius: 15px;
           }
