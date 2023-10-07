@@ -4,7 +4,8 @@ import styled from '@emotion/styled';
 import { eomji7, eomji8 } from '../../assets/img';
 import { IoCopyOutline } from 'react-icons/io5';
 import { svgEmail, svgGithub, svgNotion, svgPhone } from '../../assets/icons';
-import { keyframes } from '@emotion/react';
+import { css, keyframes } from '@emotion/react';
+import { useThemeState } from '../../hooks/ThemeContext';
 
 const imgFadeinKeyFrame = keyframes`
   from {
@@ -74,6 +75,11 @@ const ContactModalContainer = styled.section`
           width: 100%;
           height: 100%;
           object-fit: contain;
+          ${({ currentTheme }) =>
+            currentTheme === 'dark' &&
+            css`
+              filter: invert(1);
+            `}
         }
       }
       & > a {
@@ -122,6 +128,7 @@ const ContactModalContainer = styled.section`
 `;
 
 export default function ContactModal({ onCloseModal }) {
+  const currentTheme = useThemeState();
   const [emailFigCaption, setEmailFigCaption] = useState('copy');
   const [phoneFigCaption, setPhoneFigCaption] = useState('copy');
 
@@ -152,7 +159,7 @@ export default function ContactModal({ onCloseModal }) {
   };
   return (
     <ModalLayout onCloseModal={onCloseModal}>
-      <ContactModalContainer>
+      <ContactModalContainer currentTheme={currentTheme}>
         <div>
           <img src={eomji8} alt='profile img' />
         </div>
