@@ -81,9 +81,9 @@ const theme = {
     },
     lineColor: '#424242',
     projectModal: {
-      quoteLine: '#7b7b7b',
+      quoteLine: '#575757',
       topLine: '#5b5b5b',
-      etcLine: '#575757',
+      etcLine: '#4e4e4e',
       summaryBackground: '#474747',
       summaryAfter: '#ffffff3d',
     },

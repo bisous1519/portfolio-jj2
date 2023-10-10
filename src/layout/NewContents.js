@@ -5,7 +5,7 @@ import { NewSkills } from '../components/main';
 import NewProjects from '../components/main/NewProjects';
 import NewIntro from '../components/main/NewIntro';
 import Experience from '../components/main/Experience';
-import { NavContext } from '../App';
+import { NavContext, curNavInit } from '../App';
 
 const NewContentsContainer = styled.div`
   width: 100%;
@@ -29,12 +29,7 @@ export default function NewContents() {
     if (clickedEl) {
       window.scrollTo({ top: clickedEl.offsetTop, behavior: 'instant' });
       setCurNav({
-        intro: false,
-        skills: false,
-        malicon: false,
-        eeum: false,
-        ssafast: false,
-        etc: false,
+        ...curNavInit,
         [navName]: true,
       });
     }

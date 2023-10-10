@@ -1,5 +1,6 @@
 import { useCallback, useContext, useEffect, useRef } from 'react';
 import { NavContext } from '../App';
+import { curNavInit } from '../App';
 
 const useScrollNav = (navName = 'intro') => {
   const { curNav, setCurNav } = useContext(NavContext);
@@ -9,12 +10,7 @@ const useScrollNav = (navName = 'intro') => {
     ([entry]) => {
       if (entry.isIntersecting) {
         setCurNav({
-          intro: false,
-          skills: false,
-          malicon: false,
-          eeum: false,
-          ssafast: false,
-          etc: false,
+          ...curNavInit,
           [navName]: true,
         });
       }

@@ -40,16 +40,21 @@ const globalStyle = css`
 
 export const ScrollContext = createContext();
 export const NavContext = createContext();
+export const curNavInit = {
+  intro: false,
+  skills: false,
+  malicon: false,
+  eeum: false,
+  ssafast: false,
+  portfolio: false,
+  etc: false,
+};
 
 function App() {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [curNav, setCurNav] = useState({
+    ...curNavInit,
     intro: true,
-    skills: false,
-    malicon: false,
-    eeum: false,
-    ssafast: false,
-    etc: false,
   });
 
   const updateScroll = throttle(() => {

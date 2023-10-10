@@ -36,3 +36,16 @@ export { default as ssafastApiReqAni } from './ssafast_apiReqAni.gif';
 export { default as ssafastApiReqAxios } from './ssafast_apiReqAxios.png';
 export { default as ssafastUsecaseAni } from './ssafast_usecaseAni.gif';
 
+// portfolio
+export { default as portfolioIntro } from './portfolio_intro.png';
+export { default as portfolioMain } from './portfolio_main.png';
+export { default as portfolioProjectDetail } from './portfolio_projectDetail.png';
+export { default as portfolioProjectItem } from './portfolio_projectItem.png';
+export { default as portfolioSkills } from './portfolio_skills.png';
+export { default as portfolioSkillIcons } from './portfolio_skillIcons.gif';
+export { default as portfolioProjects } from './portfolio_projects.gif';
+export { default as portfolioDarkMode } from './portfolio_darkMode.gif';
+export { default as portfolioNavClick } from './portfolio_navClick.gif';
+export { default as portfolioNavHighlight } from './portfolio_navHighlight.gif';
+export { default as portfolioAnimation } from './portfolio_animation.gif';
+

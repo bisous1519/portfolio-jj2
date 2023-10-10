@@ -27,8 +27,11 @@ const NavContainer = styled.nav`
       font-weight: ${({ theme }) => theme.fontWeight.bold};
     }
     & > li.project {
+      display: flex;
       & > ul {
         margin-left: 15px;
+        padding-left: 5px;
+        border-left: 1px solid ${({ theme }) => theme.projectModal.quoteLine};
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -45,12 +48,13 @@ export default function Nav({ onClickNav }) {
   const [isSelected, setIsSelected] = useState('intro');
 
   useEffect(() => {
-    const { intro, skills, malicon, eeum, ssafast, etc } = curNav;
+    const { intro, skills, malicon, eeum, ssafast, portfolio, etc } = curNav;
     if (intro) setIsSelected('intro');
     else if (skills) setIsSelected('skills');
     else if (malicon) setIsSelected('malicon');
     else if (eeum) setIsSelected('eeum');
     else if (ssafast) setIsSelected('ssafast');
+    else if (portfolio) setIsSelected('portfolio');
     else if (etc) setIsSelected('etc');
     else setIsSelected('intro');
   }, [curNav]);
@@ -79,7 +83,7 @@ export default function Nav({ onClickNav }) {
               : ''
           }
         >
-          프로젝트
+          팀프로젝트
         </li>
         <li className='project'>
           <ul>
@@ -100,6 +104,22 @@ export default function Nav({ onClickNav }) {
               className={isSelected === 'ssafast' ? 'active' : ''}
             >
               싸패스트
+            </li>
+          </ul>
+        </li>
+        <li
+          onClick={() => onClickNav('portfolio')}
+          className={isSelected === 'portfolio' ? 'active' : ''}
+        >
+          개인프로젝트
+        </li>
+        <li className='project'>
+          <ul>
+            <li
+              onClick={() => onClickNav('portfolio')}
+              className={isSelected === 'portfolio' ? 'active' : ''}
+            >
+              포트폴리오
             </li>
           </ul>
         </li>
