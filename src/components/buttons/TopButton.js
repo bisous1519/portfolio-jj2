@@ -32,7 +32,7 @@ export default function TopButton() {
   const scrollPosition = useContext(ScrollContext);
   const btnEl = useRef();
   const toTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: 'instant' });
   };
 
   useEffect(() => {
