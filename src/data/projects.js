@@ -106,7 +106,7 @@ export const projectData = [
     nav: 'portfolio',
     id: 'mypjt-1',
     title: 'PORTFOLIO',
-    subTitle: '사용자 관점에서 생각하는, 장엄지 입니다',
+    subTitle: '프론트엔드 개발자, 장엄지 입니다',
     date: '23.11 - 23.12',
     gitLink: 'https://github.com/bisous1519/portfolio-jj2',
     detail: portfolioDetail,
