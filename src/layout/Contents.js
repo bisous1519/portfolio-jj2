@@ -5,16 +5,21 @@ import { myProject, teamProject } from '../mocks/data';
 import { NewSkills, Projects, Skills } from '../components/main';
 
 const ContentsContainer = styled.div`
-  margin-top: 10px;
+  margin-top: 50px;
   padding: 0 50px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
   & > section {
-    max-width: 100%;
+    width: 100%;
+    top: 59px;
     & > div {
-      display: flex;
+      /* display: flex;
       align-items: flex-end;
       flex-wrap: wrap;
       position: sticky;
-      top: 59px;
       background-color: ${({ theme }) => theme.background};
       transition: background-color 0.3s;
       padding-top: 15px;
@@ -30,15 +35,15 @@ const ContentsContainer = styled.div`
         font-size: ${({ theme }) => theme.fontSize.small};
         margin-left: 20px;
         font-weight: ${({ theme }) => theme.fontWeight.base};
-      }
-      &::after {
+      } */
+      /* &::after {
         content: '';
         display: block;
         width: 100%;
         border-bottom: 1px solid ${({ theme }) => theme.textColor.lightGray};
         margin-top: 15px;
         box-shadow: ${({ theme }) => theme.shadowColor};
-      }
+      }*/
     }
   }
   @media ${({ theme }) => theme.viewPortSize.mobile} {
@@ -62,7 +67,7 @@ export default function Contents() {
   return (
     <ContentsContainer>
       <NewSkills />
-      <Skills />
+      {/* <Skills />
       <Projects data={teamProject}>
         <div>
           <h3>팀프로젝트</h3>
@@ -74,7 +79,8 @@ export default function Contents() {
           <h3>개인프로젝트</h3>
           <p>스타벅스 &#47; 북시</p>
         </div>
-      </Projects>
+      </Projects> */}
+      <div style={{ height: '500px' }}></div>
       <Footer />
     </ContentsContainer>
   );

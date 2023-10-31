@@ -41,19 +41,8 @@ const LayoutContainer = styled.div`
 `;
 
 export default function NewLayout() {
-  // const scrollPosition = useContext(ScrollContext);
-
   const currentTheme = useThemeState();
   const [openModal, onOpenModal, onCloseModal] = useModal();
-
-  // const [headerVisible, setHeaderVisible] = useState(false);
-  // useEffect(() => {
-  //   if (scrollPosition && scrollPosition > window.innerHeight * 0.8) {
-  //     setHeaderVisible(true);
-  //   } else {
-  //     setHeaderVisible(false);
-  //   }
-  // }, [scrollPosition]);
 
   return (
     <ThemeProvider theme={currentTheme === 'light' ? theme.light : theme.dark}>

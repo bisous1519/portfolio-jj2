@@ -7,6 +7,7 @@ const useScroll = (percent) => {
   const [state, setState] = useState(false);
 
   useEffect(() => {
+    console.log(Math.floor((scrollPosition / window.innerHeight) * 100), '%');
     if (
       scrollPosition &&
       scrollPosition > window.innerHeight * (percent / 100)
