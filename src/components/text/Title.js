@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 import React from 'react';
 import useScrollVisible from '../../hooks/useScrollVisible';
 import useScrollFadeIn from '../../hooks/useScrollFadeIn';
+import useScrollTopFix from '../../hooks/useScrollTopFix';
 
 const TitleContainer = styled.div`
   /* &.invisible {
@@ -27,6 +28,11 @@ const TitleContainer = styled.div`
 
 export default function Title({ name }) {
   const fadeInAnimation = useScrollFadeIn();
-  return <TitleContainer {...fadeInAnimation}>{name}</TitleContainer>;
+  const topFix = useScrollTopFix();
+  return (
+    <TitleContainer {...fadeInAnimation} {...topFix}>
+      {name}
+    </TitleContainer>
+  );
 }
 

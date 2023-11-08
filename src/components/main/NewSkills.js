@@ -23,7 +23,6 @@ const SkillsInnerlContainer = styled.div`
 `;
 
 const SkillsContainer = styled.section`
-  /* overflow: hidden; */
   & > div.inner {
   }
 `;

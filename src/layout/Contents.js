@@ -7,7 +7,7 @@ import NewProjects from '../components/main/NewProjects';
 
 const ContentsContainer = styled.div`
   margin-top: 50px;
-  padding: 0 50px;
+  padding: 0 20px 0 50px;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -16,7 +16,8 @@ const ContentsContainer = styled.div`
   & > section {
     width: 100%;
     top: 59px;
-    & > div {
+    & > div.inner {
+      overflow: hidden;
       /* display: flex;
       align-items: flex-end;
       flex-wrap: wrap;

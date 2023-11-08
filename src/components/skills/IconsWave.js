@@ -10,12 +10,16 @@ import {
   TSlogo,
   Vuejslogo,
 } from '../../assets/icons';
+import skillLogo from '../../data/skillLogo';
 import useScrollVisible from '../../hooks/useScrollVisible';
 import styled from '@emotion/styled';
+import IconItem from './SkillIcons';
+import SkillIcons from './SkillIcons';
 
 const IconsWaveContainer = styled.div`
   margin-bottom: 50px;
-  & > ul.iconsWave {
+  /* & > ul { */
+  & > div {
     &.invisible {
       opacity: 0;
     }
@@ -23,10 +27,8 @@ const IconsWaveContainer = styled.div`
     transform: ${(props) => `translateX(${props.halfInnerW + 15}px)`};
     transition: opacity 0.3s;
     margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    & > li {
+  }
+  /* & > li {
       width: 30px;
       height: 30px;
       border-radius: 10px;
@@ -40,8 +42,8 @@ const IconsWaveContainer = styled.div`
         height: 100%;
         object-fit: cover;
       }
-    }
-  }
+    } */
+  /* } */
 `;
 
 function WaveBox({ logoArr, sPoint, ePoint }) {
@@ -83,40 +85,31 @@ function WaveBox({ logoArr, sPoint, ePoint }) {
     });
   }, []);
   return (
-    <ul
+    <div
       className={`iconsWave iconsWave2 ${
         iconsWaveVisible ? 'visible' : 'invisible'
       }`}
       ref={iconsWaveEl}
     >
-      {logoArr.length > 0 &&
-        logoArr.map((logo, idx) => (
-          <li key={idx}>
-            <img src={logo.src} alt={logo.alt} />
-          </li>
-        ))}
-    </ul>
+      <SkillIcons datas={logoArr} />
+    </div>
   );
 }
 
 export default function IconsWave() {
-  const logoArr1 = [
-    { src: JSlogo, alt: 'javascript logo', des: 'Javascript' },
-    { src: TSlogo, alt: 'TS logo', des: 'Typescript' },
-    { src: Reactlogo, alt: 'React logo', des: 'React' },
-    { src: Vuejslogo, alt: 'Vuejs logo', des: 'Vue.js' },
-    { src: Nextjslogo, alt: 'Nextjs logo', des: 'Next.js' },
-  ];
-  const logoArr2 = [
-    { src: Reduxlogo, alt: 'Redux logo', des: 'Redux' },
-    { src: ReduxSagalogo, alt: 'ReduxSaga logo', des: 'Redux saga' },
-    { src: Sasslogo, alt: 'Sass logo', des: 'sass' },
-    {
-      src: StyledComponentslogo,
-      alt: 'StyledComponents logo',
-      des: 'styled-components',
-    },
-  ];
+  const {
+    js,
+    nextjs,
+    react,
+    redux,
+    reduxSaga,
+    sass,
+    styledComponent,
+    ts,
+    vue,
+  } = skillLogo;
+  const logoArr1 = [js, ts, react, vue, nextjs];
+  const logoArr2 = [redux, reduxSaga, sass, styledComponent];
 
   return (
     <IconsWaveContainer>

@@ -5,3 +5,6 @@ export { default as bear } from './bear.jpg';
 export { default as bear2 } from './bear2.jpg';
 export { default as eomji } from './eomji.png';
 export { default as eeumMain } from './ieum_main.png';
+export { default as maliconMain } from './pro-malicon1.png';
+export { default as maliconLanding } from './pro-malicon2.png';
+export { default as maliconLoading } from './pro-malicon3.png';
