@@ -24,6 +24,7 @@ import {
   Git,
   Jira,
   CSSlogo,
+  Postmanlogo,
 } from '../assets/icons';
 
 const js = { src: JSlogo, alt: 'javascript logo', des: 'Javascript' };
@@ -91,6 +92,7 @@ const springBoot = {
 const mySQL = { src: MySQL, alt: 'MySQL logo', des: 'MySQL' };
 const git = { src: Git, alt: 'Git logo', des: 'git' };
 const jira = { src: Jira, alt: 'Jira logo', des: 'Jira' };
+const postman = { src: Postmanlogo, alt: 'Postman logo', des: 'Postman' };
 
 const skillLogo = {
   js,
@@ -118,6 +120,7 @@ const skillLogo = {
   git,
   jira,
   css,
+  postman,
 };
 export default skillLogo;
 

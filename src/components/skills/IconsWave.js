@@ -113,6 +113,7 @@ export default function IconsWave() {
     git,
     github,
     gitlab,
+    postman,
     notion,
     figma,
     trello,
@@ -130,7 +131,7 @@ export default function IconsWave() {
     emotion,
     tailwind,
   ];
-  const logoArr3 = [java, springBoot, mySQL, git, jira, notion, figma];
+  const logoArr3 = [java, springBoot, mySQL, postman, git, jira, notion, figma];
 
   const FEtitleEl = useRef();
   const [scrollActive, setScrollActive] = useState(false);

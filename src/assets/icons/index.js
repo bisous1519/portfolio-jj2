@@ -24,6 +24,7 @@ export { default as CSSlogo } from './css_logo.png';
 export { default as Notionlogo } from './notion_logo.png';
 export { default as Figmalogo } from './figma_logo.png';
 export { default as Trellologo } from './trello_logo.png';
+export { default as Postmanlogo } from './postman_logo.png';
 // github, gitlab, notion, trello, figma
 
 // project
