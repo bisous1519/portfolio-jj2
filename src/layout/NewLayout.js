@@ -12,8 +12,9 @@ import TopButton from '../components/buttons/TopButton';
 const LayoutContainer = styled.div`
   position: relative;
   color: ${({ theme }) => theme.textColor.initial};
-  background-color: ${({ theme }) => theme.background};
   font-size: ${({ theme }) => theme.fontSize.base};
+  font-weight: ${({ theme }) => theme.fontWeight.base};
+  background-color: ${({ theme }) => theme.background};
   transition: all 0.3s;
   width: 100vw;
   /* overflow-x: hidden; */

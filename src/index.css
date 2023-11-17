@@ -3,11 +3,6 @@
   src: url('./assets/fonts/Inter.ttf') format('truetype');
 }
 @font-face {
-  font-family: 'Pretendard';
-  src: url('./assets/fonts/PretendardVariable.ttf') format('truetype');
-  font-weight: normal;
-}
-@font-face {
   font-family: 'Yeongdeok';
   src: url('./assets/fonts/Yeongdeok\ Snow\ Crab.otf') format('opentype');
   font-weight: normal;
@@ -31,5 +26,28 @@
     format('woff');
   font-weight: normal;
   font-style: normal;
+}
+
+/* 프리텐다드 */
+@font-face {
+  font-family: 'Pretendard';
+  src: url('./assets/fonts/Pretendard-Light.woff2') format('woff2');
+  /* src: url('./assets/fonts/Pretendard-Thin.woff2') format('woff2'); */
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'Pretendard';
+  src: url('./assets/fonts/Pretendard-Regular.woff2') format('woff2');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Pretendard';
+  src: url('./assets/fonts/Pretendard-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'Pretendard';
+  src: url('./assets/fonts/Pretendard-Bold.woff2') format('woff2');
+  font-weight: 800;
 }
 
