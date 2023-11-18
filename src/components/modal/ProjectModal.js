@@ -5,43 +5,147 @@ import { Viewer } from '@toast-ui/react-editor';
 import styled from '@emotion/styled';
 
 const ProjectModalContainer = styled.section`
-  width: 80vw;
-  height: 70vh;
+  /* border: 1px solid red; */
+  width: 70vw;
+  height: 80vh;
+  padding: 0px 50px !important;
   .toastui-editor-contents {
     h1 {
-      font-size: ${({ theme }) => theme.fontSize.tititle};
+      font-size: ${({ theme }) => theme.fontSize.title};
+      font-weight: ${({ theme }) => theme.fontWeight.bolder};
       color: ${({ theme }) => theme.textColor.initial};
     }
     h2 {
       font-size: ${({ theme }) => theme.fontSize.subTitle};
+      font-weight: ${({ theme }) => theme.fontWeight.bolder};
       color: ${({ theme }) => theme.textColor.initial};
+      margin-top: 55px;
+      margin-bottom: 25px;
+      padding-bottom: 14px;
     }
     h3 {
       font-size: ${({ theme }) => theme.fontSize.lg};
+      font-weight: ${({ theme }) => theme.fontWeight.bold};
       color: ${({ theme }) => theme.textColor.initial};
+      margin-top: 30px;
+      &:nth-of-type(1) {
+        margin-top: 55px;
+        margin-bottom: 2px;
+      }
+      &:nth-of-type(2) {
+        margin-top: 9px;
+        margin-bottom: 30px;
+      }
     }
     p {
       font-size: ${({ theme }) => theme.fontSize.base};
       color: ${({ theme }) => theme.textColor.initial};
+      margin: 18px 0;
+      line-height: 1.7;
+    }
+    ul {
+      & > li {
+        &::before {
+          margin-top: 10px;
+        }
+        & > p {
+          margin: 10px 0;
+        }
+      }
+    }
+    blockquote {
+      margin: 40px 0;
+      & > p {
+        color: ${({ theme }) => theme.textColor.gray};
+        line-height: 1.8;
+      }
     }
     a {
       color: ${({ theme }) => theme.textColor.primary};
       &:hover {
-        color: ${({ theme }) => theme.textColor.lightGray};
+        color: ${({ theme }) => theme.textColor.lightPrimary};
       }
     }
     strong {
       /* color: ${({ theme }) => theme.textColor.primary}; */
-      font-weight: ${({ theme }) => theme.fontWeight.bolder};
+      font-weight: ${({ theme }) => theme.fontWeight.bold};
+    }
+    del {
+      text-decoration: none;
+      background: #e9e9e9;
+      padding: 15px;
+      border-radius: 10px;
+      color: ${({ theme }) => theme.textColor.initial};
+      display: inline-block;
+      margin-top: 5px;
+      & > strong {
+        &::after {
+          content: '';
+          border: 1px solid #0000001f;
+          margin: 0px 13px;
+        }
+      }
+    }
+    p:first-of-type {
+      & > img {
+        max-height: 280px;
+        display: block;
+        margin: 40px auto;
+      }
+    }
+    img {
+      max-height: 200px;
+      display: block;
+      margin: 0 auto;
+      border: 1px solid ${({ theme }) => theme.lineColor};
+      border-radius: 10px;
+    }
+    hr {
+      margin: 40px 0;
+    }
+    table,
+    thead,
+    tr,
+    th,
+    tbody,
+    td {
+      border: none;
+    }
+    table {
+      color: ${({ theme }) => theme.textColor.initial};
+      & > thead {
+        & > tr {
+          & > th {
+            background: none;
+            & > img {
+              width: 30px;
+              height: 30px;
+              object-fit: cover;
+              border-radius: 10px;
+              margin: 0;
+              box-shadow: ${({ theme }) => theme.shadowColor};
+            }
+          }
+        }
+      }
+      & > tbody {
+        & > tr {
+          & > td {
+            font-size: ${({ theme }) => theme.fontSize.small};
+            line-height: 1.4;
+            color: ${({ theme }) => theme.textColor.gray};
+          }
+        }
+      }
     }
   }
 `;
 
 export default function ProjectModal({ data, onCloseModal }) {
   return (
-    <ModalLayout onCloseModal={onCloseModal}>
+    <ModalLayout icon={data.icon} title={data.name} onCloseModal={onCloseModal}>
       <ProjectModalContainer>
-        <Viewer initialValue={data} />
+        <Viewer initialValue={data.text} />
       </ProjectModalContainer>
     </ModalLayout>
   );

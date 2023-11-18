@@ -18,6 +18,11 @@ export { default as MySQL } from './mysql_logo.png';
 export { default as Git } from './git_logo.png';
 export { default as Jira } from './jira_logo.jpeg';
 export { default as CSSlogo } from './css_logo.png';
+export { default as MaliconLogo } from './malicon_logo.png';
+export { default as EeumLogo } from './eeum_logo.png';
+export { default as EeumLogo2 } from './eeum_logo2.png';
+export { default as SsafastLogo1 } from './ssafast_logo1.png';
+export { default as SsafastLogo2 } from './ssafast_logo2.png';
 
 // github, gitlab, jira, notion
 

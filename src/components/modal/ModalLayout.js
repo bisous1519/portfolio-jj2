@@ -13,19 +13,47 @@ const ModalLayoutContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  & > div {
+  & > div.modalWrapper {
     padding-bottom: 20px;
     background-color: ${({ theme }) => theme.background};
     border-radius: 10px;
     box-shadow: ${({ theme }) => theme.shadowColor};
-    & > div {
+    & > div.topBar {
+      position: relative;
+      min-height: 30px;
       width: 100%;
       padding: 20px;
-      text-align: right;
       color: ${({ theme }) => theme.textColor.initial};
-      & > svg {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      & > div {
+        width: 30px;
+        height: 30px;
+        & > img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+      & > span {
+        font-size: ${({ theme }) => theme.fontSize.title};
+        font-weight: ${({ theme }) => theme.fontWeight.bold};
+        color: ${({ theme }) => theme.textColor.initial};
+      }
+      & > i {
+        position: absolute;
+        top: 50%;
+        right: 30px;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
         &:hover {
-          cursor: pointer;
           color: ${({ theme }) => theme.textColor.primary};
         }
       }
@@ -51,7 +79,7 @@ const ModalLayoutContainer = styled.div`
   }
 `;
 
-export default function ModalLayout({ children, onCloseModal }) {
+export default function ModalLayout({ children, title, icon, onCloseModal }) {
   const onClose = (e) => {
     if (e.target === e.currentTarget) {
       onCloseModal();
@@ -59,9 +87,17 @@ export default function ModalLayout({ children, onCloseModal }) {
   };
   return (
     <ModalLayoutContainer onClick={onClose}>
-      <div>
-        <div onClick={onCloseModal}>
-          <IoCloseOutline />
+      <div className='modalWrapper'>
+        <div className='topBar'>
+          {icon && (
+            <div>
+              <img src={icon.src} alt={icon.alt} />
+            </div>
+          )}
+          {title && <span>{title}</span>}
+          <i onClick={onCloseModal}>
+            <IoCloseOutline />
+          </i>
         </div>
         {children}
       </div>
