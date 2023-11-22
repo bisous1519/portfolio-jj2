@@ -1,15 +1,16 @@
 import { SsafastLogo1 } from '../../assets/icons';
-import { ssafastMain, ssafastConnAPI } from '../../assets/img';
+import { ssafastMain, ssafastConnAPIAni } from '../../assets/img';
 import skillLogo from '../../data/skillLogo';
 
 const { react, nextjs, ts, redux, reactQuery, tailwind } = skillLogo;
 
 const text = `
-<img src=${ssafastMain} alt='main page />
+<img src=${ssafastMain} alt='main page' />
 
 >기간 : 23.04.10 ~ 23.05.19 (약 7주)
 >인원 : 프론트엔드 3명(본인 포함), 백엔드 3명
->깃허브 : [SSAFAST](https://github.com/bisous1519/ssafast)
+>깃허브 : <a href='https://github.com/bisous1519/ssafast' target='_blank' rel='noreferrer'>SSAFAST</a>
+
 ___
 
 ### " 불편함을 해소하여
@@ -39,7 +40,7 @@ Figma, Notion, Postman, Swagger, Locust 등
 - 작성된 DTO를 기반으로 API를 작성할 수 있습니다.
 - Figma API를 통해 Figma에 디자인된 화면을 프레임 단위로 가져올 수 있습니다.
 - 각 Figma 화면마다 원하는 API들을 매칭하여 화면별 필요한 API를 가시화하였습니다.
-- 개발된 API를 테스트하고 프론트에서 요청하는 axios 코드를 생성할 수 있습니다.
+- 개발된 API를 테스트하고 프론트에서 서버에 요청하는 axios 객체를 생성할 수 있습니다.
 
 ## 프론트엔드 기술 스택
 
@@ -52,9 +53,13 @@ Figma, Notion, Postman, Swagger, Locust 등
 | <img src=${tailwind.src} alt=${tailwind.alt} /> | Tailwind |
 
 ## 맡은 역할
-~~**요약** 워크스페이스 홈화면 구현, 화면별 API 연결 구현, axios 요청 객체코드 반환 구현, 테스트 자동화 페이지 구현~~
+~~**요약** 워크스페이스 홈화면, 화면별 API 연결 구현, axios 요청 객체코드 반환 구현, 테스트 자동화 페이지 구현~~
 
 ### [ 화면벌 API 구현 ]
+
+### [ API 명세 및 화면 별 API 연결]
+<img src=${ssafastConnAPIAni} alt='connect api' />
+- 
 
 ## 프로젝트 성과
 서비스의 실용성을 인정받아 **삼성 청년 SW 아카데미(SSAFY) 8기 자율프로젝트 우수상**을 수여하였습니다.

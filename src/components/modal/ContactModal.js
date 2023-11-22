@@ -5,8 +5,10 @@ import { FaRegSmile } from 'react-icons/fa';
 import styled from '@emotion/styled';
 
 const ContactModalContainer = styled.section`
-  width: 350px;
-  height: 200px;
+  /* width: 350px;
+  height: 200px; */
+  max-width: 70vw;
+  max-height: 80vh;
   & > ul {
     margin: auto;
     & > a {

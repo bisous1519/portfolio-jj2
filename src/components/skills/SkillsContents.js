@@ -13,7 +13,8 @@ const SkillsContentsContainer = styled.article`
     padding: 0px 50px;
     margin: 0 auto;
     margin-top: 50px;
-    max-width: ${({ isFrontend }) => (isFrontend ? '1000px' : '840px')};
+    /* max-width: ${({ isFrontend }) => (isFrontend ? '1000px' : '840px')}; */
+    max-width: 1000px;
     display: flex;
     flex-direction: column;
     gap: 80px;

@@ -22,4 +22,5 @@ export { default as maliconTutorialAni } from './malicon_tutorial.png';
 export { default as maliconLoading } from './pro-malicon3.png';
 export { default as ssafastMain } from './ssafastMain.png';
 export { default as ssafastConnAPI } from './ssafastConnAPI.png';
+export { default as ssafastConnAPIAni } from './ssafastConnAPIAni.gif';
 

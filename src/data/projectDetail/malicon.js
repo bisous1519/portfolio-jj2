@@ -17,7 +17,7 @@ const text = `
 
 >기간 : 23.01.02 ~ 23.02.17 (약 7주)
 >인원 : 프론트엔드 2명(본인 포함), 백엔드 4명
->깃허브 : [MALICON](https://github.com/bisous1519/malicon)
+>깃허브 : <a href='https://github.com/bisous1519/malicon' target='_blank' rel='noreferrer'>MALICON</a>
 ___
 
 ### " 아바타로 소통하는 아티스트와 나,
@@ -55,7 +55,7 @@ ___
 
 
 ## 맡은 역할
-~~**요약** 애니메이션, 무한스크롤, 실시간 반응, 실시간 채팅~~
+~~**요약** 애니메이션 / 무한스크롤 / 실시간 반응 / 실시간 채팅~~
 
 ### [ 애니메이션 ]
 
