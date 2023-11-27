@@ -45,16 +45,19 @@ const ModalLayoutContainer = styled.div`
       & > i {
         position: absolute;
         top: 50%;
-        right: 30px;
+        right: 25px;
         transform: translateY(-50%);
-        width: 20px;
-        height: 20px;
+        transition: all 0.2s !important;
+        width: 25px;
+        height: 25px;
+        font-size: 18px;
+        color: ${({ theme }) => theme.textColor.lightGray};
         display: flex;
         justify-content: center;
         align-items: center;
         cursor: pointer;
         &:hover {
-          color: ${({ theme }) => theme.textColor.primary};
+          color: ${({ theme }) => theme.textColor.initial};
         }
       }
     }

@@ -6,6 +6,7 @@ export { default as eomji3 } from './eomji3.png';
 export { default as eomji4 } from './eomji4.png';
 export { default as eomji5 } from './eomji5.png';
 export { default as eomji6 } from './eomji6.png';
+export { default as eomji7 } from './eomji7.jpg';
 
 // malicon
 export { default as maliconMain } from './malicon_main.png';
@@ -38,3 +39,4 @@ export { default as ssafastApiMappingAni } from './ssafast_apiMappingAni.gif';
 export { default as ssafastApiReqAni } from './ssafast_apiReqAni.gif';
 export { default as ssafastApiReqAxios } from './ssafast_apiReqAxios.png';
 export { default as ssafastUsecaseAni } from './ssafast_usecaseAni.gif';
+

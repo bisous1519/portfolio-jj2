@@ -19,6 +19,7 @@ export { default as MySQL } from './mysql_logo.png';
 export { default as Git } from './git_logo.png';
 export { default as Jira } from './jira_logo.jpeg';
 export { default as CSSlogo } from './css_logo.png';
+// github, gitlab, notion
 
 // project
 export { default as MaliconLogo } from './malicon_logo.png';
@@ -27,5 +28,14 @@ export { default as EeumLogo2 } from './eeum_logo2.png';
 export { default as SsafastLogoBlack } from './ssafast_logo_black.png';
 export { default as SsafastLogoWhite } from './ssafast_logo_white.png';
 
-// github, gitlab, notion
+// svg icons
+export { default as svgEmail } from './png-email.png';
+export { default as svgGithub } from './png-github.png';
+export { default as svgNotion } from './png-notion.png';
+export { default as svgPhone } from './png-phone.png';
+
+// https://www.svgrepo.com/svg/315258/notion
+// https://www.svgrepo.com/svg/522622/phone
+// https://www.svgrepo.com/svg/473944/email
+// https://www.svgrepo.com/svg/507717/github-square
 
