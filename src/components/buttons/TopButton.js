@@ -1,7 +1,8 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useContext, useEffect, useRef } from 'react';
 import { IoIosArrowUp } from 'react-icons/io';
 import throttle from 'lodash.throttle';
 import styled from '@emotion/styled';
+import { ScrollContext } from '../../App';
 
 const TopButtonBox = styled.button`
   position: fixed;
@@ -12,7 +13,7 @@ const TopButtonBox = styled.button`
   border: 1px solid ${({ theme }) => theme.textColor.lightGray};
   border-radius: 50%;
   background-color: ${({ theme }) => theme.background};
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   box-shadow: ${({ theme }) => theme.shadowColor};
@@ -28,29 +29,27 @@ const TopButtonBox = styled.button`
 `;
 
 export default function TopButton() {
+  const scrollPosition = useContext(ScrollContext);
   const btnEl = useRef();
   const toTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
+
   useEffect(() => {
-    window.addEventListener(
-      'scroll',
-      throttle(() => {
-        console.log(window.scrollY);
-        if (window.scrollY > 350) {
-          btnEl.current.style.display = 'flex';
-          setTimeout(() => {
-            btnEl.current.style.opacity = 1;
-          }, 200);
-        } else {
-          btnEl.current.style.opacity = 0;
-          setTimeout(() => {
-            btnEl.current.style.display = 'none';
-          }, 200);
-        }
-      }, 300)
-    );
-  }, []);
+    const { current } = btnEl;
+
+    if (scrollPosition > 350) {
+      current.style.display = 'flex';
+      setTimeout(() => {
+        current.style.opacity = 1;
+      }, 200);
+    } else {
+      current.style.opacity = 0;
+      setTimeout(() => {
+        current.style.display = 'none';
+      }, 200);
+    }
+  }, [scrollPosition]);
   return (
     <TopButtonBox className='topButton' ref={btnEl} onClick={toTop}>
       <i>

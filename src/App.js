@@ -39,18 +39,23 @@ const globalStyle = css`
 `;
 
 export const ScrollContext = createContext();
-// export const 
 
 function App() {
   const [scrollPosition, setScrollPosition] = useState(0);
 
   const updateScroll = throttle(() => {
     setScrollPosition(window.scrollY || document.documentElement.scrollTop);
-    console.log(scrollPosition);
   }, 300);
 
   useEffect(() => {
+    console.log('현재스크롤', scrollPosition);
+  }, [scrollPosition]);
+
+  useEffect(() => {
     window.addEventListener('scroll', updateScroll);
+    return () => {
+      window.removeEventListener('scroll', updateScroll);
+    };
   }, []);
   return (
     <ModeProvider>
