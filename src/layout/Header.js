@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { FiExternalLink } from 'react-icons/fi';
 import ToggleButton from '../components/buttons/ToggleButton';
 import styled from '@emotion/styled';
-import useScrollVisible from '../hooks/useScrollVisible';
+import { NavContext } from '../App';
 
 const HeaderContainer = styled.header`
   &.invisible {
@@ -65,7 +65,8 @@ const HeaderContainer = styled.header`
 `;
 
 export default function Header({ onOpenModal }) {
-  const headerVisible = useScrollVisible(80);
+  const { curNav } = useContext(NavContext);
+  const [isVisible, setIsVisible] = useState(false);
 
   const onClickGithub = () => {
     window.open('https://github.com/bisous1519');
@@ -74,8 +75,16 @@ export default function Header({ onOpenModal }) {
     window.open('https://bit.ly/eomjii');
   };
 
+  useEffect(() => {
+    if (!curNav || curNav.intro) {
+      setIsVisible(false);
+    } else {
+      setIsVisible(true);
+    }
+  }, [curNav]);
+
   return (
-    <HeaderContainer className={headerVisible ? 'visible' : 'invisible'}>
+    <HeaderContainer className={isVisible ? 'visible' : 'invisible'}>
       <ul>
         <li onClick={onClickGithub}>
           <span>깃허브</span>

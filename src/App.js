@@ -38,7 +38,6 @@ const globalStyle = css`
   }
 `;
 
-export const ScrollContext = createContext();
 export const NavContext = createContext();
 export const curNavInit = {
   intro: false,
@@ -51,35 +50,18 @@ export const curNavInit = {
 };
 
 function App() {
-  const [scrollPosition, setScrollPosition] = useState(0);
   const [curNav, setCurNav] = useState({
     ...curNavInit,
     intro: true,
   });
 
-  const updateScroll = throttle(() => {
-    setScrollPosition(window.scrollY || document.documentElement.scrollTop);
-  }, 300);
-
-  useEffect(() => {
-    console.log('현재스크롤', scrollPosition);
-  }, [scrollPosition]);
-
-  useEffect(() => {
-    window.addEventListener('scroll', updateScroll);
-    return () => {
-      window.removeEventListener('scroll', updateScroll);
-    };
-  }, []);
   return (
     <ModeProvider>
-      <ScrollContext.Provider value={scrollPosition}>
-        <NavContext.Provider value={{ curNav, setCurNav }}>
-          <Global styles={globalStyle} />
-          {/* <Layout /> */}
-          <NewLayout />
-        </NavContext.Provider>
-      </ScrollContext.Provider>
+      <NavContext.Provider value={{ curNav, setCurNav }}>
+        <Global styles={globalStyle} />
+        {/* <Layout /> */}
+        <NewLayout />
+      </NavContext.Provider>
     </ModeProvider>
   );
 }

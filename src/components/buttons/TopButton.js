@@ -1,8 +1,9 @@
-import React, { useContext, useEffect, useRef } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import { IoIosArrowUp } from 'react-icons/io';
 import throttle from 'lodash.throttle';
 import styled from '@emotion/styled';
-import { ScrollContext } from '../../App';
+import { NavContext, ScrollContext } from '../../App';
+import useScrollPosition from '../../hooks/useScrollPosition';
 
 const TopButtonBox = styled.button`
   position: fixed;
@@ -29,7 +30,9 @@ const TopButtonBox = styled.button`
 `;
 
 export default function TopButton() {
-  const scrollPosition = useContext(ScrollContext);
+  const { curNav } = useContext(NavContext);
+  const [isVisible, setIsVisible] = useState(false);
+
   const btnEl = useRef();
   const toTop = () => {
     window.scrollTo({ top: 0, behavior: 'instant' });
@@ -38,18 +41,18 @@ export default function TopButton() {
   useEffect(() => {
     const { current } = btnEl;
 
-    if (scrollPosition > 350) {
-      current.style.display = 'flex';
-      setTimeout(() => {
-        current.style.opacity = 1;
-      }, 200);
-    } else {
+    if (!curNav || curNav.intro) {
       current.style.opacity = 0;
       setTimeout(() => {
         current.style.display = 'none';
       }, 200);
+    } else {
+      current.style.display = 'flex';
+      setTimeout(() => {
+        current.style.opacity = 1;
+      }, 200);
     }
-  }, [scrollPosition]);
+  }, [curNav]);
   return (
     <TopButtonBox className='topButton' ref={btnEl} onClick={toTop}>
       <i>
