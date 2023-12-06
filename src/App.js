@@ -39,9 +39,18 @@ const globalStyle = css`
 `;
 
 export const ScrollContext = createContext();
+export const NavContext = createContext();
 
 function App() {
   const [scrollPosition, setScrollPosition] = useState(0);
+  const [curNav, setCurNav] = useState({
+    intro: true,
+    skills: false,
+    malicon: false,
+    eeum: false,
+    ssafast: false,
+    etc: false,
+  });
 
   const updateScroll = throttle(() => {
     setScrollPosition(window.scrollY || document.documentElement.scrollTop);
@@ -60,9 +69,11 @@ function App() {
   return (
     <ModeProvider>
       <ScrollContext.Provider value={scrollPosition}>
-        <Global styles={globalStyle} />
-        {/* <Layout /> */}
-        <NewLayout />
+        <NavContext.Provider value={{ curNav, setCurNav }}>
+          <Global styles={globalStyle} />
+          {/* <Layout /> */}
+          <NewLayout />
+        </NavContext.Provider>
       </ScrollContext.Provider>
     </ModeProvider>
   );

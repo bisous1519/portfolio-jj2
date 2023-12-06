@@ -34,6 +34,7 @@ const {
 
 export const projectData = [
   {
+    nav: 'malicon',
     id: 'teampjt-1',
     title: 'MALICON',
     subTitle: '아바타로 소통하는 실시간 방송 플랫폼',
@@ -55,6 +56,7 @@ export const projectData = [
     skills: [react, ts, reduxToolkit, emotion],
   },
   {
+    nav: 'eeum',
     id: 'teampjt-2',
     title: '이음',
     subTitle: '자립준비청년의 자립을 돕는 파트너',
@@ -70,6 +72,7 @@ export const projectData = [
     skills: [reactNative, ts, recoil, styledComponent],
   },
   {
+    nav: 'ssafast',
     id: 'teampjt-3',
     title: 'SSAFAST',
     subTitle: '불편함을 해소하여 개발자 경험을 높이다',

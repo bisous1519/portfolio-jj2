@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import ModalLayout from './ModalLayout';
 import styled from '@emotion/styled';
 import { eomji7, eomji8 } from '../../assets/img';
@@ -76,7 +76,7 @@ const ContactModalContainer = styled.section`
           object-fit: contain;
         }
       }
-      & > p {
+      & > a {
         padding: 3px 0px;
         cursor: pointer;
         &:hover {
@@ -121,12 +121,23 @@ const ContactModalContainer = styled.section`
 `;
 
 export default function ContactModal({ onCloseModal }) {
+  const [emailFigCaption, setEmailFigCaption] = useState('copy');
+  const [phoneFigCaption, setPhoneFigCaption] = useState('copy');
+
   const onClickCopy = (kind) => {
     let text = '';
     if (kind === 'email') {
       text = 'anipap2@naver.com';
+      setEmailFigCaption('copied!');
+      setTimeout(() => {
+        setEmailFigCaption('copy');
+      }, 700);
     } else {
       text = '010-3566-0340';
+      setPhoneFigCaption('copied!');
+      setTimeout(() => {
+        setPhoneFigCaption('copy');
+      }, 700);
     }
 
     navigator.clipboard
@@ -154,33 +165,41 @@ export default function ContactModal({ onCloseModal }) {
                 style={{ width: '16px', height: '16px' }}
               />
             </i>
-            <p>anipap2@naver.com</p>
+            <a href='mailto:anipap2@naver.com'>anipap2@naver.com</a>
             <figure onClick={() => onClickCopy('email')}>
               <IoCopyOutline />
-              <figcaption>copy</figcaption>
+              <figcaption>{emailFigCaption}</figcaption>
             </figure>
           </li>
           <li>
             <i>
               <img src={svgPhone} alt='phone icon' />
             </i>
-            <p>010 . 3566 . 0340</p>
+            <a href='tel:010-3566-0340'>010 . 3566 . 0340</a>
             <figure onClick={() => onClickCopy('phone')}>
               <IoCopyOutline />
-              <figcaption>copy</figcaption>
+              <figcaption>{phoneFigCaption}</figcaption>
             </figure>
           </li>
           <li>
             <i>
               <img src={svgNotion} alt='notion icon' />
             </i>
-            <p>bit.ly/eomjii</p>
+            <a href='https://bit.ly/eomjii' target='_blank' rel='noreferrer'>
+              bit.ly/eomjii
+            </a>
           </li>
           <li>
             <i>
               <img src={svgGithub} alt='github icon' />
             </i>
-            <p>github.com/bisous1519</p>
+            <a
+              href='https://github.com/bisous1519'
+              target='_blank'
+              rel='noreferrer'
+            >
+              github.com/bisous1519
+            </a>
           </li>
         </ul>
       </ContactModalContainer>

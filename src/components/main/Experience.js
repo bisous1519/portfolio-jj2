@@ -5,6 +5,7 @@ import awards from '../../data/awards';
 import experience from '../../data/experience';
 import { LiaAwardSolid } from 'react-icons/lia';
 import { LuGraduationCap } from 'react-icons/lu';
+import useScrollNav from '../../hooks/useScrollNav';
 
 const ExperienceContainer = styled.section`
   display: flex;
@@ -77,8 +78,9 @@ const ExperienceContainer = styled.section`
 `;
 
 export default function Experience() {
+  const nav = useScrollNav('etc');
   return (
-    <ExperienceContainer>
+    <ExperienceContainer {...nav}>
       <div className='awards'>
         <div>
           <Title name='수상' />

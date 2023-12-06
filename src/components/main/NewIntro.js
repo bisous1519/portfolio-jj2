@@ -4,6 +4,7 @@ import Title from '../text/Title';
 import { PiCircleBold } from 'react-icons/pi';
 import intro from '../../data/intro';
 import useScrollFadeIn from '../../hooks/useScrollFadeIn';
+import useScrollNav from '../../hooks/useScrollNav';
 
 const NewIntroContainer = styled.section`
   & > ul {
@@ -77,8 +78,9 @@ function IntroItem({ data, dataIdx }) {
 }
 
 export default function NewIntro() {
+  const nav = useScrollNav('intro');
   return (
-    <NewIntroContainer>
+    <NewIntroContainer {...nav}>
       <Title name='이렇게 개발합니다' />
       <ul>
         {intro &&

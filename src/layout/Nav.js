@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import throttle from 'lodash.throttle';
-import TopButton from '../components/buttons/TopButton';
+import React, { useContext, useEffect, useState } from 'react';
 import styled from '@emotion/styled';
+import { NavContext } from '../App';
 
 const NavContainer = styled.nav`
   position: sticky;
@@ -23,7 +22,7 @@ const NavContainer = styled.nav`
         color: ${({ theme }) => theme.textColor.lightPrimary};
       }
     }
-    & > li:nth-of-type(${({ selected }) => selected}) {
+    & li.active {
       color: ${({ theme }) => theme.textColor.primary};
       font-weight: ${({ theme }) => theme.fontWeight.bold};
     }
@@ -36,58 +35,80 @@ const NavContainer = styled.nav`
       }
     }
   }
-  /* & > ul {
-    border: 1px solid blue;
-    display: flex;
-    flex-direction: column;
-    & > li {
-      padding: 10px 5px;
-    }
-  } */
   @media ${({ theme }) => theme.viewPortSize.mobile} {
     display: none;
   }
 `;
 
-const topArr = [0, 0, 424, 904, 1792];
+export default function Nav({ onClickNav }) {
+  const { curNav, setCurNav } = useContext(NavContext);
+  const [isSelected, setIsSelected] = useState('intro');
 
-export default function Nav() {
-  const [selected, setSelected] = useState(1);
-  const onClickNav = (num, top) => {
-    setSelected(num);
-    window.scrollTo({ top: top, behavior: 'smooth' });
-  };
   useEffect(() => {
-    window.addEventListener(
-      'scroll',
-      throttle(() => {
-        // console.log(window.scrollY);
-        if (window.scrollY < topArr[2]) {
-          setSelected(1);
-        } else if (window.scrollY < topArr[3]) {
-          setSelected(2);
-        } else if (window.scrollY < topArr[4]) {
-          setSelected(3);
-        } else {
-          setSelected(4);
-        }
-      }, 300)
-    );
-  }, []);
+    const { intro, skills, malicon, eeum, ssafast, etc } = curNav;
+    if (intro) setIsSelected('intro');
+    else if (skills) setIsSelected('skills');
+    else if (malicon) setIsSelected('malicon');
+    else if (eeum) setIsSelected('eeum');
+    else if (ssafast) setIsSelected('ssafast');
+    else if (etc) setIsSelected('etc');
+    else setIsSelected('intro');
+  }, [curNav]);
   return (
-    <NavContainer selected={selected}>
+    <NavContainer>
       <ul>
-        <li onClick={() => onClickNav(1, topArr[1])}>소개</li>
-        <li onClick={() => onClickNav(2, topArr[2])}>기술스택</li>
-        <li onClick={() => onClickNav(3, topArr[3])}>프로젝트</li>
+        <li
+          onClick={() => onClickNav('intro')}
+          className={isSelected === 'intro' ? 'active' : ''}
+        >
+          소개
+        </li>
+        <li
+          onClick={() => onClickNav('skills')}
+          className={isSelected === 'skills' ? 'active' : ''}
+        >
+          기술스택
+        </li>
+        <li
+          onClick={() => onClickNav('malicon')}
+          className={
+            isSelected === 'malicon' ||
+            isSelected === 'eeum' ||
+            isSelected === 'ssafast'
+              ? 'active'
+              : ''
+          }
+        >
+          프로젝트
+        </li>
         <li className='project'>
           <ul>
-            <li>마리콘</li>
-            <li>이음</li>
-            <li>싸패스트</li>
+            <li
+              onClick={() => onClickNav('malicon')}
+              className={isSelected === 'malicon' ? 'active' : ''}
+            >
+              마리콘
+            </li>
+            <li
+              onClick={() => onClickNav('eeum')}
+              className={isSelected === 'eeum' ? 'active' : ''}
+            >
+              이음
+            </li>
+            <li
+              onClick={() => onClickNav('ssafast')}
+              className={isSelected === 'ssafast' ? 'active' : ''}
+            >
+              싸패스트
+            </li>
           </ul>
         </li>
-        <li onClick={() => onClickNav(4, topArr[4])}>수상 및 교육</li>
+        <li
+          onClick={() => onClickNav('etc')}
+          className={isSelected === 'etc' ? 'active' : ''}
+        >
+          수상 및 교육
+        </li>
       </ul>
     </NavContainer>
   );
