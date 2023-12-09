@@ -103,7 +103,7 @@ const theme = {
     },
     fontWeight: {
       light: 300,
-      base: 400,
+      base: 300,
       bold: 600,
       bolder: 800,
     },
