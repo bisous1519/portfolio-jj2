@@ -8,7 +8,7 @@ import useScrollNav from '../../hooks/useScrollNav';
 
 const SkillsContainer = styled.section``;
 
-export default function NewSkills() {
+export default function Skills() {
   const nav = useScrollNav('skills');
   const { frontendSkills, etcSkills } = skillData;
 

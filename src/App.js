@@ -1,6 +1,6 @@
 import { css, Global } from '@emotion/react';
 import './assets/css/reset.css';
-import NewLayout from './layout/NewLayout';
+import Layout from './layout/Layout';
 import ModeProvider from './hooks/ThemeContext';
 import { createContext, useEffect, useState } from 'react';
 import throttle from 'lodash.throttle';
@@ -59,8 +59,7 @@ function App() {
     <ModeProvider>
       <NavContext.Provider value={{ curNav, setCurNav }}>
         <Global styles={globalStyle} />
-        {/* <Layout /> */}
-        <NewLayout />
+        <Layout />
       </NavContext.Provider>
     </ModeProvider>
   );

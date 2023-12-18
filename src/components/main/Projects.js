@@ -1,31 +1,24 @@
-import React from 'react';
-import ProjectItem from './ProjectItem';
 import styled from '@emotion/styled';
+import React, { useCallback, useEffect, useRef } from 'react';
+import Title from '../text/Title';
+import { projectData } from '../../data/projects';
+import ProjectItem from './ProjectItem';
 
 const ProjectsContainer = styled.section`
   & > ul {
-    display: flex;
-    flex-direction: column;
-    padding: 0 50px 120px;
-    & > li {
-      margin-top: 50px;
-    }
-  }
-  @media ${({ theme }) => theme.viewPortSize.mobile} {
-    & > ul {
-      padding: 0 15px 120px;
-      & > li {
-        margin-top: 35px;
-      }
-    }
   }
 `;
 
-export default function Projects({ children, data }) {
+export default function Projects() {
   return (
-    <ProjectsContainer className='projects'>
-      {children}
-      <ul>{data && data.map((v) => <ProjectItem key={v.id} data={v} />)}</ul>
+    <ProjectsContainer>
+      <Title name='프로젝트 경험' hasSub={true} />
+      <ul>
+        {projectData &&
+          projectData.map((data, idx) => (
+            <ProjectItem key={`${data.id}-${idx}`} data={data} />
+          ))}
+      </ul>
     </ProjectsContainer>
   );
 }

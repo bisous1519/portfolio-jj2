@@ -5,8 +5,7 @@ import theme from '../utils/theme';
 import { useThemeState } from '../hooks/ThemeContext';
 import useModal from '../hooks/useModal';
 import ContactModal from '../components/modal/ContactModal';
-import { Footer, Header, NewMain } from './index';
-import NewContents from './NewContents';
+import { Contents, Footer, Header, Main } from './index';
 import TopButton from '../components/buttons/TopButton';
 
 const LayoutContainer = styled.div`
@@ -33,7 +32,7 @@ const LayoutContainer = styled.div`
   }
 `;
 
-export default function NewLayout() {
+export default function Layout() {
   const currentTheme = useThemeState();
   const [openModal, onOpenModal, onCloseModal] = useModal();
 
@@ -41,8 +40,8 @@ export default function NewLayout() {
     <ThemeProvider theme={currentTheme === 'light' ? theme.light : theme.dark}>
       <LayoutContainer>
         <Header onOpenModal={onOpenModal} />
-        <NewMain />
-        <NewContents />
+        <Main />
+        <Contents />
         <Footer />
         <TopButton />
         {openModal && <ContactModal onCloseModal={onCloseModal} />}

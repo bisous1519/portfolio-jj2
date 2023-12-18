@@ -6,7 +6,7 @@ import intro from '../../data/intro';
 import useScrollFadeIn from '../../hooks/useScrollFadeIn';
 import useScrollNav from '../../hooks/useScrollNav';
 
-const NewIntroContainer = styled.section`
+const IntroContainer = styled.section`
   & > ul {
     margin-top: 120px;
     display: flex;
@@ -77,10 +77,10 @@ function IntroItem({ data, dataIdx }) {
   );
 }
 
-export default function NewIntro() {
+export default function Intro() {
   const nav = useScrollNav('intro');
   return (
-    <NewIntroContainer {...nav}>
+    <IntroContainer {...nav}>
       <Title name='이렇게 개발합니다' />
       <ul>
         {intro &&
@@ -88,7 +88,7 @@ export default function NewIntro() {
             <IntroItem key={`intro-${dataIdx}`} data={data} dataIdx={dataIdx} />
           ))}
       </ul>
-    </NewIntroContainer>
+    </IntroContainer>
   );
 }
 

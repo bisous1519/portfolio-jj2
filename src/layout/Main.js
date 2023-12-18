@@ -104,7 +104,7 @@ const MainContainer = styled.div`
   }
 `;
 
-export default function NewMain() {
+export default function Main() {
   return (
     <MainContainer>
       <div className='img-wrapper'>
