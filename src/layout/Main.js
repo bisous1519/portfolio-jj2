@@ -4,13 +4,24 @@ import { IoIosArrowDown } from 'react-icons/io';
 import { keyframes } from '@emotion/react';
 import { eomji1 } from '../assets/img';
 
-const eomjiKeyFrames = keyframes`
+const mainImgKeyFrames = keyframes`
   0% {
     transform: translateX(-30px);
     opacity: 0;
   }
   100% {
     transform: translateX(0px);
+    opacity: 1;
+  }
+`;
+
+const mainImgKeyFramesMobile = keyframes`
+  0% {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
     opacity: 1;
   }
 `;
@@ -22,6 +33,17 @@ const titleKeyFrames = keyframes`
     }
     100% {
         transform: translateX(0px);
+        opacity: 100%;
+    }
+`;
+
+const titleKeyFramesMobile = keyframes`
+    0% {
+        transform: translateY(30px);
+        opacity: 0%;
+    }
+    100% {
+        transform: translateY(0px);
         opacity: 100%;
     }
 `;
@@ -53,7 +75,7 @@ const MainContainer = styled.div`
       width: 100%;
       height: 100%;
       object-fit: contain;
-      animation: ${eomjiKeyFrames} 0.6s ease-in forwards;
+      animation: ${mainImgKeyFrames} 0.6s ease-in forwards;
       animation-delay: 1.2s;
       opacity: 0;
       /* filter: drop-shadow(2px 4px 10px #555); */
@@ -101,6 +123,43 @@ const MainContainer = styled.div`
     /* box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); */
     font-size: ${({ theme }) => theme.fontSize.xxl};
     animation: ${arrowKeyFrames} 0.8s ease-out alternate infinite;
+  }
+  @media ${({ theme }) => theme.viewPortSize.mobile} {
+    & > div.img-wrapper {
+      max-height: 33vh;
+      transform: translateX(-50%);
+      & > img {
+        bottom: 0;
+        animation: ${mainImgKeyFramesMobile} 0.6s ease-in forwards;
+      }
+    }
+    & > ul.introduction {
+      width: 90vw;
+      right: 0;
+      left: 0;
+      margin: auto;
+      bottom: 33vh;
+      transform: translateY(-17vh);
+      & > li {
+        text-align: center;
+        animation: ${titleKeyFramesMobile} 0.6s ease-in forwards;
+        animation-delay: 0.6s;
+        &.one {
+          font-size: ${({ theme }) => theme.fontSize.title};
+          animation-delay: 0.9s;
+        }
+        &.two {
+          font-size: ${({ theme }) => theme.fontSize.tititle};
+          animation-delay: 1.2s;
+        }
+        &.three {
+          font-size: ${({ theme }) => theme.fontSize.xxl};
+          animation-delay: 1.5s;
+        }
+      }
+    }
+    & > .arrow {
+    }
   }
 `;
 
