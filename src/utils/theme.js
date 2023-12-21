@@ -61,6 +61,7 @@ const theme = {
       desktop: `${size.desktop}`,
     },
     layoutPadding: {
+      mobile: '30px',
       desktop: '50px',
     },
   },
@@ -118,6 +119,7 @@ const theme = {
       desktop: `${size.desktop}`,
     },
     layoutPadding: {
+      mobile: '30px',
       desktop: '50px',
     },
   },

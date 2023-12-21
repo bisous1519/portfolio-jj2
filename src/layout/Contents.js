@@ -19,6 +19,15 @@ const ContentsContainer = styled.div`
       width: 100%;
     }
   }
+  @media ${({ theme }) => theme.viewPortSize.mobile} {
+    & > div.contents {
+      width: 100%;
+      padding: ${({ theme }) => `0px ${theme.layoutPadding.mobile}`};
+      & > section {
+        margin-top: 90px;
+      }
+    }
+  }
 `;
 
 export default function Contents() {

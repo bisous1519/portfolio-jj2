@@ -16,7 +16,7 @@ const LayoutContainer = styled.div`
   background-color: ${({ theme }) => theme.background};
   transition: all 0.3s;
   width: 100vw;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   & > div {
     width: 100%;
   }

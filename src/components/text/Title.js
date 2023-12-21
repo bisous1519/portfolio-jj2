@@ -37,6 +37,7 @@ const TitleContainer = styled.div`
 export default function Title({ name, hasSub }) {
   const topFix = useScrollTopFix();
   return (
+    // <TitleContainer {...topFix} hasSub={hasSub}>
     <TitleContainer {...topFix} hasSub={hasSub}>
       {name}
     </TitleContainer>

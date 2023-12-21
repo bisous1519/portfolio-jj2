@@ -7,13 +7,13 @@ import useScrollFadeIn from '../../hooks/useScrollFadeIn';
 import useScrollNav from '../../hooks/useScrollNav';
 
 const IntroContainer = styled.section`
-  & > ul {
+  & > ul.intro-wrapper {
     margin-top: 120px;
     display: flex;
     align-items: flex-start;
     justify-content: center;
     gap: 80px;
-    & > li {
+    & > li.item-wrapper {
       max-width: 250px;
       /* animation-delay: 2s; */
       & > p {
@@ -54,12 +54,22 @@ const IntroContainer = styled.section`
       }
     }
   }
+  @media ${({ theme }) => theme.viewPortSize.mobile} {
+    & > ul.intro-wrapper {
+      margin-top: 80px;
+      padding: 0px 25px;
+      flex-direction: column;
+      & > li.item-wrapper {
+        max-width: none;
+      }
+    }
+  }
 `;
 
 function IntroItem({ data, dataIdx }) {
   const fadeInAnimation = useScrollFadeIn(dataIdx * 0.3);
   return (
-    <li {...fadeInAnimation}>
+    <li className='item-wrapper' {...fadeInAnimation}>
       <p>
         <strong>{data.who}</strong>를 생각합니다.
       </p>
@@ -82,7 +92,7 @@ export default function Intro() {
   return (
     <IntroContainer {...nav}>
       <Title name='이렇게 개발합니다' />
-      <ul>
+      <ul className='intro-wrapper'>
         {intro &&
           intro.map((data, dataIdx) => (
             <IntroItem key={`intro-${dataIdx}`} data={data} dataIdx={dataIdx} />
