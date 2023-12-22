@@ -93,6 +93,37 @@ const SkillsContentsContainer = styled.article`
       }
     }
   }
+  @media ${({ theme }) => theme.viewPortSize.mobile} {
+    & > ul.contents {
+      padding: 0px 25px;
+      margin-top: 80px;
+      gap: 80px;
+      & > li {
+        flex-direction: column;
+        gap: 35px;
+        & > div.summ {
+          & > div.img {
+            & > img {
+            }
+          }
+          & > div.name {
+            & > p {
+            }
+            & > ul.bar {
+            }
+          }
+        }
+        & > ul.desc {
+          & > li {
+            & > i {
+            }
+            & > p {
+            }
+          }
+        }
+      }
+    }
+  }
 `;
 
 function SkillsItem({ name, skill, skillIdx }) {
