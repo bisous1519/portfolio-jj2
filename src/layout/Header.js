@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { FiExternalLink } from 'react-icons/fi';
+import { FiExternalLink, FiMenu } from 'react-icons/fi';
 import ToggleButton from '../components/buttons/ToggleButton';
 import styled from '@emotion/styled';
 import { NavContext } from '../App';
@@ -19,6 +19,9 @@ const HeaderContainer = styled.header`
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  & > i {
+    display: none;
+  }
   & > ul {
     display: flex;
     align-items: center;
@@ -43,22 +46,33 @@ const HeaderContainer = styled.header`
     top: 0;
     width: 100vw;
     height: 45px;
-    ul {
+    padding: ${({ theme }) => `0px ${theme.layoutPadding.mobile}`};
+    & > i {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
-      & > li {
-        &:first-of-type {
-          margin-left: 5px;
-        }
-        & + li {
-          margin-left: 10px;
-        }
-        & > a {
-          i {
-            margin-left: 3px;
-          }
-        }
+      font-size: ${({ theme }) => theme.fontSize.lg};
+      color: ${({ theme }) => theme.textColor.initial};
+      padding: 5px;
+    }
+    & > ul {
+      position: absolute;
+      top: 45px;
+      /* right: ${({ theme }) => theme.layoutPadding.mobile}; */
+      right: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 15px;
+      background-color: ${({ theme }) => theme.background};
+      box-shadow: ${({ theme }) => theme.shadowColor};
+      border-radius: 10px;
+      padding: 15px;
+      &.open {
+        display: flex;
+      }
+      &.close {
+        display: none;
       }
     }
   }
@@ -67,12 +81,17 @@ const HeaderContainer = styled.header`
 export default function Header({ onOpenModal }) {
   const { curNav } = useContext(NavContext);
   const [isVisible, setIsVisible] = useState(false);
+  const [isOpenBurger, setIsOpenBurger] = useState(false);
 
   const onClickGithub = () => {
     window.open('https://github.com/bisous1519');
   };
   const onClickNotion = () => {
     window.open('https://bit.ly/eomjii');
+  };
+
+  const onClickBurger = () => {
+    setIsOpenBurger((prev) => !prev);
   };
 
   useEffect(() => {
@@ -85,7 +104,10 @@ export default function Header({ onOpenModal }) {
 
   return (
     <HeaderContainer className={isVisible ? 'visible' : 'invisible'}>
-      <ul>
+      <i onClick={onClickBurger}>
+        <FiMenu />
+      </i>
+      <ul className={isOpenBurger ? 'open' : 'close'}>
         <li onClick={onClickGithub}>
           <span>깃허브</span>
           <i>

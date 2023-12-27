@@ -18,6 +18,7 @@ const IconsWaveContainer = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 20px;
+  overflow: hidden;
   & > li {
     position: relative;
     margin-bottom: 40px;
