@@ -32,6 +32,15 @@ const TitleContainer = styled.div`
       margin-top: 15px;
     }
   }
+  @media ${({ theme }) => theme.viewPortSize.mobile} {
+    ${({ hasSub }) =>
+      hasSub &&
+      css`
+        &::after {
+          display: none !important;
+        }
+      `}
+  }
 `;
 
 export default function Title({ name, hasSub }) {

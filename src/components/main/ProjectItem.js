@@ -110,6 +110,9 @@ const ProjectItemWrapper = styled.li`
             font-size: ${({ theme }) => theme.fontSize.subTitle};
             margin-bottom: 15px;
           }
+          & > div.mobileImgWrapper {
+            display: none;
+          }
           & > h3 {
             color: ${({ theme }) => theme.textColor.initial};
             font-weight: ${({ theme }) => theme.fontWeight.bold};
@@ -138,6 +141,46 @@ const ProjectItemWrapper = styled.li`
               & > i {
                 font-size: 12px;
                 margin-right: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media ${({ theme }) => theme.viewPortSize.mobile} {
+    padding: 70px 0px;
+    & > div.justOuterForNavContext {
+      & > div.imgWrapper {
+        display: none;
+      }
+      & > div.desWrapper {
+        position: relative;
+        height: 100%;
+        & > ul.moveToWrapper {
+          position: absolute;
+          top: 0;
+          right: 0;
+        }
+        & > div {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: space-between;
+          & > div {
+            width: 100%;
+            & > h1 {
+            }
+            & > div.mobileImgWrapper {
+              display: block;
+              width: 100%;
+              height: auto;
+              margin: 30px 0px;
+              & > img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
               }
             }
           }
@@ -207,6 +250,9 @@ export default function ProjectItem({ data }) {
           <div>
             <div>
               <h1>{data.title}</h1>
+              <div className='mobileImgWrapper'>
+                <img src={data.app ? data.src3 : data.src1} alt={data.alt1} />
+              </div>
               <h3>{data.subTitle}</h3>
               <span>( {data.date} )</span>
               {/* <div style={{ display: 'flex', gap: '15px' }}>

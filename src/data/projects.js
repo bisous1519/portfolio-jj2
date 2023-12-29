@@ -9,6 +9,7 @@ import {
   portfolioMain,
   portfolioSkillIcons,
   portfolioSkills,
+  eeumMain2,
 } from '../assets/img';
 import {
   maliconDetail,
@@ -77,6 +78,7 @@ export const projectData = [
     app: true,
     src1: eeumMain,
     src2: eeumDiary,
+    src3: eeumMain2,
     alt1: 'malicon landing page',
     alt2: 'malicon main page',
     skills: [reactNative, ts, recoil, styledComponent],
