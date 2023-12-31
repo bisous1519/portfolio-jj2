@@ -132,7 +132,9 @@ const ProjectModalContainer = styled.section`
       & > img {
         max-height: 280px;
         display: block;
-        margin: 40px auto;
+        margin: 0px auto;
+        margin-top: 25px;
+        margin-bottom: 40px;
       }
     }
     img {
@@ -161,6 +163,11 @@ const ProjectModalContainer = styled.section`
       margin: 40px 0;
       border: 1px solid ${({ theme }) => theme.projectModal.topLine};
     }
+  }
+  @media ${({ theme }) => theme.viewPortSize.mobile} {
+    width: 100%;
+    flex: 1;
+    padding: 0px 30px !important;
   }
 `;
 

@@ -28,7 +28,7 @@ const nameFadeinKeyFrame = keyframes`
 
 const ContactModalContainer = styled.section`
   width: 500px;
-  max-width: 100vw;
+  max-width: 90vw;
   overflow: hidden !important;
   & > div {
     width: 200px;

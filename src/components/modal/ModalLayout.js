@@ -20,7 +20,7 @@ const ModalLayoutContainer = styled.div`
     box-shadow: ${({ theme }) => theme.shadowColor};
     & > div.topBar {
       position: relative;
-      min-height: 30px;
+      /* min-height: 30px; */
       width: 100%;
       padding: 20px;
       color: ${({ theme }) => theme.textColor.initial};
@@ -78,6 +78,13 @@ const ModalLayoutContainer = styled.div`
       &::-webkit-scrollbar-corner {
         display: none;
       }
+    }
+  }
+  @media ${({ theme }) => theme.viewPortSize.mobile} {
+    & > div.modalWrapper {
+      display: flex;
+      flex-direction: column;
+      max-height: 100vh;
     }
   }
 `;
