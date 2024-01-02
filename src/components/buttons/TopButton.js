@@ -7,7 +7,7 @@ import useScrollPosition from '../../hooks/useScrollPosition';
 
 const TopButtonBox = styled.button`
   position: fixed;
-  bottom: 50px;
+  bottom: ${({ theme }) => theme.layoutPadding.desktop};
   right: ${({ theme }) => theme.layoutPadding.desktop};
   width: 30px;
   height: 30px;
@@ -26,6 +26,10 @@ const TopButtonBox = styled.button`
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  @media ${({ theme }) => theme.viewPortSize.mobile} {
+    bottom: ${({ theme }) => theme.layoutPadding.mobile};
+    right: ${({ theme }) => theme.layoutPadding.mobile};
   }
 `;
 

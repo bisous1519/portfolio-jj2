@@ -65,6 +65,7 @@ const ExperienceContainer = styled.section`
         & > li {
           display: flex;
           gap: 20px;
+          line-height: 1.1;
           & > ul {
             & > li.gray {
               color: ${({ theme }) => theme.textColor.lightGray};
@@ -73,6 +74,42 @@ const ExperienceContainer = styled.section`
           }
         }
       }
+    }
+  }
+  @media ${({ theme }) => theme.viewPortSize.mobile} {
+    flex-direction: column;
+    & > div {
+      &.awards,
+      &.experience {
+        padding: 0;
+        border: none;
+        & > div {
+          & > ul {
+            padding: 0px 25px;
+            & > li {
+              gap: 12px;
+            }
+          }
+        }
+      }
+      &.awards {
+        & span {
+          min-width: 45px;
+        }
+      }
+      &.experience {
+        margin-top: 90px;
+      }
+      /* &.awards {
+        padding: 0;
+        & > div {
+        }
+      }
+      &.experience {
+        padding: 0;
+        & > div {
+        }
+      } */
     }
   }
 `;
