@@ -25,7 +25,7 @@ export { default as Notionlogo } from './notion_logo.png';
 export { default as Figmalogo } from './figma_logo.png';
 export { default as Trellologo } from './trello_logo.png';
 export { default as Postmanlogo } from './postman_logo.png';
-// github, gitlab, notion, trello, figma
+export { default as Nestjslogo } from './nestjs_logo.jpeg';
 
 // project
 export { default as MaliconLogo } from './malicon_logo.png';

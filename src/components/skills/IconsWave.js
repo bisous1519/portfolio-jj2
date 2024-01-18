@@ -109,6 +109,7 @@ export default function IconsWave() {
 
     java,
     springBoot,
+    nestjs,
     mySQL,
     git,
     github,
@@ -131,7 +132,17 @@ export default function IconsWave() {
     emotion,
     tailwind,
   ];
-  const logoArr3 = [java, springBoot, mySQL, postman, git, jira, notion, figma];
+  const logoArr3 = [
+    java,
+    springBoot,
+    nestjs,
+    mySQL,
+    postman,
+    git,
+    jira,
+    notion,
+    figma,
+  ];
 
   const FEtitleEl = useRef();
   const [scrollActive, setScrollActive] = useState(false);

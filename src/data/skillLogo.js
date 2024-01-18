@@ -25,6 +25,7 @@ import {
   Jira,
   CSSlogo,
   Postmanlogo,
+  Nestjslogo,
 } from '../assets/icons';
 
 const js = { src: JSlogo, alt: 'javascript logo', des: 'Javascript' };
@@ -93,6 +94,7 @@ const mySQL = { src: MySQL, alt: 'MySQL logo', des: 'MySQL' };
 const git = { src: Git, alt: 'Git logo', des: 'git' };
 const jira = { src: Jira, alt: 'Jira logo', des: 'Jira' };
 const postman = { src: Postmanlogo, alt: 'Postman logo', des: 'Postman' };
+const nestjs = { src: Nestjslogo, alt: 'Nestjs logo', des: 'Nest.js' };
 
 const skillLogo = {
   js,
@@ -120,6 +122,7 @@ const skillLogo = {
   git,
   jira,
   css,
+  nestjs,
   postman,
 };
 export default skillLogo;
