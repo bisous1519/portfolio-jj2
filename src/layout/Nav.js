@@ -94,16 +94,16 @@ export default function Nav({ onClickNav }) {
               마리콘
             </li>
             <li
-              onClick={() => onClickNav('eeum')}
-              className={isSelected === 'eeum' ? 'active' : ''}
-            >
-              이음
-            </li>
-            <li
               onClick={() => onClickNav('ssafast')}
               className={isSelected === 'ssafast' ? 'active' : ''}
             >
               싸패스트
+            </li>
+            <li
+              onClick={() => onClickNav('eeum')}
+              className={isSelected === 'eeum' ? 'active' : ''}
+            >
+              이음
             </li>
           </ul>
         </li>

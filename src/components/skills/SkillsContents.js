@@ -47,6 +47,7 @@ const SkillsContentsContainer = styled.article`
           gap: 15px;
           & > p {
             font-size: ${({ theme }) => theme.fontSize.lg};
+            max-width: 100px;
           }
           & > ul.bar {
             display: flex;
@@ -108,6 +109,7 @@ const SkillsContentsContainer = styled.article`
           }
           & > div.name {
             & > p {
+              max-width: none;
             }
             & > ul.bar {
             }

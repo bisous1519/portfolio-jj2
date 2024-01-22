@@ -14,7 +14,7 @@ const intro = [
     ],
   },
   {
-    who: '나',
+    who: '앞으로의 나',
     line: [
       '사용자와 동료의 피드백을 통해 <strong>성장</strong>합니다.',
       '개인과 모두의 발전을 위해 꾸준히 <strong>공부하고 문서화</strong>합니다.',

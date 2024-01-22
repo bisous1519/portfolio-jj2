@@ -10,6 +10,12 @@ const WaveBoxContainer = styled.div`
   transition: transform 0s;
   & > ul {
     gap: 17px;
+    & > li:first-child {
+      & > span {
+        left: 0;
+        transform: translateX(0px);
+      }
+    }
   }
 `;
 
@@ -26,6 +32,9 @@ const IconsWaveContainer = styled.ul`
       font-size: ${({ theme }) => theme.fontSize.small};
       color: ${({ theme }) => theme.textColor.lightGray};
       margin-bottom: 15px;
+    }
+    &:last-child {
+      margin-bottom: 55px;
     }
   }
 `;
@@ -119,6 +128,7 @@ export default function IconsWave() {
     notion,
     figma,
     trello,
+    openvidu,
     jira,
   } = skillLogo;
   const logoArr1 = [js, ts, react, vue, nextjs, reactNative];
@@ -133,17 +143,8 @@ export default function IconsWave() {
     emotion,
     tailwind,
   ];
-  const logoArr3 = [
-    java,
-    springBoot,
-    nestjs,
-    mySQL,
-    postman,
-    git,
-    jira,
-    notion,
-    figma,
-  ];
+  const logoArr3 = [java, springBoot, nestjs, mySQL];
+  const logoArr4 = [postman, git, jira, notion, figma, openvidu];
 
   const FEtitleEl = useRef();
   const [scrollActive, setScrollActive] = useState(false);
@@ -199,12 +200,21 @@ export default function IconsWave() {
         />
       </li>
       <li>
-        <p>백엔드, 툴</p>
+        <p>백엔드</p>
         <WaveBox
           scrollActive={scrollActive}
           activeScrollY={activeScrollY}
           isAppearFromBottom={isAppearFromBottom}
           logoArr={logoArr3}
+        />
+      </li>
+      <li>
+        <p>툴, 그 외</p>
+        <WaveBox
+          scrollActive={scrollActive}
+          activeScrollY={activeScrollY}
+          isAppearFromBottom={isAppearFromBottom}
+          logoArr={logoArr4}
         />
       </li>
     </IconsWaveContainer>

@@ -17,6 +17,7 @@ const {
   tailwind,
   java,
   springBoot,
+  nestjs,
   mySQL,
   git,
   jira,
@@ -99,27 +100,6 @@ const etcSkills = [
     ],
   },
   {
-    id: 'skills-6',
-    icon: springBoot,
-    name: 'Spring Boot',
-    lv: 1,
-    des: [
-      'Spring Boot F/W를 이용하여 백엔드 서버를 개발한 경험이 있습니다.',
-      // 'Spring Boot의 장점을 이해하고 활용할 수 있습니다.',
-      '자동화된 테스트 환경을 활용해 Unit 단위로 코드를 테스트해 본 경험이 있습니다.',
-    ],
-  },
-  {
-    id: 'skills-7',
-    icon: mySQL,
-    name: 'MySQL',
-    lv: 2,
-    des: [
-      'SQL문을 통해 테이블을 조회하고 데이터를 변경할 수 있습니다.',
-      'JOIN을 통해 원하는 데이터를 얻을 수 있습니다.',
-    ],
-  },
-  {
     id: 'skills-8',
     icon: git,
     lv: 3,
@@ -129,6 +109,36 @@ const etcSkills = [
       'branch 분기를 통해 협업할 수 있습니다.',
       '코드의 변경사항을 추적하고 관리하는 등 버전 관리를 할 수 있습니다.',
       'Github, Gitlab을 사용해 협업한 경험이 있습니다.',
+    ],
+  },
+  {
+    id: 'skills-7',
+    icon: mySQL,
+    name: 'MySQL',
+    lv: 2,
+    des: [
+      '데이터의 생성, 조회, 수정, 삭제(CRUD)를 위한 SQL문을 작성할 수 있습니다.',
+      'JOIN, GROUP BY, ORDER BY 등을 통해 데이터를 효율적으로 조회할 수 있습니다.',
+    ],
+  },
+  {
+    id: 'skills-6',
+    icon: springBoot,
+    name: 'Spring Framework',
+    lv: 1,
+    des: [
+      'Spring Framework를 이용하여 백엔드 서버를 개발한 경험이 있습니다.',
+      '자동화된 테스트 환경을 활용해 Unit 단위로 코드를 테스트해 본 경험이 있습니다.',
+    ],
+  },
+  {
+    id: 'skills-9',
+    icon: nestjs,
+    name: 'Nestjs',
+    lv: 1,
+    des: [
+      'NestJS의 핵심 개념과 아키텍처를 이해하고 있습니다.',
+      'TypeORM을 활용하여 게시판 CRUD 기능의 API를 작성해 본 경험이 있습니다.',
     ],
   },
 ];

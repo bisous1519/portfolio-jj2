@@ -10,13 +10,14 @@ import {
 } from '../../assets/img';
 import skillLogo from '../../data/skillLogo';
 
-const { react, ts, reduxToolkit, emotion } = skillLogo;
+const { react, ts, reduxToolkit, emotion, openvidu } = skillLogo;
 
 const text = `
 <img src=${maliconLanding} alt='landing page' />
 
 >기간 : 23.01.02 ~ 23.02.17 (약 7주)
->인원 : 프론트엔드 2명(본인 포함), 백엔드 4명
+>인원 : 총 6명 (프론트엔드 2명, 백엔드 4명)
+>역할 : 기획 및 디자인, 프론트엔드 개발
 >깃허브 : <a href='https://github.com/bisous1519/malicon' target='_blank' rel='noreferrer'>MALICON</a>
 ___
 
@@ -34,7 +35,7 @@ ___
 ## 기획 배경
 **마리콘은 기존 실시간 방송의 소통 패러다임을 변화시키고자 개발되었습니다.**
 
-인-타, 유-브, 위-스 등을 통한 실시간 방송은 매우 보편화 되었지만,
+인스타, 유튜브, 위버스 등을 통한 실시간 방송은 매우 보편화 되었지만,
 기존의 플랫폼들은 소통의 매개체가 채팅으로 제약적입니다.
 아티스트와 팬이 조금 더 직접적인 교류를 통해
 실제 공연장처럼 실시간 교류할 수 있는 플랫폼을 개발하고자 하였습니다.
@@ -52,6 +53,7 @@ ___
 | <img src=${ts.src} alt=${ts.alt} /> | Typescript |
 | <img src=${reduxToolkit.src} alt=${reduxToolkit.alt} /> | Redux Toolkit |
 | <img src=${emotion.src} alt=${emotion.alt} /> | emotion |
+| <img src=${openvidu.src} alt=${openvidu.alt} /> | openVidu |
 
 
 ## 맡은 역할
@@ -90,10 +92,25 @@ ___
 <img src=${maliconChattingAni} alt='landing page' />
 - **Openvidu**를 통해, 사용자의 메세지 내용을 담은 시그널을 발생시켜 **실시간 채팅**을 구현하였습니다.
 
+## 프로젝트 회고
+- WebRTC 기술에 대해 공부하고 적용해보는 기회가 되었습니다.
+그 중에서 특히 Openvidu를 사용하게 되었는데, 공식 문서 상에 클래스형 컴포넌트로 예시가 들어 있어서
+함수형 컴포넌트 위주로 사용하면서 개발을 해왔었는데 이번 기회에 클래스형 컴포넌트에 대해서도 공부하게 된 기회가 되어 좋았습니다.
+다만, 주어진 짧은 기간 안에 익숙치 않은 기술을 처음 접하느라 공식 문서에 나와있는 그대로 프로젝트에 적용해보는데에 그쳤는데,
+WebRTC 부분만 클래스형 컴포넌트로 개발한 탓에 함수형 컴포넌트에 익숙한 다른 팀원들도 개발에 어려움을 겪었을 뿐만 아니라
+전체적인 코드상에도 통일감이 깨져 가독성과 유지보수성이 조금 떨어질 수 있다고 판단되었습니다.
+따라서 다음에 또 Openvidu를 사용해볼 기회가 주어진다면 함수형 컴포넌트로 직접 변환하여 적용해보고 싶다는 생각이 들었습니다.
+- 소통이 잘되고 서로 잘 도와 팀워크가 좋았기 때문에 성과가 잘 날 수 있었습니다.
+돌이켜보면 해당 프로젝트의 성과가 좋게 날 수 있었던 가장 큰 이유는 팀원들 덕분이었던 것 같습니다.
+
+
+
+
+
 ## 프로젝트 성과
 아이디어의 독창성과 프로젝트 완성도를 인정받아 **삼성 청년 SW 아카데미(SSAFY) 8기 공통프로젝트 우수상**을 수상하였습니다.
+
 `;
-// ## 프로젝트 리뷰
 
 const icon = { src: MaliconLogo, alt: 'malicon logo' };
 

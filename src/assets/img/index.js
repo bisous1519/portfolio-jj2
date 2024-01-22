@@ -48,4 +48,5 @@ export { default as portfolioDarkMode } from './portfolio_darkMode.gif';
 export { default as portfolioNavClick } from './portfolio_navClick.gif';
 export { default as portfolioNavHighlight } from './portfolio_navHighlight.gif';
 export { default as portfolioAnimation } from './portfolio_animation.gif';
+export { default as portfolioResponsive } from './portfolio_responsive.gif';
 

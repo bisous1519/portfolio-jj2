@@ -26,6 +26,7 @@ import {
   CSSlogo,
   Postmanlogo,
   Nestjslogo,
+  Openvidu,
 } from '../assets/icons';
 
 const js = { src: JSlogo, alt: 'javascript logo', des: 'Javascript' };
@@ -95,6 +96,7 @@ const git = { src: Git, alt: 'Git logo', des: 'git' };
 const jira = { src: Jira, alt: 'Jira logo', des: 'Jira' };
 const postman = { src: Postmanlogo, alt: 'Postman logo', des: 'Postman' };
 const nestjs = { src: Nestjslogo, alt: 'Nestjs logo', des: 'Nest.js' };
+const openvidu = { src: Openvidu, alt: 'openVidu logo', des: 'openVidu' };
 
 const skillLogo = {
   js,
@@ -124,6 +126,6 @@ const skillLogo = {
   css,
   nestjs,
   postman,
+  openvidu,
 };
 export default skillLogo;
-

@@ -7,6 +7,7 @@ import {
   portfolioAnimation,
   portfolioNavHighlight,
   portfolioMain,
+  portfolioResponsive,
 } from '../../assets/img';
 import skillLogo from '../../data/skillLogo';
 
@@ -16,7 +17,8 @@ const text = `
 <img src=${portfolioMain} alt='thumbnail' />
 
 >기간 : 23.11.01 ~ 23.11.30 (약 5주)
->인원 : 1명(본인)
+>인원 : 1명
+>역할 : 기획 및 디자인, 개발, 서버리스 배포
 >깃허브 : <a href='https://github.com/bisous1519/portfolio-jj2' target='_blank' rel='noreferrer'>Eomji's portfolio</a>
 ___
 
@@ -50,7 +52,7 @@ Figma를 이용해 기획하고, React, Javascript 로 구현한 SPA이며,
 
 
 ## 구현 내용
-~~**요약** 스크롤 이벤트 / 다크모드 / 네비게이션 / 애니메이션~~
+~~**요약** 스크롤 이벤트 / 다크모드 / 네비게이션 / 애니메이션 / 반응형~~
 
 ### [ 스크롤 이벤트 ]
 
@@ -98,9 +100,14 @@ Nav 컴포넌트에서 **useEffect를 통해 해당 state 값의 변경을 감�
 - 위로 살짝 이동하며 fadeIn 효과를 줄 각 요소들을 **Intersection Observer api**로 감시하였습니다.
 - 각 요소가 **뷰포트에 관찰**되었을 때, **CSS 속성을 변경**(opacity(투명도)와 transform(위치) 변경)하여 **fadeIn 효과를 구현**하였습니다.
 
-## 프로젝트 리뷰
+### [ 반응형 ]
+<img src=${portfolioResponsive} alt='responsive' />
+- **미디어쿼리**를 사용하여 가로 폭 770px 에서 브레이크포인트를 두어, 모바일 환경의 반응형 웹을 구현하였습니다.
+- 가로 폭이 좁은 모바일의 특성을 고려하여 네비게이션을 없애고, 헤더바를 버튼으로 변경하였습니다.
+
+## 프로젝트 회고
 **Intersection Observer api에 대해 깊이있게 탐구해보는 시간이 되었습니다.**
-- 구현 초기엔 대부분의 스크롤 이벤트를 addEventListener를 통해 구현하였습니다. 하지만 스크롤과 관련한 이벤트가 점점 많아져 성능을 최적화하고자, 대부분의 스크롤 이벤트를 Intersection Observer를 이용한 로직으로 변경했습니다.
+- 구현 초기엔 대부분의 스크롤 이벤트를 addEventListener를 통해 구현하였습니다. 하지만 스크롤과 관련한 이벤트가 점점 많아져 성능을 최적화하고자, 대부분의 스크롤 이벤트를 Intersection Observer를 이용한 로직으로 변경했습니다. 그 과정에서, 자바스크립트에서 이벤트 리스너가 동작하는 방식에 대한 공부가 많이 되었고, Intersection Observer API 에 대한 탐구를 깊이있게 하는 경험이 되었습니다.
 
 **팀프로젝트와는 또 다른 색다른 경험이었습니다.**
 - 거대하지 않은 프로젝트였지만, 팀원들과 의견을 조율하며 진행했던 다른 프로젝트들과 달리, 혼자서 원하는대로 프로젝트를 끌어가는 것도 색다르게 재밌는 경험이었습니다.

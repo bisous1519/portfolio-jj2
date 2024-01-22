@@ -1,16 +1,10 @@
 import { SsafastLogoBlack } from '../../assets/icons';
 import {
   ssafastMain,
-  ssafastPJMain,
-  ssafastModeDark,
-  ssafastkModeWhite,
   ssafastApiMappingAni,
   ssafastApiReqAni,
   ssafastApiReqAxios,
   ssafastUsecaseAni,
-  ssafastCreateUsecase,
-  ssafastUsecaseList,
-  ssafastUsecaseSelectApi,
 } from '../../assets/img';
 import skillLogo from '../../data/skillLogo';
 
@@ -20,7 +14,8 @@ const text = `
 <img src=${ssafastMain} alt='main page' />
 
 >기간 : 23.04.10 ~ 23.05.19 (약 7주)
->인원 : 프론트엔드 3명(본인 포함), 백엔드 3명
+>인원 : 총 6명 (프론트엔드 3명, 백엔드 3명)
+>역할 : 기획 및 디자인, 프론트엔드 개발
 >깃허브 : <a href='https://github.com/bisous1519/ssafast' target='_blank' rel='noreferrer'>SSAFAST</a>
 
 ___
@@ -85,6 +80,10 @@ Figma에 디자인된 화면을 프레임 단위로 가져오고 각 프레임 �
 ### [ API 유스케이스 테스트 ]
 <img src=${ssafastUsecaseAni} alt='usecase test' />
 - 하나의 시나리오를 위해 실행되어야하는 API들의 데이터를 유기적으로 요청하여, 해당 기능이 성공적으로 구현되었는지 쉽게 확인할 수 있도록 구현하였습니다.
+
+## 프로젝트 회고
+- 이전 프로젝트에서 도입하고 싶었던 React Query를 드디어 사용해볼 수 있게 되어 의미가 깊었던 프로젝트였습니다.
+- Next.js 사용해봐서 좋았지만 다른 API와 함께 사용하는데 있어 충돌이 발생해서 핵심 기능인 서버사이드렌더링을 제대로 수행하지 못했던것이 아쉽습니다.?
 
 ## 프로젝트 성과
 서비스의 실용성을 인정받아 **삼성 청년 SW 아카데미(SSAFY) 8기 자율프로젝트 우수상**을 수상하였습니다.

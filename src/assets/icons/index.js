@@ -26,6 +26,7 @@ export { default as Figmalogo } from './figma_logo.png';
 export { default as Trellologo } from './trello_logo.png';
 export { default as Postmanlogo } from './postman_logo.png';
 export { default as Nestjslogo } from './nestjs_logo.jpeg';
+export { default as Openvidu } from './openvidu_logo.png';
 
 // project
 export { default as MaliconLogo } from './malicon_logo.png';
