@@ -46,6 +46,7 @@ export const curNavInit = {
   eeum: false,
   ssafast: false,
   portfolio: false,
+  blog: false,
   etc: false,
 };
 

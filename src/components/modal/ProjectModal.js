@@ -55,6 +55,14 @@ const ProjectModalContainer = styled.section`
         }
       }
     }
+    ul {
+      & > li.task-list-item {
+        padding-left: 30px;
+        &::before {
+          margin-top: 3.5px;
+        }
+      }
+    }
     table,
     thead,
     tr,
