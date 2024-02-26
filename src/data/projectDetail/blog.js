@@ -1,20 +1,11 @@
 import { PortfolioLogo } from '../../assets/icons';
-import {
-  portfolioSkillIcons,
-  portfolioProjects,
-  portfolioDarkMode,
-  portfolioNavClick,
-  portfolioAnimation,
-  portfolioNavHighlight,
-  portfolioMain,
-  portfolioResponsive,
-} from '../../assets/img';
+import { projectING, projectING2 } from '../../assets/img';
 import skillLogo from '../../data/skillLogo';
 
 const { react, nextjs, ts, tailwind } = skillLogo;
 
 const text = `
-<img src=${portfolioMain} alt='thumbnail' />
+<img src=${projectING} alt='thumbnail' />
 
 >기간 : 24.02 ~ 진행중
 >인원 : 1명
@@ -27,7 +18,7 @@ ___
 
 
 이 프로젝트는,
-**Next.js를 공부하기 위한 목적**으로 진행중인 개인 프로젝트 입니다.
+**Next.js를 학습하기 위한 목적**으로 진행중인 개인 프로젝트 입니다.
 
 1차적인 목표로 두고 있는 것은
 Next.js의 가장 큰 특징인 **서버 사이드 렌더링**에 대한 깊이있는 이해입니다.
@@ -41,8 +32,9 @@ Next.js의 라우팅 시스템에 대해 이해하고,
 ## 진행 계획
 - [x] 공식 문서를 기반으로 한 Next.js 학습
 - [x] 다이나믹 라우팅을 활용한 전반적인 레이아웃 구현
-- [ ] 블로그 글 작성, 수정, 삭제 기능
-- [ ] 블로그 글 카테고리 별, 키워드 별 검색 기능
+- [ ] 블로그 글 작성, 수정, 삭제 기능 구현
+- [ ] 블로그 글 카테고리 별, 키워드 별 검색 기능 구현
+- [ ] 배포
 - [ ] 검색 엔진 최적화
 
 ## 프론트엔드 기술 스택

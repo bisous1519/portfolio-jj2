@@ -10,6 +10,8 @@ import {
   portfolioSkillIcons,
   portfolioSkills,
   eeumMain2,
+  projectING,
+  projectING2,
 } from '../assets/img';
 import {
   maliconDetail,
@@ -136,8 +138,8 @@ export const projectData = [
     gitLink: 'https://github.com/bisous1519/blog-jj2',
     detail: blogDetail,
     des: ['SSR 진행중', 'SEO 진행중', '다이나믹 라우팅'],
-    src1: portfolioMain,
-    src2: portfolioSkills,
+    src1: projectING,
+    src2: projectING2,
     alt1: 'portfolio thumbnail',
     alt2: 'portfolio skills',
     skills: [react, nextjs, ts, tailwind],
