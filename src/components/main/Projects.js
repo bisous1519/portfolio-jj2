@@ -16,7 +16,7 @@ export default function Projects() {
       <ul>
         {projectData &&
           projectData.map((data, idx) => (
-            <ProjectItem key={`${data.id}-${idx}`} data={data} />
+            <ProjectItem key={`${data.id}-${idx}`} data={data} idx={idx} />
           ))}
       </ul>
     </ProjectsContainer>

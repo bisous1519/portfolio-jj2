@@ -190,7 +190,7 @@ const ProjectItemWrapper = styled.li`
   }
 `;
 
-export default function ProjectItem({ data }) {
+export default function ProjectItem({ data, idx }) {
   const [openModal, onOpenModal, onCloseModal] = useModal();
   const nav = useScrollNav(data.nav);
   const projectOuterRef = useRef();
@@ -222,7 +222,7 @@ export default function ProjectItem({ data }) {
     }
   }, [scrollHandler]);
   return (
-    <ProjectItemWrapper ref={projectOuterRef}>
+    <ProjectItemWrapper ref={idx === 0 ? projectOuterRef : undefined}>
       <div className='justOuterForNavContext' {...nav}>
         <div className={`imgWrapper${data.app ? ' app' : ''}`}>
           <div className='firstImg'>
