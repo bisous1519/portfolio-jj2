@@ -15,9 +15,10 @@ const { react, ts, reduxToolkit, emotion, openvidu } = skillLogo;
 const text = `
 <img src=${maliconLanding} alt='landing page' />
 
->기간 : 23.01.02 ~ 23.02.17 (약 7주)
->인원 : 총 6명 (프론트엔드 2명, 백엔드 4명)
+>기간 : 23.01.02 - 23.02.17 (약 7주)
+>인원 : 총 6명 (FE 2명, BE 4명)
 >역할 : 기획 및 디자인, 프론트엔드 개발
+>기여도 : 40%
 >깃허브 : <a href='https://github.com/bisous1519/malicon' target='_blank' rel='noreferrer'>MALICON</a>
 ___
 

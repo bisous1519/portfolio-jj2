@@ -13,9 +13,10 @@ const { reactNative, ts, recoil, styledComponent } = skillLogo;
 const text = `
 <img src=${eeumMain2} alt='landing page' />
 
->기간 : 23.02.20 ~ 23.04.07 (약 7주)
->인원 : 총 6명 (프론트엔드 3명, 백엔드 3명)
+>기간 : 23.02.20 - 23.04.07 (약 7주)
+>인원 : 총 6명 (FE 3명, BE 3명)
 >역할 : 기획 및 디자인, 프론트엔드 개발
+>기여도 : 40%
 >깃허브 : <a href='https://github.com/bisous1519/E-Eum' target='_blank' rel='noreferrer'>E-Eum</a>
 
 ___
@@ -73,7 +74,7 @@ ___
 - **공통 컴포넌트 제작**으로 일관된 UI를 제공하여 사용자 경험을 높였습니다.
 - 특히 각종 페이지에 공통으로 사용되는 버튼의 경우, props를 통해 크기와 디자인을 선택할 수 있게 **리팩토링**하여 사용되는 목적에 따라 컴포넌트의 재사용 범위를 팀원이 융통성있게 선택하여 구현할 수 있도록 하였습니다.
 
-### [ theme.js ]
+### [ theme.ts ]
 <img src=${eeumTheme} alt='theme.ts code' />
 - 폰트 사이즈나 자주 쓰이는 색상등을 객체화하여 **theme.ts**파일로 작성했습니다.
 - styled-component에서 제공하는 **ThemeProvider** 컴포넌트를 통해 모든 컴포넌트에서 편하게 사용할 수 있도록 하여 개발 속도를 향상시켰습니다.

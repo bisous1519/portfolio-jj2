@@ -16,9 +16,10 @@ const { react, js, emotion } = skillLogo;
 const text = `
 <img src=${portfolioMain} alt='thumbnail' />
 
->기간 : 23.11.01 ~ 23.11.30 (약 5주)
+>기간 : 23.11.01 - 23.11.30 (약 5주)
 >인원 : 1명
 >역할 : 기획 및 디자인, 개발, 서버리스 배포
+>기여도 : 100%
 >깃허브 : <a href='https://github.com/bisous1519/portfolio-jj2' target='_blank' rel='noreferrer'>Eomji's portfolio</a>
 ___
 

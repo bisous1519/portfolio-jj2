@@ -11,6 +11,7 @@ const globalStyle = css`
   * {
     box-sizing: border-box;
     transition: all 0.3s;
+    word-break: keep-all;
   }
   html {
     /* scroll-behavior: smooth; */

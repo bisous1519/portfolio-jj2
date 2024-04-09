@@ -7,9 +7,10 @@ const { react, nextjs, ts, tailwind } = skillLogo;
 const text = `
 <img src=${projectING} alt='thumbnail' />
 
->기간 : 24.02 ~ 진행중
+>기간 : 24.02.01 - 진행중
 >인원 : 1명
 >역할 : 기획 및 디자인, 개발
+>기여도 : 100%
 >깃허브 : <a href='https://github.com/bisous1519/blog-jj2' target='_blank' rel='noreferrer'>Eomji Log</a>
 ___
 

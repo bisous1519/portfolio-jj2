@@ -92,7 +92,7 @@ const ProjectItemWrapper = styled.li`
             height: 40px;
             & > div {
               position: absolute;
-              animation: ${upDownKeyFrames} 0.5s ease-in alternate infinite;
+              animation: ${upDownKeyFrames} 0.3s ease-in alternate infinite;
             }
           }
         }
@@ -102,7 +102,7 @@ const ProjectItemWrapper = styled.li`
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
-        gap: 35px;
+        gap: 40px;
         & > div {
           & > h1 {
             color: ${({ theme }) => theme.textColor.primary};
@@ -122,8 +122,8 @@ const ProjectItemWrapper = styled.li`
           & > span {
             display: block;
             color: ${({ theme }) => theme.textColor.gray};
-            font-size: ${({ theme }) => theme.fontSize.base};
-            margin-bottom: 20px;
+            font-size: ${({ theme }) => theme.fontSize.small};
+            margin-top: 12px;
           }
           & > p {
             color: ${({ theme }) => theme.textColor.initial};
@@ -138,6 +138,7 @@ const ProjectItemWrapper = styled.li`
             align-items: flex-start;
             gap: 15px;
             & > li {
+              font-size: ${({ theme }) => theme.fontSize.base};
               & > i {
                 font-size: 12px;
                 margin-right: 10px;
@@ -168,6 +169,7 @@ const ProjectItemWrapper = styled.li`
           flex-direction: column;
           align-items: flex-start;
           justify-content: space-between;
+          gap: 25px;
           & > div {
             width: 100%;
             & > h1 {
@@ -176,11 +178,26 @@ const ProjectItemWrapper = styled.li`
               display: block;
               width: 100%;
               height: auto;
-              margin: 30px 0px;
+              margin: 25px 0px;
               & > img {
                 width: 100%;
                 height: 100%;
                 object-fit: contain;
+              }
+            }
+            & > h3 {
+              margin-bottom: 12px;
+            }
+            & > span {
+              margin-top: 10px;
+            }
+            & > p {
+              margin-bottom: 12px;
+            }
+            & > ul.des {
+              gap: 10px;
+              & > li {
+                font-size: ${({ theme }) => theme.fontSize.small};
               }
             }
           }
@@ -254,11 +271,9 @@ export default function ProjectItem({ data, idx }) {
                 <img src={data.app ? data.src3 : data.src1} alt={data.alt1} />
               </div>
               <h3>{data.subTitle}</h3>
-              <span>( {data.date} )</span>
-              {/* <div style={{ display: 'flex', gap: '15px' }}>
-              <MoveToButton github={true} link={data.gitLink} />
-              <MoveToButton detail={true} />
-            </div> */}
+              <span>기간 : {data.date}</span>
+              <span>인원 : {data.member}</span>
+              <span>기여도 : {data.percent}</span>
             </div>
             <div>
               <p>맡은 역할</p>
