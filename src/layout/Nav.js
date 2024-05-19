@@ -48,12 +48,22 @@ export default function Nav({ onClickNav }) {
   const [isSelected, setIsSelected] = useState('intro');
 
   useEffect(() => {
-    const { intro, skills, malicon, eeum, ssafast, portfolio, blog, etc } =
-      curNav;
+    const {
+      intro,
+      skills,
+      malicon,
+      eeum,
+      mine,
+      ssafast,
+      portfolio,
+      blog,
+      etc,
+    } = curNav;
     if (intro) setIsSelected('intro');
     else if (skills) setIsSelected('skills');
     else if (malicon) setIsSelected('malicon');
     else if (eeum) setIsSelected('eeum');
+    else if (mine) setIsSelected('mine');
     else if (ssafast) setIsSelected('ssafast');
     else if (portfolio) setIsSelected('portfolio');
     else if (blog) setIsSelected('blog');
@@ -110,15 +120,25 @@ export default function Nav({ onClickNav }) {
           </ul>
         </li>
         <li
-          onClick={() => onClickNav('portfolio')}
+          onClick={() => onClickNav('mine')}
           className={
-            isSelected === 'portfolio' || isSelected === 'blog' ? 'active' : ''
+            isSelected === 'mine' ||
+            isSelected === 'portfolio' ||
+            isSelected === 'blog'
+              ? 'active'
+              : ''
           }
         >
           개인프로젝트
         </li>
         <li className='project'>
           <ul>
+            <li
+              onClick={() => onClickNav('mine')}
+              className={isSelected === 'mine' ? 'active' : ''}
+            >
+              지뢰찾기
+            </li>
             <li
               onClick={() => onClickNav('portfolio')}
               className={isSelected === 'portfolio' ? 'active' : ''}

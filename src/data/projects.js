@@ -12,6 +12,9 @@ import {
   eeumMain2,
   projectING,
   projectING2,
+  mineMain,
+  mineGame,
+  mineMain2,
 } from '../assets/img';
 import {
   maliconDetail,
@@ -19,6 +22,7 @@ import {
   ssafastDetail,
   portfolioDetail,
   blogDetail,
+  mineDetail,
 } from '../data/projectDetail';
 import skillLogo from './skillLogo';
 
@@ -84,8 +88,8 @@ export const projectData = [
     ],
     src1: ssafastMain,
     src2: ssafastPJMain,
-    alt1: 'malicon landing page',
-    alt2: 'malicon main page',
+    alt1: 'ssafast landing page',
+    alt2: 'ssafast main page',
     skills: [react, nextjs, ts, redux, reactQuery, tailwind],
   },
   {
@@ -110,9 +114,33 @@ export const projectData = [
     src1: eeumMain,
     src2: eeumDiary,
     src3: eeumMain2,
-    alt1: 'malicon landing page',
-    alt2: 'malicon main page',
+    alt1: 'eeum landing page',
+    alt2: 'eeum main page',
     skills: [reactNative, ts, recoil, styledComponent],
+  },
+  {
+    nav: 'mine',
+    id: 'mypjt-3',
+    title: '지뢰찾기',
+    subTitle: '커스텀이 가능한 지뢰찾기 게임',
+    date: '24.04.12 - 24.04.16 (약 1주)',
+    member: '1명',
+    percent: '100%',
+    gitLink: 'https://github.com/bisous1519/minesweeper/',
+    detail: mineDetail,
+    des: [
+      '난이도 선택 화면 구현',
+      '게임 화면 구현',
+      '보드 크기, 지뢰 개수 커스텀 기능 구현',
+      '깃발꽂기 기능 구현',
+    ],
+    app: true,
+    src1: mineMain,
+    src2: mineGame,
+    src3: mineMain2,
+    alt1: 'mine main page',
+    alt2: 'mine game page',
+    skills: [reactNative, ts, recoil],
   },
   {
     nav: 'portfolio',
@@ -150,8 +178,8 @@ export const projectData = [
     des: ['SSR 진행중', 'SEO 진행중', '다이나믹 라우팅'],
     src1: projectING,
     src2: projectING2,
-    alt1: 'portfolio thumbnail',
-    alt2: 'portfolio skills',
+    alt1: 'blog thumbnail',
+    alt2: 'blog skills',
     skills: [react, nextjs, ts, tailwind],
   },
   // {

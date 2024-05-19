@@ -45,6 +45,7 @@ export const curNavInit = {
   skills: false,
   malicon: false,
   eeum: false,
+  mine: false,
   ssafast: false,
   portfolio: false,
   blog: false,

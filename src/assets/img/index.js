@@ -50,6 +50,11 @@ export { default as portfolioNavHighlight } from './portfolio_navHighlight.gif';
 export { default as portfolioAnimation } from './portfolio_animation.gif';
 export { default as portfolioResponsive } from './portfolio_responsive.gif';
 
+// mine sweeper
+export { default as mineMain } from './mine-sweeper-main.png';
+export { default as mineMain2 } from './mine-sweeper-main2.png';
+export { default as mineGame } from './mine-sweeper-game.png';
+
 // etc
 export { default as projectING } from './project_ing.png';
 export { default as projectING2 } from './project_ing2.png';

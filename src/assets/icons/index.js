@@ -35,6 +35,7 @@ export { default as EeumLogo2 } from './eeum_logo2.png';
 export { default as SsafastLogoBlack } from './ssafast_logo_black.png';
 export { default as SsafastLogoWhite } from './ssafast_logo_white.png';
 export { default as PortfolioLogo } from './portfolio_logo.png';
+export { default as MineLogo } from './mineLogo.png';
 
 // svg icons
 export { default as svgEmail } from './png-email.png';
