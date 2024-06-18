@@ -69,6 +69,3 @@ function App() {
 }
 
 export default App;
-
-// NOTE: nestjs 추가하고, 마리콘 맡은 역할 요약에 로그인 및 회원가입 추가, 튜토리얼페이지 구현,
-
