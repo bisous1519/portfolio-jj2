@@ -168,7 +168,7 @@ const ProjectItemWrapper = styled.li`
           display: flex;
           flex-direction: column;
           align-items: flex-start;
-          justify-content: space-between;
+          justify-content: space-around;
           gap: 25px;
           & > div {
             width: 100%;

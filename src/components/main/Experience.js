@@ -1,17 +1,17 @@
 import styled from '@emotion/styled';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Title from '../text/Title';
-import awards from '../../data/awards';
-import experience from '../../data/experience';
 import { LiaAwardSolid } from 'react-icons/lia';
 import { LuGraduationCap } from 'react-icons/lu';
 import useScrollNav from '../../hooks/useScrollNav';
+import { awards, certificate, experience } from '../../data/experience';
+import { HiOutlineBadgeCheck } from 'react-icons/hi';
 
 const ExperienceContainer = styled.section`
   display: flex;
   & > div {
     flex: 1;
-    &.awards {
+    &.left {
       padding-right: 30px;
       border-right: 0.7px solid ${({ theme }) => theme.lineColor};
       & > div {
@@ -34,7 +34,7 @@ const ExperienceContainer = styled.section`
         }
       }
     }
-    &.experience {
+    &.right {
       padding-left: 30px;
       & > div {
         & > ul {
@@ -54,7 +54,9 @@ const ExperienceContainer = styled.section`
         }
       }
     }
-    & > div {
+    & > div.awards,
+    & > div.experience,
+    & > div.etc {
       max-width: 400px;
       margin: 0 auto;
       & > ul {
@@ -75,12 +77,22 @@ const ExperienceContainer = styled.section`
         }
       }
     }
+    & > div.etc {
+      margin-top: 50px;
+      & > ul {
+        & > li {
+          & > i {
+            color: #fc7491;
+          }
+        }
+      }
+    }
   }
   @media ${({ theme }) => theme.viewPortSize.mobile} {
     flex-direction: column;
     & > div {
-      &.awards,
-      &.experience {
+      &.left,
+      &.right {
         padding: 0;
         border: none;
         & > div {
@@ -92,24 +104,17 @@ const ExperienceContainer = styled.section`
           }
         }
       }
-      &.awards {
+      &.left {
         & span {
           min-width: 45px;
         }
       }
-      &.experience {
-        margin-top: 90px;
-      }
-      /* &.awards {
-        padding: 0;
-        & > div {
+      &.right {
+        & > div.experience,
+        & > div.etc {
+          margin-top: 90px;
         }
       }
-      &.experience {
-        padding: 0;
-        & > div {
-        }
-      } */
     }
   }
 `;
@@ -118,8 +123,8 @@ export default function Experience() {
   const nav = useScrollNav('etc');
   return (
     <ExperienceContainer {...nav}>
-      <div className='awards'>
-        <div>
+      <div className='left'>
+        <div className='awards'>
           <Title name='수상' />
           <ul>
             {awards &&
@@ -139,8 +144,8 @@ export default function Experience() {
           </ul>
         </div>
       </div>
-      <div className='experience'>
-        <div>
+      <div className='right'>
+        <div className='experience'>
           <Title name='교육' />
           <ul>
             {experience &&
@@ -153,6 +158,23 @@ export default function Experience() {
                     <li>{data.name}</li>
                     <li>{data.date}</li>
                     <li className='gray'>{data.desc}</li>
+                  </ul>
+                </li>
+              ))}
+          </ul>
+        </div>
+        <div className='etc'>
+          <Title name='자격 / 어학' />
+          <ul>
+            {certificate &&
+              certificate.map((data) => (
+                <li key={`etc-${data.id}`}>
+                  <i>
+                    <HiOutlineBadgeCheck />
+                  </i>
+                  <ul>
+                    <li>{data.name}</li>
+                    <li className='gray'>{data.date}</li>
                   </ul>
                 </li>
               ))}
